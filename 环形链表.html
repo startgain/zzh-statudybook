@@ -1,0 +1,67 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-11-09 10:48:53
+ * @LastEditTime: 2021-11-09 10:57:28
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \zzh-statudybook\环形链表.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>环形链表</title>
+  </head>
+  <body></body>
+  <script>
+    var head = {
+      val: 3,
+      next: {
+        val: 2,
+        next: {
+          val: 0,
+          next: {
+            val: -4,
+            next: null,
+          },
+        },
+      },
+    };
+    head.next.next.next.next = head.next;
+
+    // 快慢指针
+
+    var hasCycle = function (head) {
+      if (!head) return false;
+      var slow = head;
+      var fast = head.next;
+      while (fast && fast.next) {
+        slow = slow.next;
+        fast = fast.next.next;
+        if (slow === fast) {
+          return true;
+        }
+      }
+      return false;
+    };
+    console.log(hasCycle(head));
+
+    // 利用数组中是否存在相同节点
+
+    var hasCycle = function (head) {
+      if (!head) return false;
+      var arr = [];
+      while (head && head.next) {
+        if (!!~arr.indexOf(head)) {
+          return true;
+        }
+        arr.push(head);
+        head = head.next;
+      }
+      return false;
+    };
+    console.log(hasCycle(head));
+  </script>
+</html>
