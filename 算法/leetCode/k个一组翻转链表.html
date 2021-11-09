@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
+	<title>k个一组翻转链表</title>
+</head>
+
+<body>
+
+</body>
+<script>
+	function reverseList(head) {
+		debugger
+		if (!head) return head
+		if (head.next) {
+			var next = head.next
+			var res = reverseList(next)
+			next.next = head
+			head.next = null
+			return res
+		} else {
+			return head
+		}
+	}
+	var reverseKGroup = function (head, k) {
+		let start = head;
+		let end = head;
+		let next = null;
+		for (var i = 0; i < k - 1; i++) {
+			if (end && !end.next) {
+				return start
+			}
+			end = end.next;
+		}
+		next = end.next
+		end.next = null
+		var res = reverseList(start)
+
+		if (next) {
+			start.next = reverseKGroup(next, k)
+		}
+		return res
+	};
+
+	var head = {
+		val: 1,
+		next: {
+			val: 2,
+			next: {
+				val: 3,
+				next: {
+					val: 4,
+					next: {
+						val: 5,
+						next: null
+					}
+				}
+			}
+		}
+	}
+
+
+	const myReverse = (head, tail) => {
+		let prev = tail.next;
+		let p = head;
+		while (prev !== tail) {
+			const nex = p.next;
+			p.next = prev;
+			prev = p;
+			p = nex;
+		}
+		return [tail, head];
+	}
+	var reverseKGroup = function (head, k) {
+		debugger
+		const hair = { val: 0, next: null };
+		hair.next = head;
+		let pre = hair;
+
+		while (head) {
+			let tail = pre;
+			// 查看剩余部分长度是否大于等于 k
+			for (let i = 0; i < k; ++i) {
+				tail = tail.next;
+				if (!tail) {
+					return hair.next;
+				}
+			}
+			const nex = tail.next;
+			[head, tail] = myReverse(head, tail);
+			// 把子链表重新接回原链表
+			pre.next = head;
+			tail.next = nex;
+			pre = tail;
+			head = tail.next;
+		}
+		return hair.next;
+	};
+	console.log(reverseKGroup(head, 2))
+</script>
+
+</html>

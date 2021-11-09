@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
+	<title>只出现一次的数字 </title>
+</head>
+
+<body>
+
+</body>
+<script>
+	const nums = [2, 2, 3, 2]
+	var singleNumber = function (nums) {
+		if (nums.length === 1) return nums[0]
+		var len = nums.length
+		for (let i = 0; i < nums.length; i++) {
+			for (let j = 0; j < nums.length; j++) {
+				if (i !== j && nums[i] === nums[j]) {
+					break;
+				}
+				if (i !== j && nums[i] !== nums[j]) {
+					if (i === len - 1 && j === len - 2) {
+						return nums[i]
+					}
+					if (i !== len - 1 && j === len - 1) {
+						return nums[i]
+					}
+				}
+			}
+		}
+	};
+	console.log(singleNumber(nums))
+</script>
+
+</html>
