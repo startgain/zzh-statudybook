@@ -1,0 +1,20 @@
+<title>排序数组</title>
+<script>
+//这里其实就是排序算法  参考https://juejin.cn/post/7025801186238267428
+
+//计数排序
+var sortArray = function(nums) {
+    var len = nums.length,
+    gap = Math.floor(len / 2)
+    for (gap; gap > 0; gap = Math.floor(gap / 2)) {
+      for (var i = gap; i < len; i++) {
+        temp = nums[i]
+        for (var j = i - gap; j >= 0 && nums[j] > temp; j -= gap) {
+          nums[j + gap] = nums[j]
+        }
+        nums[j + gap] = temp
+      }
+    }
+    return nums
+};
+</script>

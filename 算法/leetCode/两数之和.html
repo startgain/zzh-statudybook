@@ -1,0 +1,44 @@
+<title>两数之和</title>
+<script>
+	var twoSum = function(nums, target) {
+    for(let i=0;i<nums.length;i++){
+        for(let j=i+1;j<nums.length;j++){
+            if(nums[i]+ nums[j] === target ){
+                return [i,j]
+            }
+        }
+    }
+};
+var nums = [2,7,11,15], target = 9
+console.log(twoSum(nums,target))
+
+
+var twoSum = function(nums, target) {
+    var map = {}
+    for(let i=0;i<nums.length;i++){
+        if(map[nums[i]]===undefined){
+            map[nums[i]] = [i]
+        }else{
+            map[nums[i]].push(i)
+        }
+    }
+		console.log(map)
+    for(let i=0;i<nums.length;i++){
+        var secNum = target - nums[i]
+
+				if(secNum === nums[i]){
+            if(map[secNum].length>1){
+							return [i,map[secNum][1]]
+						}else{
+							continue
+						}
+        }
+        if(map[secNum]){
+            return [i,map[secNum][0]]
+        }
+    }
+
+};
+var nums = [3,2,4], target = 6
+console.log(twoSum(nums,target))
+</script>

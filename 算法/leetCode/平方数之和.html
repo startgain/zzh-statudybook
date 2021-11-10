@@ -6,17 +6,7 @@
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: \zzh-statudybook\算法\leetCode\判断开放.html
 -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>平方数之和</title>
-</head>
-<body>
-    
-</body>
 <script>
 var judgeSquareSum = function(c) {
     function isInteger(obj) {
@@ -27,23 +17,27 @@ var judgeSquareSum = function(c) {
     }
     var maxNear = Math.floor(Math.sqrt(c))
     var rest = c-Math.pow(maxNear,2)
-    while(maxNear--){
+    while(Math.floor(Math.sqrt(rest))<maxNear&&maxNear--){
         if(isInteger(Math.sqrt(rest))){
             return true
         }else{
             rest = c-Math.pow(maxNear,2)
+						
         }
     }
     return false
 }
+var judgeSquareSum = function (c) {
+    for (let a = 0; a * a <= c; a++) {
+        const b = Math.sqrt(c - a * a);
+        if (b === parseInt(b)) {
+            return true;
+        }
+    }
+    return false;
+};
 
 console.log(judgeSquareSum(5))
 console.log(judgeSquareSum(3))
 console.log(judgeSquareSum(1))
-
-
-// 27
-// 5^2+2
-// 4^2+11
 </script>
-</html>
