@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-11-09 10:33:52
- * @LastEditTime: 2021-11-10 16:00:22
+ * @LastEditTime: 2021-11-11 21:23:17
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: \zzh-statudybook\README.md
@@ -12,9 +12,12 @@
 ## 日志
 
 -   算法学习
+    -   2021.11.10 最长递增子序列
+        - 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/最长递增子序列.html)
 
 	-   2021.11.10 平方数之和
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E5%B9%B3%E6%96%B9%E6%95%B0%E4%B9%8B%E5%92%8C.html)
+        - 掘金 [地址](https://juejin.cn/post/7028992548341284895)
 	-   2021.11.10 排序数组
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84.html)
 	-   2021.11.10 二分查找

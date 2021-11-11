@@ -1,0 +1,29 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-11-11 20:33:05
+ * @LastEditTime: 2021-11-11 21:03:57
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \zzh-statudybook\算法\leetCode\最长递增子序列.html
+-->
+<title>最长递增子序列</title>
+<script>
+    var nums = [10,9,2,5,3,7,101]
+    var lengthOfLIS = function(nums) {
+        if(nums.length===1) return 1
+        var dp = [];
+        var maxLen = 1
+        dp[0] = 1
+        for(var i=0;i<nums.length;i++){
+            dp[i] = 1
+            for(var j=0;j<i;j++){
+                if(nums[i]>nums[j]){
+                    dp[i] = Math.max(dp[i],dp[j] + 1)
+                }
+            }
+            maxLen = Math.max(maxLen,dp[i])
+        }
+        return maxLen
+    };
+    console.log(lengthOfLIS(nums))
+</script>
