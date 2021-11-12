@@ -11,10 +11,15 @@
 
 ## 日志
 
--   算法学习
-    -   2021.11.11 最长递增子序列
-        - 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/最长递增子序列.html)
-        - 掘金 [地址](https://juejin.cn/post/7029332892903800846)
+- 算法学习
+	-   2021.11.12 快乐数
+		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/快乐数.html)
+
+		- 掘金 [地址](https://juejin.cn/post/7029713542202785828)
+
+	-   2021.11.11 最长递增子序列
+		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/最长递增子序列.html)
+		- 掘金 [地址](https://juejin.cn/post/7029332892903800846)
 
 	-   2021.11.10 平方数之和
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E5%B9%B3%E6%96%B9%E6%95%B0%E4%B9%8B%E5%92%8C.html)

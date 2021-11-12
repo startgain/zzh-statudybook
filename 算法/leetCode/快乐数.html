@@ -1,0 +1,28 @@
+<title>标题</title>
+<script>
+//算法
+var getNext = function(n){
+	var total = 0
+	while(n>0){
+		var p = n%10
+    var n = parseInt(n/10)
+    total+=p*p
+	}
+	return total
+}
+var isHappy = function (n) {
+    var next
+    var nArr = []
+    while(n!=1){
+			debugger
+				nArr.push(n)
+        n = getNext(n)
+				console.log(n)
+        if(nArr.includes[n]) {
+					return false
+				}
+    }   
+    return true
+};
+console.log(isHappy(20))
+</script>
