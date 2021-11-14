@@ -1,0 +1,31 @@
+<meta charset='UTF-8' />
+<title>标题</title>
+<script>
+	//算法
+	var longestPalindrome = function (s) {
+		var map = {}
+		for (var i = 0; i < s.length; i++) {
+			map[s[i]] ? map[s[i]]++ : (map[s[i]] = 1)
+		}
+		var odd = 0;
+		var maxLen = 0
+		for (var key in map) {
+			if (map[key] % 2 === 0) {
+				maxLen += map[key]
+			}
+			if (map[key] % 2 === 1 && map[key]>1) {
+				maxLen += map[key]-1
+				odd = 1
+			} 
+			if(map[key]===1){
+				odd = 1
+			}
+			
+		}
+		return maxLen + odd
+		
+	};
+
+	var s = "abccccdd"
+	console.log(longestPalindrome(s))
+</script>

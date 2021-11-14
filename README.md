@@ -12,6 +12,18 @@
 ## 日志
 
 - 算法学习
+	-   2021.11.14 最长回文串 
+		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/最长回文串.html)
+		- 掘金 [地址](https://juejin.cn/post/7030461490880577573)
+
+	-   2021.11.14  二叉树的直径 
+		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/二叉树的直径 .html)
+		- 掘金 [地址](https://juejin.cn/post/7030412939320360974)
+
+	-   2021.11.13 有效的字母异位词 
+		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/有效的字母异位词.html)
+
+		- 掘金 [地址](https://juejin.cn/post/7030083731171835940)
 	-   2021.11.12 快乐数
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/快乐数.html)
 

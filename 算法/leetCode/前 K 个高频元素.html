@@ -1,0 +1,27 @@
+<meta charset='UTF-8' />
+<title>标题</title>
+<script>
+	//算法
+	var topKFrequent = function (nums, k) {
+		var map = {}
+		var mapArr = []
+		var res = []
+		for (var i = 0; i < nums.length; i++) {
+			map[nums[i]] ? map[nums[i]]++ : (map[nums[i]] = 1)
+		}
+		for (var key in map) {
+			mapArr.push({val:key,nums:map[key]})
+		}
+		mapArr = mapArr.sort((a,b)=>b.nums-a.nums)
+		console.log(mapArr)
+		for (var i = 0; i < mapArr.length; i++){
+			var item = mapArr[i]
+			if(!res.includes(item.val)){
+				res.push(item.val)
+			}
+			if(res.length===k) return res
+		}
+	};
+var nums = [1,1,1,2,2,3]
+	console.log(topKFrequent(nums,2))
+</script>

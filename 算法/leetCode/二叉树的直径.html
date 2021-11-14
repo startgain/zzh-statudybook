@@ -1,0 +1,35 @@
+<meta charset="UTF-8" />
+<title>二叉树的直径</title>
+<script>
+	//算法
+	var Max = 0;
+	var depth = function (node) {
+		if (node === null) {
+			return 0
+		}
+		var leftDepth = depth(node.left)
+		var rightDepth = depth(node.right)
+
+		if (leftDepth + rightDepth > Max) {
+			Max = leftDepth + rightDepth
+		}
+
+		return Math.max(leftDepth, rightDepth) + 1
+	}
+	var diameterOfBinaryTree = function (root) {
+		Max = 0
+		depth(root);
+		return Max
+	};
+
+	var root = {
+		val: 1,
+		left: {
+			val: 2,
+			left: null,
+			right: null,
+		},
+		right: null
+	}
+	console.log(diameterOfBinaryTree(root))
+</script>

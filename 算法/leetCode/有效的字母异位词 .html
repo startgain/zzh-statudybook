@@ -1,0 +1,27 @@
+<title> 有效的字母异位词  </title>
+<script>
+//算法
+function pushMap(map,key){
+    if(map[key]){
+        map[key]++
+    }else{
+        map[key] = 1
+    }
+}
+var isAnagram = function(s, t) {
+    var sMap = {}
+    var sLen = s.length;
+    var tMap = {}
+    var tLen = t.length
+    if(sLen !== tLen) return false
+    for(var i = 0;i<sLen;i++){
+        pushMap(sMap,s[i])
+        pushMap(tMap,t[i])
+    }
+    for(var key in sMap){
+        if(sMap[key] !== tMap[key]) return false
+    }
+    return true
+};
+console.log(isAnagram("rat","car"))
+</script>
