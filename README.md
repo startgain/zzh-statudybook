@@ -17,7 +17,7 @@
 		- 掘金 [地址](https://juejin.cn/post/7030461490880577573)
 
 	-   2021.11.14  二叉树的直径 
-		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/二叉树的直径 .html)
+		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/二叉树的直径.html)
 		- 掘金 [地址](https://juejin.cn/post/7030412939320360974)
 
 	-   2021.11.13 有效的字母异位词 
