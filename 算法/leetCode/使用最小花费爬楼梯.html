@@ -1,0 +1,26 @@
+<meta charset='UTF-8' />
+<title>使用最小花费爬楼梯</title>
+<script>
+//算法
+var minCostClimbingStairs = function(cost) {
+    var dp = []
+    dp[0] = dp[1] = 0
+    for(var i = 2; i <= cost.length; i++) {
+			dp[i] = Math.min(dp[i-1]+cost[i-1], dp[i-2]+cost[i-2])
+		}
+		return dp[cost.length]
+};
+var minCostClimbingStairs = function(cost) {
+	var curr = 0;
+    var prev = 0
+    var res = 0;
+    for (var i = 2; i <= cost.length; i++) {
+        res = Math.min(curr + cost[i - 1], prev + cost[i - 2])
+        prev = curr
+        curr = res
+    }
+    return res
+};
+var cost = [1, 100, 1, 1, 1, 100, 1, 1, 100, 1]
+console.log(minCostClimbingStairs(cost))
+</script>
