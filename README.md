@@ -15,9 +15,11 @@
 	- 2021.11.15 使用最小花费爬楼梯 
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/使用最小花费爬楼梯.html)
 		- 掘金 [地址](https://juejin.cn/post/7030832746607935519/)
+		- b站 [地址](https://www.bilibili.com/video/BV1sQ4y1U7BR/)
 	-   2021.11.15 买卖股票的最佳时机 
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/买卖股票的最佳时机.html)
 		- 掘金 [地址](https://juejin.cn/post/7030794575337750558)
+		- b站 [地址](https://www.bilibili.com/video/BV1Yb4y1t7hV/)
 	-   2021.11.14 最长回文串 
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/最长回文串.html)
 		- 掘金 [地址](https://juejin.cn/post/7030461490880577573)
