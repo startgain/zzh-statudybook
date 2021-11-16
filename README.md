@@ -12,6 +12,10 @@
 ## 日志
 
 - 算法学习
+	- 2021.11.16 回文子串
+		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/回文子串.html)
+		- 掘金 [地址](https://juejin.cn/post/7031222414457438222/)
+		- b站 [地址](https://www.bilibili.com/video/BV1wL411g7FX/)
 	- 2021.11.15 使用最小花费爬楼梯 
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/使用最小花费爬楼梯.html)
 		- 掘金 [地址](https://juejin.cn/post/7030832746607935519/)

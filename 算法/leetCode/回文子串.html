@@ -1,0 +1,30 @@
+<meta charset='UTF-8' />
+<title>回文子串</title>
+<script>
+	//算法
+	var extend = function (s, left, right) {
+		var ans = 0;
+		while (left >= 0 && right <= s.length - 1 && left <= right && s[left] === s[right]) {
+			ans++
+			left = left - 1
+			right = right + 1
+		}
+		return ans
+	}
+	var countSubstrings = function (s) {
+		var n = s.length;
+		let ans = 0;
+		let left, right
+		for (let i = 0; i < n; ++i) {
+			//中心一个字符串
+			left = i
+			right = i
+			ans += extend(s, left, right)
+			//中心两个字符串
+			left = i - 1
+			right = i
+			ans += extend(s, left, right)
+		}
+		return ans;
+	};
+</script>
