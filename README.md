@@ -12,6 +12,10 @@
 ## 日志
 
 - 算法学习
+	- 2021.11.17 最长公共子序列
+		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/最长公共子序列.html)
+		- 掘金 [地址](https://juejin.cn/post/7031589995194351647)
+		- b站 [地址](https://www.bilibili.com/video/BV1ar4y1k7XF/)
 	- 2021.11.16 回文子串
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/回文子串.html)
 		- 掘金 [地址](https://juejin.cn/post/7031222414457438222/)
