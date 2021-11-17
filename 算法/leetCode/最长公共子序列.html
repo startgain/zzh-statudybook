@@ -1,0 +1,55 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-11-17 16:23:52
+ * @LastEditTime: 2021-11-17 18:55:18
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \zzh-statudybook\算法\leetCode\最长.html
+-->
+<meta charset="UTF-8" />
+<title>标题</title>
+<script>
+  //算法
+  var longestCommonSubsequence = function (text1, text2) {
+    var max = 0;
+    var dp = [];
+    for (var i = 0; i < text1.length; i++) {
+      dp[i] = [];
+      for (var j = 0; j < text2.length; j++) {
+        if (text1[i] === text2[j]) {
+          if (i === 0) {
+            dp[i][j] = dp[i][j - 1] + 1;
+
+            max = Math.max(dp[i][j], max);
+            continue;
+          }
+          if (j === 0) {
+            dp[i][j] = dp[i - 1][j] + 1;
+            max = Math.max(dp[i][j], max);
+            continue;
+          }
+          dp[i][j] = Math.max(dp[i][j - 1], dp[i - 1][j]);
+
+          max = Math.max(dp[i][j], max);
+        }
+        if (text1[i] !== text2[j]) {
+          dp[i][j] = 0;
+        }
+      }
+    }
+    console.log(dp);
+    return max;
+  };
+  var text1 = "ezupkr";
+  var text2 = "ubmrapg";
+
+  var text1 = "oxcpqrsvwf";
+  var text2 = "shmtulqrypy";
+
+  var text1 = "hofubmnylkra";
+  var text2 = "pqhgxgdofcvmr";
+
+  //   var text1 = "mhunuzqrkzsnidwbun";
+  //   var text2 = "szulspmhwpazoxijwbq";
+  console.log(longestCommonSubsequence(text1, text2));
+</script>
