@@ -12,6 +12,9 @@
 ## 日志
 
 - 算法学习
+	- 2021.11.17 链表中倒数第k个节点
+		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/链表中倒数第k个节点.html)
+		- 掘金 [地址](https://juejin.cn/post/7031969449276080135/)
 	- 2021.11.17 最长公共子序列
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/最长公共子序列.html)
 		- 掘金 [地址](https://juejin.cn/post/7031589995194351647)

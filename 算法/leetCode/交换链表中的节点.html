@@ -1,0 +1,25 @@
+<meta charset='UTF-8' />
+<title>交换链表中的节点</title>
+<script>
+//算法
+ var swapNodes = function(head, k) {
+    
+    if(!head) return head
+    var stack = []
+    while(head){
+        stack.push(head)
+        head = head.next
+    }
+    var n = stack.length
+    var temp = stack[k-1]
+    stack[k-1] = stack[n-k]
+    stack[n-k] = temp
+    for(var i=0;i<n-1;i++){
+        stack[i].next = stack[i+1]
+    }
+    stack[n-1].next = null
+    return stack[0]
+};
+var head = {val:1,next:null}
+console.log(swapNodes(head,1))
+</script>

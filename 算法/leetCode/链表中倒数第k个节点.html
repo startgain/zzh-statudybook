@@ -1,0 +1,48 @@
+<meta charset='UTF-8' />
+<title>标题</title>
+<script>
+//算法
+var getKthFromEnd = function(head, k) {
+    var stack = []
+    while(head){
+        stack.push(head)
+        head = head.next
+    }
+    return stack[stack.length-k]
+};
+
+var getKthFromEnd = function(head, k) {
+    if(!head) return head
+    var slow = fast = head
+    var n = 0
+    while(n<k){
+        fast = fast.next
+        n++
+    }
+    while(fast){
+        fast = fast.next
+        slow = slow.next
+    }
+    return slow
+};
+
+var getKthFromEnd = function(head, k) {
+    if(!head) return head
+    var node = head
+    var n = 0
+    //第一次遍历获取链表程度n
+    while(node){
+        node = node.next
+        n++
+    }
+    var m = 0;
+    var res = head
+    //第二次遍历获取链表倒数第k个节点，正数第n-k+1
+    while(m<n-k){
+        res = res.next
+        m++
+    }
+    return res
+};
+
+</script>
