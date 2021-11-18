@@ -32,8 +32,6 @@
       return nodeMap.get(obj)
     }
     while (head1) {
-        debugger
-      nodeMap.set(head1, {val:head1.val});
       var curr = transation(head1)
       curr.next = transation(head1.next);
       curr.random = transation(head1.random);
