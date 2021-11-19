@@ -1,0 +1,37 @@
+<meta charset="UTF-8" />
+<title>两两交换链表中的节点</title>
+<script>
+  //算法
+  var swapPairs = function (head) {
+    if (!head || !head.next) return head;
+    var stack1 = [];
+    var stack2 = [];
+
+    var ind = 0;
+    while (head) {
+      if (ind % 2) {
+        stack2.push(head);
+      } else {
+        stack1.push(head);
+      }
+      head = head.next;
+      ind++;
+    }
+    var k = 0;
+    var newHead = { val: "head", next: null };
+    var last = newHead;
+    while (k < stack1.length) {
+      if (k === stack1.length - 1 && !stack2[k]) {
+        last.next = stack1[k];
+        stack1[k].next = null;
+        break;
+      }
+      last.next = stack2[k];
+      stack2[k].next = stack1[k];
+      last = stack1[k];
+      last.next = null;
+      k++;
+    }
+    return stack2[0];
+  };
+</script>

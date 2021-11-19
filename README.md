@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-11-09 10:33:52
- * @LastEditTime: 2021-11-12 09:29:05
+ * @LastEditTime: 2021-11-19 14:02:55
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: \zzh-statudybook\README.md
@@ -12,7 +12,13 @@
 ## 日志
 
 - 算法学习
-	- 2021.11.17 链表中倒数第k个节点
+	- 2021.11.18 两两交换链表中的节点
+		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/两两交换链表中的节点.html)
+	- 2021.11.18 交换链表中的节点
+		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/交换链表中的节点.html)
+	- 2021.11.18 复制带随机指针的链表
+		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/复制带随机指针的链表.html)
+	- 2021.11.18 链表中倒数第k个节点
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/链表中倒数第k个节点.html)
 		- 掘金 [地址](https://juejin.cn/post/7031969449276080135/)
 	- 2021.11.17 最长公共子序列
