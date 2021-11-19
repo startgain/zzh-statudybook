@@ -18,6 +18,7 @@
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/交换链表中的节点.html)
 	- 2021.11.18 复制带随机指针的链表
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/复制带随机指针的链表.html)
+		- [掘金](https://juejin.cn/post/7032335888809984030/)(11.19b补充)
 	- 2021.11.18 链表中倒数第k个节点
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/链表中倒数第k个节点.html)
 		- 掘金 [地址](https://juejin.cn/post/7031969449276080135/)
