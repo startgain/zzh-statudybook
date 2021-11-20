@@ -6,16 +6,25 @@
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: \zzh-statudybook\README.md
 -->
-
+<!-- 
+[代码]() 
+[掘金]() 
+[b站]() 
+-->
 # zzh-statudybook
 
 ## 日志
 
 - 算法学习
+	- 2021.11.19 合并K个升序链表
+		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/合并K个升序链表.html)
+		- [掘金]()
 	- 2021.11.18 两两交换链表中的节点
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/两两交换链表中的节点.html)
+		[掘金](https://juejin.cn/post/7032692365571670046)
 	- 2021.11.18 交换链表中的节点
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/交换链表中的节点.html)
+		- [掘金]()
 	- 2021.11.18 复制带随机指针的链表
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/复制带随机指针的链表.html)
 		- [掘金](https://juejin.cn/post/7032335888809984030/)(11.19b补充)

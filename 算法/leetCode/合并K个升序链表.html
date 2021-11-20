@@ -1,0 +1,89 @@
+<meta charset='UTF-8' />
+<title>合并K个升序链表</title>
+<script>
+	//算法
+//暴力循环
+	var mergeKLists = function (lists) {
+		var newList = { val: 'head', next: null }
+		var last = newList
+
+		function fundMin(lists) {
+			var min = null, index = null
+			for (var i = 0; i < lists.length; i++) {
+				var item = lists[i]
+				if (!item) continue
+				if (!min || item.val < min.val) {
+					min = item
+					index = i
+				}
+			}
+			return { min, index }
+		}
+		var { min, index } = fundMin(lists)
+		while (min) {
+			last = last.next = min
+			lists[index] = lists[index].next
+			min = fundMin(lists).min
+			index = fundMin(lists).index
+		}
+
+		return newList.next
+	};
+
+//队列分治
+	var mergeTwoList = function (a, b) {
+    if (!a || !b) {
+        return a ? a : b
+    }
+    var node1 = a
+    var node2 = b
+    var newHead = new ListNode('head')
+    var last = newHead
+
+    while (node1 && node2) {
+        if (node1.val < node2.val) {
+            last = last.next = node1
+            node1 = node1.next
+        } else {
+            last = last.next = node2
+            node2 = node2.next
+        }
+    }
+    last.next = node1 ? node1 : node2
+
+    return newHead.next
+}
+var mergeKLists = function (lists) {
+    if (lists.length === 0) return null
+    while (lists.length > 1) {
+        var node1 = lists.shift()
+        var node2 = lists.shift()
+        lists.push(mergeTwoList(node1, node2))
+    }
+    return lists[0]
+};
+	var lists = [
+		{
+			val: 1,
+			next: {
+				val: 3,
+				next: null
+			}
+		},
+		{
+			val: 2,
+			next: {
+				val: 5,
+				next: null
+			}
+		},
+		{
+			val: 4,
+			next: {
+				val: 6,
+				next: null
+			}
+		},
+	]
+	console.log(mergeKLists(lists))
+</script>
