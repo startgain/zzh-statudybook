@@ -7,9 +7,9 @@
  * @FilePath: \zzh-statudybook\README.md
 -->
 <!-- 
-[代码]() 
-[掘金]() 
-[b站]() 
+- [代码]() 
+- [掘金]() 
+- [b站]() 
 -->
 # zzh-statudybook
 
@@ -18,19 +18,24 @@
 - 算法学习
 	- 2021.11.19 合并K个升序链表
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/合并K个升序链表.html)
-		- [掘金]()
+		- [掘金](https://juejin.cn/post/7033059148526780430)(11.20补充)
+		- [b站](https://www.bilibili.com/video/BV1Sb4y1t7zu/)(11.21补充)
 	- 2021.11.18 两两交换链表中的节点
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/两两交换链表中的节点.html)
-		[掘金](https://juejin.cn/post/7032692365571670046)
+		- [掘金](https://juejin.cn/post/7032692365571670046)(11.20补充)
+		- [b站](https://www.bilibili.com/video/BV1rh41147ew/) (11.21补充)
 	- 2021.11.18 交换链表中的节点
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/交换链表中的节点.html)
-		- [掘金]()
+		- [掘金](https://juejin.cn/post/7032642194355781640)(11.20补充)
+		- [b站](https://www.bilibili.com/video/BV14f4y1M7RL/) (11.21补充)
 	- 2021.11.18 复制带随机指针的链表
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/复制带随机指针的链表.html)
-		- [掘金](https://juejin.cn/post/7032335888809984030/)(11.19b补充)
+		- [掘金](https://juejin.cn/post/7032335888809984030/)(11.19补充)
+		- [b站](https://www.bilibili.com/video/BV1u44y1Y7WK/)(11.21补充)
 	- 2021.11.18 链表中倒数第k个节点
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/链表中倒数第k个节点.html)
-		- 掘金 [地址](https://juejin.cn/post/7031969449276080135/)
+		- 掘金 [地址](https://juejin.cn/post/7031969449276080135/)(11.20补充)
+		- [b站](https://www.bilibili.com/video/BV1mS4y197Vw/) (11.21补充)
 	- 2021.11.17 最长公共子序列
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/最长公共子序列.html)
 		- 掘金 [地址](https://juejin.cn/post/7031589995194351647)
