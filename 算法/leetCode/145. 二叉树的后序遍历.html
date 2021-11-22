@@ -1,0 +1,54 @@
+<meta charset='UTF-8' />
+<title>145. 二叉树的后序遍历</title>
+<script>
+	//算法145. 二叉树的后序遍历
+	//递归
+	var postorderTraversal = function (root) {
+		var res = []
+		if (!root) return []
+		res = res.concat(postorderTraversal(root.left))
+		res = res.concat(postorderTraversal(root.right))
+		res.push(root.val)
+		return res
+	};
+	//迭代
+	var postorderTraversal = function (root) {
+		if (!root) return root
+		var stack = []
+		var res = []
+		stack.push(root)
+		while (stack.length > 0) {
+			var node = stack.pop()
+			if (!node.left && !node.right) {
+				res.push(node.val)
+				continue
+			}
+
+			var left = node.left
+			var right = node.right
+			node.left = node.right = null
+			stack.push(node)
+			if (right) {
+				stack.push(right)
+			}
+			if (left) {
+				stack.push(left)
+			}
+		}
+		return res
+	}
+	var root = {
+		val: 1,
+		left: null,
+		right: {
+			val: 2,
+			left: {
+				val: 3,
+				left: null,
+				right: null
+			},
+			right: null
+		}
+	}
+	console.log(postorderTraversal(root))
+</script>
