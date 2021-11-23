@@ -1,0 +1,84 @@
+<meta charset='UTF-8' />
+<title>227. 基本计算器 II</title>
+<script>
+	//算法
+	var calculate = function (s) {
+		s = s.trim();
+		const stack = new Array();
+		let preSign = '+';
+		let num = 0;
+		const n = s.length;
+		for (let i = 0; i < n; ++i) {
+			if (!isNaN(Number(s[i])) && s[i] !== ' ') {
+				num = num * 10 + s[i].charCodeAt() - '0'.charCodeAt();
+			}
+			if (isNaN(Number(s[i])) || i === n - 1) {
+				switch (preSign) {
+					case '+':
+						stack.push(num);
+						break;
+					case '-':
+						stack.push(-num);
+						break;
+					case '*':
+						stack.push(stack.pop() * num);
+						break;
+					default:
+						console.log(stack.pop() / num | 0)
+						stack.push(stack.pop() / num | 0);
+				}
+				preSign = s[i];
+				num = 0;
+			}
+		}
+		let ans = 0;
+		console.log(stack)
+		while (stack.length) {
+			ans += stack.pop();
+		}
+		return ans;
+	};
+
+	var calculate1 = function (s) {
+		//去掉两边以及中间的空格
+		s = s.trim()
+		s = s.replaceAll(' ', '')
+		var stack = []
+		var num = ''
+		var ope = '+'
+		for (var i = 0; i < s.length; i++) {
+			var item = s[i]
+			if (!isNaN(Number(item))) {
+				num += item
+			}
+
+			if (isNaN(Number(item)) || i === s.length - 1){
+				switch (ope) {
+					case '+':
+						stack.push(+num)
+						break
+					case '-':
+						stack.push(-num)
+						break
+					case '*':
+						stack.push(stack.pop() * num)
+						break
+					case '/':
+						stack.push(stack.pop() / num)
+				}
+				ope = item
+				num = ''
+			}
+		}
+
+		var res = 0
+
+		while (stack.length) {
+			res += stack.pop()
+		}
+		return res
+	};
+
+	var s = '3/2'
+	console.log(calculate(s))
+</script>
