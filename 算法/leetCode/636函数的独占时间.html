@@ -1,0 +1,44 @@
+<meta charset='UTF-8' />
+<title>636函数的独占时间</title>
+<script>
+	//算法
+	var exclusiveTime = function (n, logs) {
+    //存放运行的函数的id
+    var stack = []
+    //下标为函数id   值为对应函数的运行时间
+    var res = new Array(n).fill(0)
+    //上一个日志的时间节点
+    var pre = 0
+    
+    for (var i = 0; i < logs.length; i++) {
+        var item = logs[i].split(':')
+        //日志id
+        var fn_id = item[0]
+        //日志状态
+        var fn_state = item[1]
+        //日志时间点
+        var fn_time = item[2]
+    
+        if (fn_state === 'start') {
+            //如果有stack有函数则需要去更新栈顶函数运行时间
+            if (stack.length) {
+                res[stack[stack.length - 1]] += (fn_time - pre)
+            }
+            pre = fn_time
+            stack.push(fn_id)
+
+        }
+        if (fn_state === 'end') {
+            //更新当前函数运行时间
+            res[fn_id] += (fn_time - pre + 1)
+            //这里要将fn_time转为数字，否则为字符串相加
+            pre = fn_time*1 + 1
+            stack.pop()
+        }
+    }
+    return res
+};
+
+	var n = 2, logs = ["0:start:0", "1:start:2", "1:end:5", "0:end:6"]
+	console.log(exclusiveTime(n, logs))
+</script>
