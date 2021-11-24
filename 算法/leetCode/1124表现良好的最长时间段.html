@@ -1,0 +1,58 @@
+<meta charset='UTF-8' />
+<title>1124表现良好的最长时间段</title>
+<script>
+	//算法
+	var longestWPI = function (hours) {
+		var max = 0
+		for (let i = 0; i < hours.length; i++) {
+			var long = 0
+			var less = 0
+			for (let j = i; j < hours.length; j++) {
+				const item = hours[j];
+				if (item > 8) {
+					long++
+				} else {
+					less++
+				}
+				if (long > less) {
+					max = Math.max(max, long + less);
+				}
+			}
+		}
+		return max;
+	};
+
+	var longestWPI = function (hours) {
+    // 前缀和
+		//比元素多一位   0的位置为0   preSum[0, -1, -2, -1]
+    let preSum = new Array(hours.length+1).fill(0)
+    for (let i = 0; i < hours.length; i++) {
+        if (hours[i] > 8) preSum[i+1] = preSum[i] + 1
+        else preSum[i+1] = preSum[i] - 1
+    }
+
+    // 单减栈
+		//stack [0, 1, 2]
+		//找到比当前位置（从0开始）更小的下标保存在stack中
+    let stack = []
+    stack.push(0)
+    for (let i = 1; i < preSum.length; i++){
+        if (preSum[stack[stack.length-1]] > preSum[i]) stack.push(i)
+    }
+
+    // 从右到左求最大跨度
+    let max = 0
+    for (let i = preSum.length-1; i > max; i--){
+			//最低点和当前位置的前缀比   如果满足当前点的值更大  则代表 stack[stack.length-1] (这是一个下标记作stackI)  stackI - i   这段是满足条件的
+			//用折线图会比较好理解
+        while(stack.length > 0 && preSum[stack[stack.length-1]] < preSum[i]){
+            max = Math.max(max, i - stack.pop() )
+        }
+    }
+    return max
+};
+
+	var hours = [9, 9, 6, 0, 6, 6, 9]
+	var hours = [6, 6, 9]
+	console.log(longestWPI(hours));
+</script>
