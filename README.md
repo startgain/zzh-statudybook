@@ -16,6 +16,9 @@
 ## 日志
 
 - 算法学习 
+	- 2021.11.23 636函数的独占时间
+		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/636函数的独占时间.html)
+		- [掘金](https://juejin.cn/post/7034166589960224782)
 	- 2021.11.23 227. 基本计算器 II 
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/227.%20%E5%9F%BA%E6%9C%AC%E8%AE%A1%E7%AE%97%E5%99%A8%20II.html)
 		- [掘金](https://juejin.cn/post/7033825333425995807/)
