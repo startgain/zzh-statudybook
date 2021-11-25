@@ -16,10 +16,14 @@
 ## 日志
 
 - 算法学习 
-	- 2021.11.23 1124表现良好的最长时间段
+	- 2021.11.25 331验证二叉树的前序序列化
+		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/331验证二叉树的前序序列化.html)
+		- [掘金](https://juejin.cn/post/7034545652356874270/)
+		- [b站](https://www.bilibili.com/video/bv12Q4y1v7rp)
+	- 2021.11.24 1124表现良好的最长时间段
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/1124表现良好的最长时间段.html)
 		- [掘金](https://juejin.cn/post/7034208671227707428)
-	- 2021.11.23 636函数的独占时间
+	- 2021.11.24 636函数的独占时间
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/636函数的独占时间.html)
 		- [掘金](https://juejin.cn/post/7034166589960224782)
 	- 2021.11.23 227. 基本计算器 II 

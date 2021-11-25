@@ -1,0 +1,52 @@
+<meta charset='UTF-8' />
+<title>331验证二叉树的前序序列化</title>
+<script>
+//算法
+//栈
+var isValidSerialization = function (preorder) {
+    var nodeArr = preorder.split(',')
+    var stack = [1]
+    for (var i = 0; i < nodeArr.length; i++) {
+        if(stack.length===0) return false
+        var item = nodeArr[i]
+        switch(item){
+            case '#':
+                stack[stack.length-1]--
+                if(stack[stack.length-1]===0){
+                    stack.pop()
+                }
+                break;
+            default:
+                stack[stack.length-1]--
+                if(stack[stack.length-1]===0){
+                    stack.pop()
+                }
+                stack.push(2)
+                break;
+        }
+    }
+    return stack.length===0
+};
+/**
+ * @param {string} preorder
+ * @return {boolean}
+ */
+// 计数
+ var isValidSerialization = function (preorder) {
+    var nodeArr = preorder.split(',')
+    var slot = 1
+    for (var i = 0; i < nodeArr.length; i++) {
+        if(slot===0) return false
+        var item = nodeArr[i]
+        switch(item){
+            case '#':
+                slot--
+                break;
+            default:
+                slot++
+                break;
+        }
+    }
+    return slot===0
+};
+</script>
