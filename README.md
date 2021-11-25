@@ -16,6 +16,9 @@
 ## 日志
 
 - 算法学习 
+	- 2021.11.23 1124表现良好的最长时间段
+		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/1124表现良好的最长时间段.html)
+		- [掘金](https://juejin.cn/post/7034208671227707428)
 	- 2021.11.23 636函数的独占时间
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/636函数的独占时间.html)
 		- [掘金](https://juejin.cn/post/7034166589960224782)
