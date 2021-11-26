@@ -42,7 +42,8 @@ let writeFile = function (path_way, content = "") {
 
 async function start(path_way) {
   const data = await readFsync(path_way);
-  const time = '1111';
+  const time = new Date();
+  console.log(time)
   const newData = data ? "\n" + time : time;
   writeFile(path_way, newData);
 }
