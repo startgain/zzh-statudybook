@@ -16,6 +16,10 @@
 ## 日志
 
 - 算法学习 
+	- 2021.11.25 142环形链表 II
+		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/142环形链表II.html)
+		- [掘金](https://juejin.cn/post/7034545652356874270/)
+		- [b站](https://juejin.cn/post/7035266993687101453)
 	- 2021.11.25 331验证二叉树的前序序列化
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/331验证二叉树的前序序列化.html)
 		- [掘金](https://juejin.cn/post/7034545652356874270/)
