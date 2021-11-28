@@ -1,0 +1,27 @@
+<meta charset='UTF-8' />
+<title>206. 反转链表</title>
+<script>
+//算法
+var reverseList = function (head) {
+    if (!head || !head.next) return head
+
+    var next = head.next
+    var res = reverseList(head.next)
+    next.next = head
+    head.next = null
+    return res          
+};
+
+var reverseList = function (head) {
+    if (!head || !head.next) return head
+    var pre = null
+    var newHead = head
+    while(newHead){
+        var next = newHead.next
+        newHead.next = pre
+        if(!next) return newHead
+        pre = newHead
+        newHead = next
+    }
+};
+</script>

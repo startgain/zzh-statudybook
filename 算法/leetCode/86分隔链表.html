@@ -1,0 +1,26 @@
+<meta charset='UTF-8' />
+<title>86. 分隔链表</title>
+<script>
+//算法
+var partition = function (head, x) {
+    var minList = new ListNode('min')
+    var minLast = minList
+    var maxList = new ListNode('max')
+    var maxLast = maxList
+    var newHead = head
+    while (newHead) {
+        if (newHead.val < x) {
+            minLast.next = newHead
+            minLast = newHead
+        } else {
+            maxLast.next = newHead
+            maxLast = newHead
+        }
+        newHead = newHead.next
+    }
+    minLast.next = maxList.next
+    maxLast.next = null
+
+    return minList.next
+};
+</script>

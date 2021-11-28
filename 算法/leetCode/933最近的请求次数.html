@@ -1,0 +1,46 @@
+<meta charset='UTF-8' />
+<title>933. 最近的请求次数</title>
+<script>
+	//算法
+	var RecentCounter = function () {
+		this.queue = []
+	};
+
+	/** 
+	 * @param {number} t
+	 * @return {number}
+	 */
+	RecentCounter.prototype.ping = function (t) {
+		this.queue.push(t)
+		var index = 0
+		var len = this.queue.length
+		var queue = this.queue
+		for (var i = len - 1; i >= 0; i--) {
+			var item = queue[i]
+			if (t - item <= 3000) {
+				index++
+			} else {
+				break;
+			}
+		}
+		return index
+	};
+
+	var RecentCounter = function () {
+		this.queue = []
+	};
+
+	/** 
+	 * @param {number} t
+	 * @return {number}
+	 */
+	RecentCounter.prototype.ping = function (t) {
+		this.queue.push(t)
+
+		while (t - this.queue[0] > 3000) {
+			this.queue.shift()
+		}
+		return this.queue.length
+	};
+
+</script>

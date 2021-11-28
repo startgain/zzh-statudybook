@@ -1,0 +1,21 @@
+<meta charset='UTF-8' />
+<title>83. 删除排序链表中的重复元素</title>
+<script>
+//算法
+var deleteDuplicates = function(head) {
+    if(!head) return head
+    var  pre = head
+    var newHead = head
+    while(newHead){
+        var curr = newHead
+        if(pre.val===curr.val&&pre!==curr){
+            pre.next = curr.next
+        }
+        if(pre.val!==curr.val){
+            pre = curr
+        }
+        newHead = newHead.next
+    }
+    return head
+};
+</script>

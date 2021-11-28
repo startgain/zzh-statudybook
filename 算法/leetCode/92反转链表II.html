@@ -1,0 +1,73 @@
+<meta charset='UTF-8' />
+<title>92. 反转链表 II</title>
+<script>
+	//算法
+	var reverseBetween = function (head, left, right) {
+		var newHead = head
+		var index = 0
+		var pLeft, pRight, childLeft, childRight
+		while (newHead) {
+			if (index === left - 1) {
+				pLeft = newHead
+				childLeft = newHead.next
+			}
+			if (index === right) {
+				childRight = newHead
+				pRight = newHead.next
+			}
+			newHead = newHead.next
+			index++
+		}
+		pLeft.next = null
+		childRight.next = null
+		reverseList(childLeft)
+		pLeft.next = childRight
+		childLeft.next = pRight
+
+		return head
+	};
+	var reverseList = function (head) {
+		var pre = null
+		var newHead = head
+		while (newHead) {
+			var next = newHead.next
+			newHead.next = pre
+			pre = newHead
+			newHead = next
+		}
+	};
+
+	var reverseBetween = function (head, left, right) {
+		// var preHead = new ListNode('head')
+		debugger
+		var preHead = { val: 'head', next: null }
+		preHead.next = head
+		var index = 0
+		var newHead = preHead
+		var pLeft, preCurr, curr
+		while (newHead) {
+			var next = newHead.next
+			curr = newHead
+			if (index === left - 1) {
+				pLeft = newHead
+				preCurr = childLeft = newHead.next
+			}
+			if (index > left && index <= right) {
+				pLeft.next = curr
+				curr.next = childLeft
+				preCurr.next = next
+
+				childLeft = curr
+			}
+
+			newHead = next
+			index++
+		}
+		return preHead.next
+	};
+
+	// var head = { val: 'head', next: { val: 1, next: { val: 2, next: null } } }
+	var head = { val: 1, next: { val: 2, next: null } }
+	var head = { val: 1, next: { val: 2, next: { val: 3, next: { val: 4, next: { val: 5, next: null } } } } }
+	console.log(reverseBetween(head, 2, 4))
+</script>
