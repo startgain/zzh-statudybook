@@ -16,7 +16,12 @@
 ## 日志
 
 - 算法学习 
-	- 2021.11.25 142环形链表 II
+
+	- 2021.11.27 206反转链表
+		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/206反转链表.html)
+		- [掘金](https://juejin.cn/post/7035294135728734215/)
+		- [b站](https://www.bilibili.com/video/BV1Gq4y1r7UU/)
+	- 2021.11.27 142环形链表 II
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/142环形链表II.html)
 		- [掘金](https://juejin.cn/post/7034545652356874270/)
 		- [b站](https://juejin.cn/post/7035266993687101453)
