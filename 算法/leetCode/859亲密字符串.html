@@ -1,0 +1,76 @@
+<meta charset='UTF-8' />
+<title>859. 亲密字符串</title>
+<script>
+	//算法
+	var buddyStrings = function (s, goal) {
+		if (s.length !== goal.length || s.length === 1) return false
+		var diffInd1 = null, diffInd2 = null, index = 0
+		var stack = []
+		var hasRepeat = false
+		while (index < s.length) {
+			var sItem = s[index]
+			var goalItem = goal[index]
+			if (!hasRepeat) {
+				if (stack.includes(sItem)) hasRepeat = true
+				stack.push(sItem)
+			}
+			if (sItem !== goalItem) {
+				if (diffInd1 === null) {
+					diffInd1 = index
+					index++
+					continue
+				}
+				if (diffInd2 === null) {
+					diffInd2 = index
+					index++
+					continue
+				}
+				return false
+			}
+			index++
+		}
+		//相同
+		if (s === goal && s.length >= 2) {
+			if (hasRepeat) return true
+			if (!hasRepeat) return false
+		}
+		//不同
+		if (diffInd1 !== null && diffInd2 !== null && s[diffInd1] === goal[diffInd2] && s[diffInd2] === goal[diffInd1]) {
+			return true
+		}
+		return false
+	};
+	var buddyStrings = function (s, goal) {
+		if (s.length !== goal.length || s.length === 1) return false
+		var diffStr1 = '', diffStr2 = '', index = 0
+		var stack = []
+		var hasRepeat = false
+		while (index < s.length) {
+			var sItem = s[index]
+			var goalItem = goal[index]
+			if (!hasRepeat) {
+				if (stack.includes(sItem)) hasRepeat = true
+				stack.push(sItem)
+			}
+			if (sItem !== goalItem) {
+				if (diffStr1.length === 2) return false
+				diffStr1 += sItem
+				diffStr2 += goalItem
+			}
+			index++
+		}
+		//相同
+		if (s === goal && s.length >= 2) {
+			if (hasRepeat) return true
+			if (!hasRepeat) return false
+		}
+		//不同
+		if (diffStr1.length === 2 && diffStr1[0] === diffStr2[1] && diffStr2[0] === diffStr1[1]) {
+			return true
+		}
+		return false
+	};
+	var s = 'ab'
+	var goal = 'ca'
+	console.log(buddyStrings(s, goal))
+</script>

@@ -1,0 +1,18 @@
+<meta charset='UTF-8' />
+<title>面试题 17.09. 第 k 个数</title>
+<script>
+//算法
+var getKthMagicNumber = function (k) {
+    var p3 = 0,p5 = 0,p7 = 0;
+    var dp = [1]
+    for(var i = 1;i < k ;i++){
+        dp[i] = Math.min(dp[p3]*3,dp[p5]*5,dp[p7]*7)
+        if(dp[i]===dp[p3]*3) p3++
+        if(dp[i]===dp[p5]*5) p5++
+        if(dp[i]===dp[p7]*7) p7++
+    }
+
+    return dp[k-1]
+}
+console.log(getKthMagicNumber(8))
+</script>
