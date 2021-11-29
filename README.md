@@ -16,7 +16,39 @@
 ## 日志
 
 - 算法学习 
-
+	- 2021.11.28 859亲密字符串
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/859亲密字符串.html)
+		- [掘金](https://juejin.cn/post/7036036246191210533)
+	- 2021.11.28 面试题 17.09. 第 k 个数
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E9%9D%A2%E8%AF%95%E9%A2%98%2017.09.%20%E7%AC%AC%20k%20%E4%B8%AA%E6%95%B0.html)
+		- [掘金](https://juejin.cn/post/7036035856569729031)
+	- 2021.11.28 933最近的请求次数
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/933最近的请求次数.html)
+		- [掘金](https://juejin.cn/post/7035672338397921294)
+	- 2021.11.28 1670设计前中后队列
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/1670设计前中后队列.html)
+		- [掘金](https://juejin.cn/post/7035672682116939783)
+	- 2021.11.28 641设计循环双端队列
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/641设计循环双端队列.html)
+		- [掘金](https://juejin.cn/post/7035673373451485191)
+	- 2021.11.28 622设计循环队列
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/622设计循环队列.html)
+		- [掘金](https://juejin.cn/post/7035672138283483150)
+	- 2021.11.28 86分隔链表
+		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/86分隔链表.html)
+		- [掘金](https://juejin.cn/post/7035671442070962190)
+	- 2021.11.28 82删除排序链表中的重复元素II
+		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/82删除排序链表中的重复元素II.html)
+		- [掘金](https://juejin.cn/post/7035671471263318023)
+	- 2021.11.28 83删除排序链表中的重复元素
+		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/83删除排序链表中的重复元素.html)
+		- [掘金](https://juejin.cn/post/7035637406216749069)
+	- 2021.11.28 19删除链表的倒数第N个结点
+		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/19删除链表的倒数第N个结点.html)
+		- [掘金](https://juejin.cn/post/7035637554871287815)
+	- 2021.11.28 92反转链表II
+		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/92反转链表II.html)
+		- [掘金](https://juejin.cn/post/7035636861812867085)
 	- 2021.11.27 206反转链表
 		- 代码 [地址](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/206反转链表.html)
 		- [掘金](https://juejin.cn/post/7035294135728734215/)
