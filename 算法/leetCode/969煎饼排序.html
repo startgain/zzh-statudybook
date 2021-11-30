@@ -1,0 +1,49 @@
+<meta charset='UTF-8' />
+<title>969. 煎饼排序</title>
+<script>
+	//算法
+	var pancakeSort = function (arr) {
+		var isSort = true;
+		var j = 1
+		while (j < arr.length) {
+			if (arr[j - 1] > arr[j]) {
+				isSort = false
+				break
+			}
+			j++
+		}
+		if (isSort) {
+			return []
+		}
+		var max = Math.max(...arr);
+		var maxIndex = arr.findIndex(item => item === max)
+		var res = []
+		if (maxIndex === arr.length - 1) {
+			//无需处理,递归处理接下来的
+			res = [...res, ...pancakeSort(arr.splice(0, arr.length - 1))]
+		}
+		if (maxIndex === 0) {
+			res.push(arr.length)
+			arr.reverse()
+			
+			res = [...res, ...pancakeSort(arr.splice(0, arr.length - 1))]
+		}
+		if (0 < maxIndex && maxIndex < arr.length - 1) {
+			res.push(maxIndex + 1)
+			res.push(arr.length)
+			var reverseArr = arr.splice(0, maxIndex + 1)
+			reverseArr.reverse()
+			arr = [...reverseArr, ...arr]
+			arr.reverse()
+			res = [...res, ...pancakeSort(arr.splice(0, arr.length - 1))]
+		}
+		return res
+	};
+	var arr = [3, 2, 4, 1]
+	console.log(pancakeSort(arr))
+	// 3[4, 2, 3, 1]
+	// 4[1, 3, 2, 4]
+	// 2[3, 1, 2, 4]
+	// 3[2, 1, 3, 4]
+	// 2[1, 2, 3, 4]
+</script>

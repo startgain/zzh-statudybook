@@ -16,10 +16,16 @@
 ## 日志
 
 - 算法学习 
-	- 2021.11.28 859亲密字符串
+	- 2021.11.30 969煎饼排序
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/969煎饼排序.html)
+		- [掘金](https://juejin.cn/post/7036395141443092516)
+	- 2021.11.30 860柠檬水找零
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/860柠檬水找零.html)
+		- [掘金](https://juejin.cn/post/7036369407521587213)
+	- 2021.11.29 859亲密字符串
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/859亲密字符串.html)
 		- [掘金](https://juejin.cn/post/7036036246191210533)
-	- 2021.11.28 面试题 17.09. 第 k 个数
+	- 2021.11.29 面试题 17.09. 第 k 个数
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E9%9D%A2%E8%AF%95%E9%A2%98%2017.09.%20%E7%AC%AC%20k%20%E4%B8%AA%E6%95%B0.html)
 		- [掘金](https://juejin.cn/post/7036035856569729031)
 	- 2021.11.28 933最近的请求次数
