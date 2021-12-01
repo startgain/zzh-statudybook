@@ -1,0 +1,63 @@
+<meta charset='UTF-8' />
+<title>621. 任务调度器</title>
+<script>
+	//算法
+	var leastInterval = function (tasks, n) {
+		var baseData = {}
+		for (var i = 0; i < tasks.length; i++) {
+			var item = tasks[i];
+			if (baseData[item]) {
+				baseData[item].num++
+			} else {
+				baseData[item] = { num: 1, time: 0 }
+			}
+		}
+		//处理完毕
+		function findWord() {
+			var max = {
+				val: '', num: 0
+			};
+			for (var key in baseData) {
+				var item = baseData[key]
+				console.log((item.num > 0 && item.time === 0) ? '满足条件' : '不满足', item.num, item.time,)
+				if (item.num > 0 && item.time === 0) {
+					if (item.num > max.num) {
+						max.val = key
+						max.num = item.num
+					}
+				}
+			}
+			if (max.val) {
+				baseData[max.val].num--;
+				baseData[max.val].time = n + 1
+				return max.val
+			}else{
+				return null
+			}
+			
+		}
+		var res = []
+		while (tasks.length > 0) {
+			timeDeal(baseData)
+			var key = findWord()
+			if (key) {
+				var index = tasks.findIndex(o => o === key)
+				tasks.splice(index, 1)
+			}
+			res.push(key)
+		}
+		return res.length
+
+	};
+	function timeDeal(baseData) {
+		for (var key in baseData) {
+			var item = baseData[key]
+			if (item.time > 0) {
+				item.time--
+			}
+		}
+	}
+	var tasks = ["A", "A", "A", "B", "B", "B"], n = 2
+	var tasks = ["A", "A", "A", "B", "B", "B", "C", "C", "C", "D", "D", "E"], n = 2
+	console.log(leastInterval(tasks, n))
+</script>

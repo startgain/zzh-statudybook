@@ -16,6 +16,12 @@
 ## 日志
 
 - 算法学习 
+	- 2021.12.01 621任务调度器
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/621任务调度器.html)
+		- [掘金]() 待补充
+	- 2021.12.01 面试题 03.04. 化栈为队
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/面试题0304化栈为队.html)
+		- [掘金](https://juejin.cn/post/7036770068709015565)
 	- 2021.11.30 969煎饼排序
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/969煎饼排序.html)
 		- [掘金](https://juejin.cn/post/7036395141443092516)
