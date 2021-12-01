@@ -6,7 +6,7 @@ let readFsync = function (path_way, context = "") {
   return new Promise((resolve, reject) => {
     fs.access(path_way, (err) => {
       if (err) {
-        console.log("package.json不存在于当前目录中，准备新建");
+        console.log("文件不存在于当前目录中，准备新建");
         fs.appendFileSync(path_way, context, "utf-8", (err) => {
           if (err) {
             console.log("该文件不存在，重新创建失败！");
@@ -32,11 +32,11 @@ let readFsync = function (path_way, context = "") {
 };
 
 let writeFile = function (path_way, content = "") {
-  fs.appendFile(path_way, content, (err) => {
+  fs.writeFileSync(path_way, content, (err) => {
     if(err){
         console.log(err);
     }
-    console.log('读取成功')
+    console.log('写入成功')
   });
 };
 
