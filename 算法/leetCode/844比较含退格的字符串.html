@@ -1,0 +1,33 @@
+<meta charset='UTF-8' />
+<title>844. 比较含退格的字符串</title>
+<script>
+	//算法
+	var backspaceCompare = function (s, t) {
+		function dealStr(str) {
+			var index = 0;
+			var newStr = ''
+			while (index < str.length) {
+				var item = str[index];
+				if (item === '#' && newStr.length > 0) {
+					newStr = newStr.slice(0, newStr.length - 1)
+				}
+				if (item !== '#') {
+					newStr += item
+				}
+				index++
+			}
+			return newStr
+		}
+		if (dealStr(s) === dealStr(t)) {
+			return true
+		}
+		return false
+	};
+	var s = "a#c"
+	var t = "b"
+	var s = "ab##"
+	var t = "c#d#"
+	var s = "y#fo##f"
+	var t = "y#f#o##f"
+	console.log(backspaceCompare(s, t))
+</script>

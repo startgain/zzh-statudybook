@@ -1,0 +1,35 @@
+<meta charset='UTF-8' />
+<title>682. 棒球比赛</title>
+<script>
+	//算法
+	var calPoints = function (ops) {
+		var stack = []
+		var score = 0
+		while (ops.length) {
+			var item = ops.shift()
+			switch (item) {
+				case '+':
+					var num1 = stack[stack.length - 1]*1
+					var num2 = stack[stack.length - 2]*1
+					stack.push(num1 + num2)
+					score += stack[stack.length - 1]*1
+					break;
+				case 'D':
+					stack.push(stack[stack.length - 1] * 2)
+					score += stack[stack.length - 1]*1
+					break;
+				case 'C':
+					score -= stack[stack.length - 1]*1
+					stack.pop()
+					break;
+				default:
+					stack.push(item)
+					score += stack[stack.length - 1]*1
+					break;
+			}
+		}
+		return score
+	};
+	var ops = ["5", "2", "C", "D", "+"];
+	console.log(calPoints(ops))
+</script>

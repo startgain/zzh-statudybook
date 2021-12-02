@@ -1,0 +1,27 @@
+<meta charset='UTF-8' />
+<title>1021. 删除最外层的括号</title>
+<script>
+	//算法
+	var removeOuterParentheses = function (s) {
+		var score = 0
+		var newStr = ''
+		var i = 0
+		while (i < s.length) {
+			var item = s[i]
+			i++
+			if (item === '(') {
+				score += 1
+				if (score > 1) {
+					newStr += item
+				}
+			} else {
+				score -= 1
+				if (score === 0) {
+					continue
+				}
+				newStr += item
+			}
+		}
+		return newStr
+	};
+</script>
