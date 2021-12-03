@@ -19,21 +19,26 @@
 	- 2021.12.01 946验证栈序列
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/946验证栈序列.html)
 		- [掘金](https://juejin.cn/post/7037140830431215630)
+		- [b站](https://www.bilibili.com/video/BV1Fg411P7FZ/) 12.3补
 	- 2021.12.01 1021删除最外层的括号
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/1021删除最外层的括号.html)
 		- [掘金](https://juejin.cn/post/7037132327280967693)
+		- [b站](https://www.bilibili.com/video/BV1CS4y1X7Sk/) 12.3补
 	- 2021.12.01 844比较含退格的字符串
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/844比较含退格的字符串.html)
 		- [掘金](https://juejin.cn/post/7037120095365103646)
+		- [b站](https://www.bilibili.com/video/BV18M4y1w7Sb/) 12.3补
 	- 2021.12.01 682棒球比赛
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/682棒球比赛.html)
 		- [掘金](https://juejin.cn/post/7037100896165036046)
+		- [b站](https://www.bilibili.com/video/BV1XY411s7YE/) 12.3补
 	- 2021.12.01 621任务调度器
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/621任务调度器.html)
 		- [掘金]() 待补充
 	- 2021.12.01 面试题 03.04. 化栈为队
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/面试题0304化栈为队.html)
 		- [掘金](https://juejin.cn/post/7036770068709015565)
+		- [b站](https://www.bilibili.com/video/BV1SY411s7VA/) 12.3补
 	- 2021.11.30 969煎饼排序
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/969煎饼排序.html)
 		- [掘金](https://juejin.cn/post/7036395141443092516)
