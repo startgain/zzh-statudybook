@@ -1,0 +1,28 @@
+<meta charset='UTF-8' />
+<title>1249. 移除无效的括号</title>
+<script>
+//算法
+var minRemoveToMakeValid = function (s) {
+    var res = s.split('')
+    var stack = []
+    for (var i = 0; i < s.length; i++) {
+        var item = s[i]
+        if (item === '(') {
+            stack.push([item, i])
+        }
+        if (item === ')') {
+            if (stack.length > 0 && stack[stack.length - 1][0] === '(') {
+                stack.pop()
+            } else {
+                stack.push([item, i])
+            }
+        }
+    }
+    for (var j = stack.length-1; j >=0 ; j--) {
+        var item = stack[j]
+        //res.splice(item[1],1)//超过10%
+        res[item[1]] = ''//超过75%
+    }
+    return res.join('')
+};
+</script>

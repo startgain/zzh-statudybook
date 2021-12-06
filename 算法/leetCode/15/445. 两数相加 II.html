@@ -1,0 +1,75 @@
+<meta charset='UTF-8' />
+<title>445. 两数相加 II</title>
+<script>
+//算法 
+//js  表达数字长度不够  2 * 53次方   64位表达法  1位正负  11位指数  52位数字
+var addTwoNumbers = function(l1, l2) {
+    var p1 = l1
+    var val1 = ''
+    while(p1){
+        val1+=p1.val
+        p1 = p1.next
+    }
+    var p2 = l2
+    var val2 = ''
+    while(p2){
+        val2+=p2.val
+        p2 = p2.next
+    }
+    var total = (val1*1 + val2*1)+''
+    var newHead
+    for(var i = total.length-1;i >= 0; i--){
+        var item = total[i]
+        var currNode = new ListNode(item)
+        if(!newHead) newHead = currNode
+        currNode.next = newHead
+        newHead = currNode
+    }
+    return newHead
+};
+
+var addTwoNumbers = function (l1, l2) {
+    var stack1 = []
+    var stack2 = []
+    var p1 = l1
+    var p2 = l2
+    while (p1) {
+        stack1.push(p1.val)
+        p1 = p1.next
+    }
+    
+    while (p2) {
+        stack2.push(p2.val)
+        p2 = p2.next
+    }
+    var res = null
+    var pre = 0
+    var curr = 0
+    while (stack1.length || stack2.length) {
+        var pop1 = stack1.pop()
+        var pop2 = stack2.pop()
+        var num1 = pop1 ? pop1 * 1 : 0
+        var num2 = pop2 ? pop2 * 1 : 0
+        var total = pre ? num1 + num2 + pre : num1 + num2
+
+        pre = 0
+        if (total >= 10) {
+            curr = total % 10
+            pre = (total - curr) / 10
+        } else {
+            curr = total
+        }
+        var newHead = new ListNode(curr)
+        newHead.next = res
+        res = newHead
+        curr = 0
+    }
+    if(pre){
+        var newHead = new ListNode(pre)
+        newHead.next = res
+        res = newHead
+    }
+    return res
+};
+
+</script>

@@ -16,6 +16,12 @@
 ## 日志
 
 - 算法学习 
+	- 2021.12.06 1249. 移除无效的括号
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/1249.%20%E7%A7%BB%E9%99%A4%E6%97%A0%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7.html)
+		- [掘金](https://juejin.cn/post/7038649825490911245/)
+	- 2021.12.06 445. 两数相加 II
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/445.%20%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0%20II.html)
+		- [掘金](https://juejin.cn/post/7038649146898661406)
 	- 2021.12.01 946验证栈序列
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/946验证栈序列.html)
 		- [掘金](https://juejin.cn/post/7037140830431215630)
