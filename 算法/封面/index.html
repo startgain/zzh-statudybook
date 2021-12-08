@@ -42,10 +42,23 @@
 		color: #ffffff;
 		box-shadow: 0 0 20px 19px rgb(100 141 121 / 60%);
 	}
+	.download{
+		display:block;
+		width:130px;
+		height: 50px;
+		border: 1px solid #fff;
+		background:lightblue;
+		color: #000;
+		text-align: center;
+		line-height: 50px;
+		text-decoration:none;
+		border-radius: 10px;
+		margin: 0 auto;;
+	}
 </style>
 
 <body>
-	<div>
+	<div class="imgBox">
 		<!-- <p>331. 验证二叉树的前序序列化</p> -->
 		<!-- <p>142. 环形链表 II</p> -->
 		<!-- <p>206. 反转链表</p> -->
@@ -68,15 +81,27 @@
 		<!-- <p>1021. 删除最外层的括号</p> -->
 		<!-- <p>946. 验证栈序列</p> -->
 		<!-- <p>445. 两数相加 II</p> -->
-		<p>1249. 移除无效的括号</p>
+		<!-- <p>1249. 移除无效的括号</p> -->
+		<!-- <p class="imgTitle">633. 平方数之和</p> -->
+		<!-- <p>707. 设计链表</p> -->
+		<p>143. 重排链表</p>
 	</div>
-	<!-- <a href="" download="">下载图片</a> -->
+	<a class="download"
+		href="./img/wuya.png"
+		download="aaa">下载图片</a>
+
 </body>
 <script src="./js/html2canvas.min.js"></script>
 <script>
+
+
 	var img = document.querySelector('div');
-	html2canvas(document.body,{width:1303,height:734}).then(function (canvas) {
-		document.body.appendChild(canvas);
+	html2canvas(document.body, { width: 1303, height: 734 }).then(function (canvas) {
+		var btn = document.querySelector('.download');
+		document.querySelector('.imgBox').style.display = 'none';
+		document.body.insertBefore(canvas,btn);
+		document.querySelector('.download').href = canvas.toDataURL('image/png')
+		document.querySelector('.download').download = document.querySelector('p').innerText + '.png'
 	});
 </script>
 

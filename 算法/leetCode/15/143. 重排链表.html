@@ -1,0 +1,24 @@
+<meta charset='UTF-8' />
+<title>143. 重排链表</title>
+<script>
+	//算法
+	var reorderList = function (head) {
+		var stack = []
+		var p = head
+		while (p) {
+			stack.push(p)
+			p = p.next
+		}
+		var newHead = new ListNode('head')
+		var pre = newHead
+		while (stack.length) {
+			var first = stack.shift()
+			var last = stack.pop() || null
+			first.next = last
+			pre.next = first
+			pre = last
+		}
+		if (pre) pre.next = null
+		return newHead.next
+	};
+</script>
