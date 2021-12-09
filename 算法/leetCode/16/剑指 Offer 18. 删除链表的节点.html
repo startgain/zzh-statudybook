@@ -1,0 +1,16 @@
+<meta charset='UTF-8' />
+<title>剑指 Offer 18. 删除链表的节点</title>
+<script>
+	//算法
+	var deleteNode = function (head, val) {
+		var p = head
+		while (p) {
+			if (p.val === val) return p.next
+			if (p.next && p.next.val === val) {
+				p.next = p.next.next
+			}
+			p = p.next
+		}
+		return head
+	};
+</script>

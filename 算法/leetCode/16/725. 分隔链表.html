@@ -1,0 +1,38 @@
+<meta charset='UTF-8' />
+<title>725. 分隔链表</title>
+<script>
+	//算法
+	var splitListToParts = function (head, k) {
+		var res = []
+		var p = head
+		var len = 0
+		while (p) {
+			len++
+			p = p.next
+		}
+
+		var yu = len % k
+		var nums = (len - yu) / k
+
+		while (res.length < k) {
+			var total = yu > 0 ? nums + 1 : nums
+			yu > 0 ? yu-- : ''
+			var newHead = head
+			while (total > 1) {
+				if (newHead) newHead = newHead.next
+				total--
+			}
+			if (newHead) {
+				var next = newHead.next
+				res.push(head)
+				head = newHead.next
+				newHead.next = null
+			} else {
+				res.push(null)
+			}
+		}
+		return res
+	};
+	var head = { val: 1, next: { val: 2, next: { val: 3, next: { val: 4, next: null } } } }
+	console.log(splitListToParts(head, 3))
+</script>

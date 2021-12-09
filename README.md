@@ -16,6 +16,16 @@
 ## 日志
 
 - 算法学习 
+
+	- 2021.12.09 剑指 Offer 18. 删除链表的节点
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E5%89%91%E6%8C%87%20Offer%2018.%20%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9.html)
+		- [掘金]()
+	- 2021.12.09 725. 分隔链表
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/725.%20%E5%88%86%E9%9A%94%E9%93%BE%E8%A1%A8.html)
+		- [掘金](https://juejin.cn/post/7039754809972359176)
+	- 2021.12.09 面试题 02.04. 分割链表
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E9%9D%A2%E8%AF%95%E9%A2%98%2002.04.%20%E5%88%86%E5%89%B2%E9%93%BE%E8%A1%A8.html)
+		- [掘金](https://juejin.cn/post/7039745591995269133)
 	- 2021.12.07 707. 设计链表
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/707.%20%E8%AE%BE%E8%AE%A1%E9%93%BE%E8%A1%A8.html)
 		- [掘金](https://juejin.cn/post/7039376057266339853)

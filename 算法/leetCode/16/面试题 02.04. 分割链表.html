@@ -1,0 +1,26 @@
+<meta charset='UTF-8' />
+<title>面试题 02.04. 分割链表</title>
+<script>
+//算法
+var partition = function(head, x) {
+    var left = new ListNode('left')
+    var min = left
+    var right = new ListNode('right')
+    var max = right
+   
+    while(head){
+        if(head.val<x) {
+            min.next = head
+            min = head
+        }else {
+            max.next = head
+            max = head
+        }
+        head=head.next
+    }
+    min.next = right.next
+    if(max) max.next = null
+
+    return left.next
+};
+</script>
