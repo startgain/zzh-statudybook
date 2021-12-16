@@ -1,0 +1,18 @@
+<meta charset='UTF-8' />
+<title>222. 完全二叉树的节点个数</title>
+<script>
+//算法
+var countNodes = function(root) {
+    var nodeNum = 0
+    
+    function totalNum(root){
+        if(root){
+            nodeNum+=1
+            totalNum(root.left)
+            totalNum(root.right)
+        }
+    }
+    totalNum(root)
+    return nodeNum
+};
+</script>

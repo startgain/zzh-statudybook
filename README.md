@@ -1,11 +1,3 @@
-<!--
- * @Author: your name
- * @Date: 2021-11-09 10:33:52
- * @LastEditTime: 2021-11-19 14:02:55
- * @LastEditors: Please set LastEditors
- * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- * @FilePath: \zzh-statudybook\README.md
--->
 <!-- 
 - [代码]() 
 - [掘金]() 
@@ -14,20 +6,33 @@
 # zzh-statudybook
 
 ## 日志
-
 - 算法学习 
-
+	- 2021.12.15 222. 完全二叉树的节点个数
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/17/222.%20%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%8A%82%E7%82%B9%E4%B8%AA%E6%95%B0.html)
+		- [掘金](https://juejin.cn/post/7041599568219209736)
+	- 2021.12.15 剑指 Offer 10- I. 斐波那契数列
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/17/%E5%89%91%E6%8C%87%20Offer%2010-%20I.%20%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97.html)
+		- [掘金](https://juejin.cn/post/7040338916490248223)
+	- 2021.12.15 105. 从前序与中序遍历序列构造二叉树
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/17/105.%20%E4%BB%8E%E5%89%8D%E5%BA%8F%E4%B8%8E%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91.html)
+		- [掘金](https://juejin.cn/post/7041985472540704799)
+	- 2021.12.15 779. 第K个语法符号
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/17/779.%20%E7%AC%ACK%E4%B8%AA%E8%AF%AD%E6%B3%95%E7%AC%A6%E5%8F%B7.html)
+		- [掘金](https://juejin.cn/post/7041594069830598669)
+	- 2021.12.15 112. 路径总和
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/17/112.%20%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C.html)
+		- [掘金](https://juejin.cn/post/7041562262507061262)
 	- 2021.12.09 剑指 Offer 18. 删除链表的节点
-		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E5%89%91%E6%8C%87%20Offer%2018.%20%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9.html)
-		- [掘金]()
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/16/%E5%89%91%E6%8C%87%20Offer%2018.%20%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9.html)
+		- [掘金](https://juejin.cn/post/7042134325172633631)
 	- 2021.12.09 725. 分隔链表
-		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/725.%20%E5%88%86%E9%9A%94%E9%93%BE%E8%A1%A8.html)
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/16/725.%20%E5%88%86%E9%9A%94%E9%93%BE%E8%A1%A8.html)
 		- [掘金](https://juejin.cn/post/7039754809972359176)
 	- 2021.12.09 面试题 02.04. 分割链表
-		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E9%9D%A2%E8%AF%95%E9%A2%98%2002.04.%20%E5%88%86%E5%89%B2%E9%93%BE%E8%A1%A8.html)
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/16/%E9%9D%A2%E8%AF%95%E9%A2%98%2002.04.%20%E5%88%86%E5%89%B2%E9%93%BE%E8%A1%A8.html)
 		- [掘金](https://juejin.cn/post/7039745591995269133)
 	- 2021.12.07 707. 设计链表
-		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/707.%20%E8%AE%BE%E8%AE%A1%E9%93%BE%E8%A1%A8.html)
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/16/707.%20%E8%AE%BE%E8%AE%A1%E9%93%BE%E8%A1%A8.html)
 		- [掘金](https://juejin.cn/post/7039376057266339853)
 	- 2021.12.07 143. 重排链表
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/143.%20%E9%87%8D%E6%8E%92%E9%93%BE%E8%A1%A8.html)

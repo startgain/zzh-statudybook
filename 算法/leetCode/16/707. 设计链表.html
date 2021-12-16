@@ -1,0 +1,109 @@
+<meta charset='UTF-8' />
+<title>112. 路径总和</title>
+<script>
+	//算法
+	var MyLinkedList = function () {
+    this.Head = {
+        val: 'head',
+        next: null
+    }
+    return this.Head.next
+};
+
+/** 
+ * @param {number} index
+ * @return {number}
+ */
+MyLinkedList.prototype.get = function (index) {
+    if (index < 0) return -1
+    var i = 0
+    var node = this.Head.next
+    while(node){
+        if(i===index) return node.val
+        node = node.next
+        i++
+    }
+    return -1
+};
+
+/** 
+ * @param {number} val
+ * @return {void}
+ */
+MyLinkedList.prototype.addAtHead = function (val) {
+    var newNode = {
+        val,
+        next:this.Head.next
+    }
+    this.Head.next = newNode
+};
+
+/** 
+ * @param {number} val
+ * @return {void}
+ */
+MyLinkedList.prototype.addAtTail = function (val) {
+    var lastNode = this.lastNode()
+    lastNode.next = {
+        val,
+        next:null
+    }
+};
+
+MyLinkedList.prototype.lastNode = function (val) {
+    var node = this.Head
+    while(node){
+        if(!node.next) return node
+        node = node.next
+    }
+};
+
+/** 
+ * @param {number} index 
+ * @param {number} val
+ * @return {void}
+ */
+MyLinkedList.prototype.addAtIndex = function (index, val) {
+    if(index<=0) this.addAtHead(val)
+    var node = this.Head.next
+    var i = 0
+    while(node){
+        if(i===index-1){
+            var next = node.next
+            var newNode = {val,next:null}
+            newNode.next = next
+            node.next = newNode
+            break
+        }
+        node = node.next
+        i++
+    }
+};
+
+/** 
+ * @param {number} index
+ * @return {void}
+ */
+MyLinkedList.prototype.deleteAtIndex = function (index) {
+    var i = -1
+    var node = this.Head
+    while(node){
+        if(i===index-1&&node.next){
+            node.next = node.next.next
+            break
+        }
+        node = node.next
+        i++
+    }
+};
+
+/**
+ * Your MyLinkedList object will be instantiated and called as such:
+ * var obj = new MyLinkedList()
+ * var param_1 = obj.get(index)
+ * obj.addAtHead(val)
+ * obj.addAtTail(val)
+ * obj.addAtIndex(index,val)
+ * obj.deleteAtIndex(index)
+ */
+</script>
