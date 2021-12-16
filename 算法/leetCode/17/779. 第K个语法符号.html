@@ -1,0 +1,25 @@
+<meta charset='UTF-8' />
+<title>779. 第K个语法符号</title>
+<script>
+//算法
+var kthGrammar = function (n, k) {
+    if (n === 1 && k === 1) return '0'
+    var treeStack = []
+    while (n > 1) {
+        var pos = k % 2 === 0 ? 1 : 0
+        var opt = [n, k, pos]
+        k = Math.ceil(k / 2)
+        treeStack.push(opt)
+        n--
+    }
+    var curr = '0'
+    while (treeStack.length) {
+        var item = treeStack.pop()
+        var newCurr = curr === '1' ? '10' : '01'
+        var index = item[2]
+        curr = newCurr[index]
+    }
+    return curr
+};
+
+</script>

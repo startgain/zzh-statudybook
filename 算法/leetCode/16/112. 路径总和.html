@@ -1,0 +1,24 @@
+<meta charset='UTF-8' />
+<title>112. 路径总和</title>
+<script>
+	//算法
+	var hasPathSum = function (root, targetSum) {
+		var queue = [root]
+		while (queue.length) {
+			var item = queue.shift()
+			if (item.left) {
+				item.left.val += item.val
+				queue.push(item.left)
+			}
+			if (item.right) {
+				item.right.val += item.val
+				queue.push(item.right)
+			}
+			if (!item.left && !item.right && item === targetSum) {
+				return true
+			}
+		}
+		return false
+	};
+	// var root = {}
+</script>

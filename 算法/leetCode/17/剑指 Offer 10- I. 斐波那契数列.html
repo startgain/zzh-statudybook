@@ -1,0 +1,21 @@
+<meta charset='UTF-8' />
+<title>剑指 Offer 10- I. 斐波那契数列</title>
+<script>
+	//算法
+	var fib = function (n) {
+		var m = 1000000007
+		var p = 0
+		var q = 1
+		var curr
+		if (n === 0) return 0
+		if (n === 1) return 1
+		var index = 2
+		while (index <= n) {
+			curr = (p + q) % m
+			p = q
+			q = curr
+			index++
+		}
+		return curr
+	};
+</script>

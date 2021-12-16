@@ -1,0 +1,61 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-12-16 01:02:04
+ * @LastEditTime: 2021-12-16 01:39:32
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \zzh-statudybook\算法\leetCode\17\105. 从前序与中序遍历序列构造二叉树.html
+-->
+<meta charset='UTF-8' />
+<title>105. 从前序与中序遍历序列构造二叉树</title>
+<script>
+	//算法
+
+	function TreeNode(val, left, right) {
+		this.val = (val === undefined ? 0 : val)
+		this.left = (left === undefined ? null : left)
+		this.right = (right === undefined ? null : right)
+	}
+
+	/**
+	 * @param {number[]} preorder
+	 * @param {number[]} inorder
+	 * @return {TreeNode}
+	 */
+	var buildTree = function (preorder, inorder) {
+		//通过前序遍历的首节点来获取根节点
+		var rootNode = preorder[0]
+		//通过findIndex来获取中序遍历中rootNode的位置信息
+		var rootIndex = inorder.findIndex(item => item === rootNode)
+		//根据rootIndex来获取左子树的前序遍历结果
+		var leftChildPre = preorder.slice(1, 1 + rootIndex)
+		//同理获取右子树的前序遍历结果
+		var rightChildPre = preorder.slice(1 + rootIndex)
+		//根据rootIndex来获取左子树的中序遍历结果
+		var leftChildOrder = inorder.slice(0, rootIndex)
+		//同理获取右子树的中序遍历结果
+		var rightChildOrder = inorder.slice(1 + rootIndex)
+		//最后声明两个变量来保存左子树和右子树的还原结果
+		var leftChildRoot, rightChildRoot
+		//重点，递归的出口
+		//如果左子树的节点数量小于等于1，那么只有一个节点或者为null
+		if (leftChildPre.length <= 1) {
+			//如果左子树有节点则直接生成一颗单节点的树 ， 否则为null
+			leftChildRoot = leftChildPre.length > 0 ? new TreeNode(leftChildPre[0]) : null
+		} else {
+			//如果节点数量大于1则需要继续递归处理
+			leftChildRoot = buildTree(leftChildPre, leftChildOrder)
+		}
+		//同上
+		if (rightChildPre.length <= 1) {
+			rightChildRoot = rightChildPre.length > 0 ? new TreeNode(rightChildPre[0]) : null
+		} else {
+			rightChildRoot = buildTree(rightChildPre, rightChildOrder)
+		}
+		//最后只需要把左右子树衔接在根节点下即可
+		var root = new TreeNode(rootNode, leftChildRoot, rightChildRoot)
+
+		return root
+		var preorder = [1, 2, 3], inorder = [3, 2, 1]
+		console.log(buildTree(preorder, inorder))
+</script>
