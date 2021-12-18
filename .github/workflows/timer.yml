@@ -16,7 +16,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  getDate:
+  start:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -32,9 +32,11 @@ jobs:
       - name: npm install
         run: npm install
       # 执行脚本
-      - name: shell脚本
+      - name: 执行脚本
         run: |
-          ./update.sh
+          node ./算法/autoGenerate/bilibili/index.js
+          node ./算法/autoGenerate/juejin/index.js
+          node ./算法/autoGenerate/generateREADME.js 
       # git 提交文件
       - name: Commit files
         run: |
