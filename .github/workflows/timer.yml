@@ -5,10 +5,10 @@ name: timer
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
-  # schedule:
+  schedule:
     # * is a special character in YAML so you have to quote this string
-    # 定时任务每分钟执行一次
-    # - cron:  '* * * * *'
+    # 定时任务每分钟执行一次 分别代表分(0-59)、时(0-23)、天(1-31)、月(1-12)、周(0-6)
+    - cron:  '0 3 * * *'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -30,14 +30,14 @@ jobs:
         run: echo Hello, world!
       # 执行脚本
       - name: get price
-        run: node ./算法/autoGenerate/generate.js
+        run: ./update.sh
       # git 提交文件
       - name: Commit files
         run: |
           git config --local user.email "yufei0453@qq.com"
           git config --local user.name "Action"
           git add .
-          git commit -m "获取当前时间" #动态提交信息
+          git commit -m "每日自动更新README.md" #动态提交信息
       # Runs a set of commands using the runners shell
       # 推送到github仓库
       - name: Push changes
