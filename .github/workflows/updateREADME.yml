@@ -50,7 +50,7 @@ jobs:
           git config --local user.email "yufei0453@qq.com"
           git config --local user.name "Action"
           git add .
-          git commit -m "更新README.md:`date '+%Y-%m-%d %H:%M:%S'`" #动态提交信息
+          git commit -m "`date '+%Y-%m-%d %H:%M:%S'` 更新README.md" #动态提交信息
       # Runs a set of commands using the runners shell
       # 推送到github仓库
       - name: Push changes
