@@ -1,22 +1,83 @@
 const getFileInfo = require("./getAllFileInfo")
 const fs = require("fs")
+const path = require("path")
+//补丁map表 替换名称
+const replaceMap = require("./utils/replaceVal")
+const replacejj = replaceMap.juejin
+const replacebl = replaceMap.bili
 
+//所有本地文件信息
 const allFillInfo = getFileInfo('算法/leetCode')
-var fileContent = fs.readFileSync('README.md', "utf8")
-// console.log(fileContent)
-function generatorMd(fileData){
-	console.log(fileData)
-	fileData.sort((a,b)=>b.birthTimeMs-a.birthTimeMs)
-	if(!fileData) return
+// console.log('allFillInfo>>>',allFillInfo)
+var juejinData = require("./juejin/jsonData/juejin.json")
+var bilibiliData = require("./bilibili/jsonData/bilibili.json")
+// console.log('juejinData的长度',juejinData.length)
+// console.log('bilibiliData',bilibiliData.length)
+var jjss = 0
+var blss = 0
+var ss = []
+function findAddress(data, name, from) {
+	var res = data.find(item => {
+		var prefix = ''
+		if (from === 'bl') {
+			var prefix = '程序员必刷算法题：'
+			name = replacebl[name]?replacebl[name]:name
+			return (item.title === prefix + name) || item.title === name
+		} else {
+			prefix = '[路飞]_程序员必刷力扣题: '
+			name = replacejj[name]?replacejj[name]:name
+			return (item.title.trim() === prefix + name) || item.title.trim() === name || item.title.trim().endsWith(name)
+		}
+	})
+	var resIndex = data.findIndex(item => {
+		var prefix = ''
+		if (from === 'bl') {
+			var prefix = '程序员必刷算法题：'
+			return (item.title === prefix + name) || item.title === name
+		} else {
+			prefix = '[路飞]_程序员必刷力扣题: '
+			if(name === 'k个一组翻转链表'){
+				name = 'K 个一组翻转链表'
+			}
+			return (item.title.trim() === prefix + name) || item.title.trim() === name || item.title.trim().endsWith(name)
+		}
+	})
+	var result = res ? res.url : ''
+	if (from === 'jj' && result) {
+		ss.push('[路飞]_程序员必刷力扣题: ' + name)
+		data.splice(resIndex, 1)
+		jjss++
+	}
+	if (from === 'bl' && result) {
+		// ss.push('程序员必刷算法题：' + name)
+		// data.splice(resIndex, 1)
+		blss++
+	}
+	return result
+}
+function generatorMd(fileData) {
+	fileData.sort((a, b) => b.birthTimeMs - a.birthTimeMs)
+	if (!fileData) return
 	var baseTemp = "# zzh-statudybook \n \n## 日志 \n- 算法学习\n"
 	var itemTemp = ''
-	fileData.forEach(item=>{
-		var itemTempBase = `	- ${item.birthTime} ${item.name}\n		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/${encodeURI(item.path)})\n		- [掘金]()\n		- [b站]()\n`
+	fileData.forEach(item => {
+		var date = `	- ${item.importantDate ? item.importantDate : item.birthTime} ${item.name}\n`
+		var gitCode = `		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/${encodeURI(item.path)})\n`
+		var jjAddress = findAddress(juejinData, item.name, 'jj')
+		var juejin = `		- [掘金](${jjAddress})\n`
+		var blAddress = findAddress(bilibiliData, item.name, 'bl')
+		var bilibili = `		- [b站](${blAddress})\n`
+		var itemTempBase = date + gitCode + (jjAddress ? juejin : '') + (blAddress ? bilibili : '')
+		// console.log('>>>',itemTempBase)
 		//拼接文件模板详情
-		itemTemp+=itemTempBase
-		
+		itemTemp += itemTempBase
 	})
-	fs.writeFileSync('README3.md', baseTemp+itemTemp)
+	// console.log('jjss', jjss)
+	// console.log('blss', blss)
+	// console.log('fail', juejinData.length, juejinData)
+	// console.log('fail', bilibiliData.length, bilibiliData)
+	fs.writeFileSync(path.join(__dirname,'../../README.md') , baseTemp + itemTemp)
+	console.log('README.md文件生成成功！！！')
 }
 
 generatorMd(allFillInfo)

@@ -1,0 +1,27 @@
+{
+  "name": "zzh-statudybook",
+  "version": "1.0.0",
+  "description": "<!-- \r - [代码]() \r - [掘金]() \r - [b站]() \r -->\r # zzh-statudybook",
+  "main": "index.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
+    "moment": "^2.29.1",
+    "puppeteer": "^13.0.0",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/startgain/zzh-statudybook.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/startgain/zzh-statudybook/issues"
+  },
+  "homepage": "https://github.com/startgain/zzh-statudybook#readme"
+}

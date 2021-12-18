@@ -53,6 +53,8 @@ function fileInfo(path) {
 	var birthTime = dateFormatter('YYYY.MM.DD',info.birthtime)
 	
 	var fileContent = fs.readFileSync(path, "utf8")
+	var importantDateReg = /<\!-- (日期:(.*)) -->/
+	var importantDate = fileContent.match(importantDateReg)&&fileContent.match(importantDateReg)[1]
 	var regJuejin = /<\!-- (\[掘金\](.*)) -->/
 	var regBiLi = /<\!-- (\[b站\](.*)) -->/
 	var jueJin = fileContent.match(regJuejin)&&fileContent.match(regJuejin)[1]
@@ -66,6 +68,7 @@ function fileInfo(path) {
 		birthTimeMs:parseInt(info.birthtimeMs),
 		jueJin,
 		biLi,
+		importantDate
 	}
 }
 
