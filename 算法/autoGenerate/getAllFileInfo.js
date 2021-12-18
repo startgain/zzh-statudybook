@@ -3,6 +3,7 @@ var dateFormatter = require('./utils/dateFormatter');
 
 //打印目录结构 获取文件信息
 function treeAndInfo(path, num) {
+	var catalogue = []
 	num = num ? num : 1;
 	let str = '';
 	for (var i = 0; i < num - 1; i++) {
@@ -21,7 +22,7 @@ function treeAndInfo(path, num) {
 		let isFile = stats.isFile();
 		if (isFile) {
 			//文件目录
-			console.log(str + item);
+			catalogue.push(str + item)
 			fileList.push({ path: path + '/' + item })
 		} else {
 			var dirItem = { path: path + '/' + item, num: num + 1, name: item }
@@ -37,7 +38,7 @@ function treeAndInfo(path, num) {
 	dirList.forEach((item, index) => {
 		const { name, path, num } = item
 		//文件夹目录
-		console.log(str + name);
+		catalogue.push(str + name)
 		const fileItemList = treeAndInfo(path, num)
 		fileList = [...fileList, ...fileItemList]
 	})
@@ -48,17 +49,23 @@ function fileInfo(path) {
 	//获取名称
 	var name = path.match(nameReg)[1]
 	const info = fs.statSync(path, { bigint: true })
+
 	//获取时间
 	var lastTime = dateFormatter('YYYY.MM.DD',info.atime)
 	var birthTime = dateFormatter('YYYY.MM.DD',info.birthtime)
-	
+	console.log('atime',info.atime)
+	console.log('mtime',info.mtime)
+	console.log('ctime',info.ctime)
+	console.log('birthtime',info.birthtime)
 	var fileContent = fs.readFileSync(path, "utf8")
 	var importantDateReg = /<\!-- (日期:(.*)) -->/
-	var importantDate = fileContent.match(importantDateReg)&&fileContent.match(importantDateReg)[1]
+	var importantDate = fileContent.match(importantDateReg)&&fileContent.match(importantDateReg)[2]
 	var regJuejin = /<\!-- (\[掘金\](.*)) -->/
 	var regBiLi = /<\!-- (\[b站\](.*)) -->/
 	var jueJin = fileContent.match(regJuejin)&&fileContent.match(regJuejin)[1]
 	var biLi= fileContent.match(regBiLi)&&fileContent.match(regBiLi)[1]
+
+	// console.log('>>>>>',info.birthTime,importantDate)
 	return {
 		name,
 		path, 

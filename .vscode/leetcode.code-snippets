@@ -9,8 +9,6 @@
 	"Print to console": {
 		"prefix": "lc",
 		"body": [
-			"<!-- [掘金]() -->"
-			"<!-- [b站]() -->"
 			"<meta charset='UTF-8' />"
 			"<title>标题</title>"
 			"<script>"

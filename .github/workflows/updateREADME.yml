@@ -22,6 +22,13 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      # 输出IP
+      - name: IP
+        run: sudo curl ifconfig.me
+      # 设置服务器时区为东八区 
+      - name: Set time zone
+        run: sudo timedatectl set-timezone 'Asia/Shanghai'
+
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
@@ -43,7 +50,7 @@ jobs:
           git config --local user.email "yufei0453@qq.com"
           git config --local user.name "Action"
           git add .
-          git commit -m "每日自动更新README.md" #动态提交信息
+          git commit -m "更新README.md:`date '+%Y-%m-%d %H:%M:%S'`" #动态提交信息
       # Runs a set of commands using the runners shell
       # 推送到github仓库
       - name: Push changes
