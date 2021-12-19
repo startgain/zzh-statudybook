@@ -1,5 +1,6 @@
-var fs = require('fs');
-var dateFormatter = require('./utils/dateFormatter');
+const fs = require('fs');
+const dateFormatter = require('./utils/dateFormatter');
+const checkFile = require('./utils/checkFile');
 
 //打印目录结构 获取文件信息
 function treeAndInfo(path, num) {
@@ -53,17 +54,14 @@ function fileInfo(path) {
 	//获取时间
 	var lastTime = dateFormatter('YYYY.MM.DD',info.atime)
 	var birthTime = dateFormatter('YYYY.MM.DD',info.birthtime)
-	console.log('atime',info.atime)
-	console.log('mtime',info.mtime)
-	console.log('ctime',info.ctime)
-	console.log('birthtime',info.birthtime)
-	var fileContent = fs.readFileSync(path, "utf8")
-	var importantDateReg = /<\!-- (日期:(.*)) -->/
-	var importantDate = fileContent.match(importantDateReg)&&fileContent.match(importantDateReg)[2]
-	var regJuejin = /<\!-- (\[掘金\](.*)) -->/
-	var regBiLi = /<\!-- (\[b站\](.*)) -->/
-	var jueJin = fileContent.match(regJuejin)&&fileContent.match(regJuejin)[1]
-	var biLi= fileContent.match(regBiLi)&&fileContent.match(regBiLi)[1]
+	// console.log('atime',info.atime)
+	// console.log('mtime',info.mtime)
+	// console.log('ctime',info.ctime)
+	// console.log('birthtime',info.birthtime)
+	var checkItem = new checkFile(path)
+	var importantDate = checkItem.checkDate()
+	var jueJin = checkItem.jueJin()
+	var biLi= checkItem.biLi()
 
 	// console.log('>>>>>',info.birthTime,importantDate)
 	return {
