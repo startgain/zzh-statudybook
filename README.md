@@ -2,6 +2,9 @@
  
 ## 日志 
 - 算法学习
+	- 2021.12.19 19. 删除链表的倒数第 N 个结点
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/19.%20%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%AC%20N%20%E4%B8%AA%E7%BB%93%E7%82%B9.html)
+		- [掘金](https://juejin.cn/post/7035637554871287815)
 	- 2021.12.16 105. 从前序与中序遍历序列构造二叉树
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/17/105.%20%E4%BB%8E%E5%89%8D%E5%BA%8F%E4%B8%8E%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91.html)
 		- [掘金](https://juejin.cn/post/7041985472540704799)
@@ -93,9 +96,6 @@
 	- 2021.11.29 933. 最近的请求次数
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/933.%20%E6%9C%80%E8%BF%91%E7%9A%84%E8%AF%B7%E6%B1%82%E6%AC%A1%E6%95%B0.html)
 		- [掘金](https://juejin.cn/post/7035672338397921294)
-	- 2021.11.28 19. 删除链表的倒数第 N 个结点
-		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/19.%20%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%AC%20N%20%E4%B8%AA%E7%BB%93%E7%82%B9.html)
-		- [掘金](https://juejin.cn/post/7035637554871287815)
 	- 2021.11.28 206. 反转链表
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/206.%20%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8.html)
 		- [掘金](https://juejin.cn/post/7035294135728734215)
