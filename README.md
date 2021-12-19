@@ -2,6 +2,68 @@
  
 ## 日志 
 - 算法学习
+	- 2021.12.19 交换链表中的节点
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9.html)
+		- [掘金](https://juejin.cn/post/7032692365571670046)
+		- [b站](https://www.bilibili.com/video/BV14f4y1M7RL)
+	- 2021.12.19 从尾到头打印链表和环形链表
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8%E5%92%8C%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8.html)
+		- [b站](https://www.bilibili.com/video/BV1Bq4y137GT)
+	- 2021.12.19 使用最小花费爬楼梯
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E4%BD%BF%E7%94%A8%E6%9C%80%E5%B0%8F%E8%8A%B1%E8%B4%B9%E7%88%AC%E6%A5%BC%E6%A2%AF.html)
+		- [掘金](https://juejin.cn/post/7030832746607935519)
+		- [b站](https://www.bilibili.com/video/BV1sQ4y1U7BR)
+	- 2021.12.19 前 K 个高频元素
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E5%89%8D%20K%20%E4%B8%AA%E9%AB%98%E9%A2%91%E5%85%83%E7%B4%A0.html)
+	- 2021.12.19 只出现一次的数字
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97.html)
+		- [掘金](https://juejin.cn/post/7028633444074651661)
+	- 2021.12.19 合并K个升序链表
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E5%90%88%E5%B9%B6K%E4%B8%AA%E5%8D%87%E5%BA%8F%E9%93%BE%E8%A1%A8.html)
+		- [掘金](https://juejin.cn/post/7033059148526780430)
+		- [b站](https://www.bilibili.com/video/BV1Sb4y1t7zu)
+	- 2021.12.19 回文子串
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2.html)
+		- [掘金](https://juejin.cn/post/7031222414457438222)
+		- [b站](https://www.bilibili.com/video/BV1wL411g7FX)
+	- 2021.12.19 复制带随机指针的链表
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E5%A4%8D%E5%88%B6%E5%B8%A6%E9%9A%8F%E6%9C%BA%E6%8C%87%E9%92%88%E7%9A%84%E9%93%BE%E8%A1%A8.html)
+		- [掘金](https://juejin.cn/post/7032335888809984030)
+		- [b站](https://www.bilibili.com/video/BV1u44y1Y7WK)
+	- 2021.12.19 平方数之和
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E5%B9%B3%E6%96%B9%E6%95%B0%E4%B9%8B%E5%92%8C.html)
+		- [掘金](https://juejin.cn/post/7028992548341284895)
+	- 2021.12.19 快乐数
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E5%BF%AB%E4%B9%90%E6%95%B0.html)
+		- [掘金](https://juejin.cn/post/7029713542202785828)
+	- 2021.12.19 排序数组
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84.html)
+	- 2021.12.19 最长公共子序列
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97.html)
+		- [掘金](https://juejin.cn/post/7031589995194351647)
+		- [b站](https://www.bilibili.com/video/BV1ar4y1k7XF)
+	- 2021.12.19 最长回文串
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E4%B8%B2.html)
+		- [掘金](https://juejin.cn/post/7030461490880577573)
+	- 2021.12.19 最长递增子序列
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E6%9C%80%E9%95%BF%E9%80%92%E5%A2%9E%E5%AD%90%E5%BA%8F%E5%88%97.html)
+		- [掘金](https://juejin.cn/post/7029332892903800846)
+	- 2021.12.19 有效的字母异位词
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D.html)
+		- [掘金](https://juejin.cn/post/7030083731171835940)
+	- 2021.12.19 返回倒数第 k 个节点
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E8%BF%94%E5%9B%9E%E5%80%92%E6%95%B0%E7%AC%AC%20k%20%E4%B8%AA%E8%8A%82%E7%82%B9.html)
+	- 2021.12.19 链表中倒数第k个节点
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9.html)
+		- [掘金](https://juejin.cn/post/7031969449276080135)
+		- [b站](https://www.bilibili.com/video/BV1mS4y197Vw)
+	- 2021.12.19 面试题 03.04. 化栈为队
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E9%9D%A2%E8%AF%95%E9%A2%98%2003.04.%20%E5%8C%96%E6%A0%88%E4%B8%BA%E9%98%9F.html)
+		- [掘金](https://juejin.cn/post/7036770068709015565)
+		- [b站](https://www.bilibili.com/video/BV1SY411s7VA)
+	- 2021.12.19 面试题 17.09. 第 k 个数
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E9%9D%A2%E8%AF%95%E9%A2%98%2017.09.%20%E7%AC%AC%20k%20%E4%B8%AA%E6%95%B0.html)
+		- [掘金](https://juejin.cn/post/7036035856569729031)
 	- 2021.12.19 1021. 删除最外层的括号
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/1021.%20%E5%88%A0%E9%99%A4%E6%9C%80%E5%A4%96%E5%B1%82%E7%9A%84%E6%8B%AC%E5%8F%B7.html)
 		- [掘金](https://juejin.cn/post/7037132327280967693)
@@ -87,7 +149,6 @@
 		- [b站](https://www.bilibili.com/video/BV1VS4y1d71d)
 	- 2021.12.19 两两交换链表中的节点
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9.html)
-		- [掘金](https://juejin.cn/post/7032692365571670046)
 		- [b站](https://www.bilibili.com/video/BV1rh41147ew)
 	- 2021.12.19 两数之和
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C.html)
@@ -104,68 +165,6 @@
 	- 2021.12.19 二叉树的直径
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84.html)
 		- [掘金](https://juejin.cn/post/7030412939320360974)
-	- 2021.12.19 交换链表中的节点
-		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9.html)
-		- [掘金](https://juejin.cn/post/7032642194355781640)
-		- [b站](https://www.bilibili.com/video/BV14f4y1M7RL)
-	- 2021.12.19 从尾到头打印链表和环形链表
-		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8%E5%92%8C%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8.html)
-		- [b站](https://www.bilibili.com/video/BV1Bq4y137GT)
-	- 2021.12.19 使用最小花费爬楼梯
-		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E4%BD%BF%E7%94%A8%E6%9C%80%E5%B0%8F%E8%8A%B1%E8%B4%B9%E7%88%AC%E6%A5%BC%E6%A2%AF.html)
-		- [掘金](https://juejin.cn/post/7030832746607935519)
-		- [b站](https://www.bilibili.com/video/BV1sQ4y1U7BR)
-	- 2021.12.19 前 K 个高频元素
-		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E5%89%8D%20K%20%E4%B8%AA%E9%AB%98%E9%A2%91%E5%85%83%E7%B4%A0.html)
-	- 2021.12.19 只出现一次的数字
-		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97.html)
-		- [掘金](https://juejin.cn/post/7028633444074651661)
-	- 2021.12.19 合并K个升序链表
-		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E5%90%88%E5%B9%B6K%E4%B8%AA%E5%8D%87%E5%BA%8F%E9%93%BE%E8%A1%A8.html)
-		- [掘金](https://juejin.cn/post/7033059148526780430)
-		- [b站](https://www.bilibili.com/video/BV1Sb4y1t7zu)
-	- 2021.12.19 回文子串
-		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2.html)
-		- [掘金](https://juejin.cn/post/7031222414457438222)
-		- [b站](https://www.bilibili.com/video/BV1wL411g7FX)
-	- 2021.12.19 复制带随机指针的链表
-		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E5%A4%8D%E5%88%B6%E5%B8%A6%E9%9A%8F%E6%9C%BA%E6%8C%87%E9%92%88%E7%9A%84%E9%93%BE%E8%A1%A8.html)
-		- [掘金](https://juejin.cn/post/7032335888809984030)
-		- [b站](https://www.bilibili.com/video/BV1u44y1Y7WK)
-	- 2021.12.19 平方数之和
-		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E5%B9%B3%E6%96%B9%E6%95%B0%E4%B9%8B%E5%92%8C.html)
-		- [掘金](https://juejin.cn/post/7028992548341284895)
-	- 2021.12.19 快乐数
-		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E5%BF%AB%E4%B9%90%E6%95%B0.html)
-		- [掘金](https://juejin.cn/post/7029713542202785828)
-	- 2021.12.19 排序数组
-		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84.html)
-	- 2021.12.19 最长公共子序列
-		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97.html)
-		- [掘金](https://juejin.cn/post/7031589995194351647)
-		- [b站](https://www.bilibili.com/video/BV1ar4y1k7XF)
-	- 2021.12.19 最长回文串
-		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E4%B8%B2.html)
-		- [掘金](https://juejin.cn/post/7030461490880577573)
-	- 2021.12.19 最长递增子序列
-		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E6%9C%80%E9%95%BF%E9%80%92%E5%A2%9E%E5%AD%90%E5%BA%8F%E5%88%97.html)
-		- [掘金](https://juejin.cn/post/7029332892903800846)
-	- 2021.12.19 有效的字母异位词
-		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D.html)
-		- [掘金](https://juejin.cn/post/7030083731171835940)
-	- 2021.12.19 返回倒数第 k 个节点
-		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E8%BF%94%E5%9B%9E%E5%80%92%E6%95%B0%E7%AC%AC%20k%20%E4%B8%AA%E8%8A%82%E7%82%B9.html)
-	- 2021.12.19 链表中倒数第k个节点
-		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9.html)
-		- [掘金](https://juejin.cn/post/7031969449276080135)
-		- [b站](https://www.bilibili.com/video/BV1mS4y197Vw)
-	- 2021.12.19 面试题 03.04. 化栈为队
-		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E9%9D%A2%E8%AF%95%E9%A2%98%2003.04.%20%E5%8C%96%E6%A0%88%E4%B8%BA%E9%98%9F.html)
-		- [掘金](https://juejin.cn/post/7036770068709015565)
-		- [b站](https://www.bilibili.com/video/BV1SY411s7VA)
-	- 2021.12.19 面试题 17.09. 第 k 个数
-		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/%E9%9D%A2%E8%AF%95%E9%A2%98%2017.09.%20%E7%AC%AC%20k%20%E4%B8%AA%E6%95%B0.html)
-		- [掘金](https://juejin.cn/post/7036035856569729031)
 	- 2021.12.19 1249. 移除无效的括号
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/15/1249.%20%E7%A7%BB%E9%99%A4%E6%97%A0%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7.html)
 		- [掘金](https://juejin.cn/post/7038649825490911245)
