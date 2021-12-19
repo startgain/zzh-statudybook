@@ -43,6 +43,11 @@ function treeAndInfo(path, num) {
 		const fileItemList = treeAndInfo(path, num)
 		fileList = [...fileList, ...fileItemList]
 	})
+	fileList.sort((a,b)=>{
+		var aDate = a.importantDate.split('.').join('')
+		var bDate = b.importantDate.split('.').join('')
+		return bDate - aDate
+	})
 	return fileList
 }
 function fileInfo(path) {

@@ -57,7 +57,6 @@ function findAddress(data, name, from) {
 	return result
 }
 function generatorMd(fileData) {
-	fileData.sort((a, b) => b.birthTimeMs - a.birthTimeMs)
 	if (!fileData) return
 	var baseTemp = "# zzh-statudybook \n \n## 日志 \n- 算法学习\n"
 	var itemTemp = ''
