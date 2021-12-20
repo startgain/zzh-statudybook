@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const dateFormatter = require('./utils/dateFormatter');
 const checkFile = require('./utils/checkFile');
 
@@ -43,6 +44,7 @@ function treeAndInfo(path, num) {
 		const fileItemList = treeAndInfo(path, num)
 		fileList = [...fileList, ...fileItemList]
 	})
+	// console.log(fileList)
 	fileList.sort((a,b)=>{
 		var aDate = a.importantDate.split('.').join('')
 		var bDate = b.importantDate.split('.').join('')
@@ -50,20 +52,22 @@ function treeAndInfo(path, num) {
 	})
 	return fileList
 }
-function fileInfo(path) {
+function fileInfo(filePath) {
 	var nameReg = /\/([^/]*)\.html/
 	//获取名称
-	var name = path.match(nameReg)[1]
-	const info = fs.statSync(path, { bigint: true })
+	var name = filePath.match(nameReg)[1]
+	const info = fs.statSync(filePath, { bigint: true })
 
 	//获取时间
 	var lastTime = dateFormatter('YYYY.MM.DD',info.atime)
 	var birthTime = dateFormatter('YYYY.MM.DD',info.birthtime)
+	//固话日期 有则跳过无则添加
+	fixedDate(filePath,birthTime)
 	// console.log('atime',info.atime)
 	// console.log('mtime',info.mtime)
 	// console.log('ctime',info.ctime)
 	// console.log('birthtime',info.birthtime)
-	var checkItem = new checkFile(path)
+	var checkItem = new checkFile(filePath)
 	var importantDate = checkItem.checkDate()
 	var jueJin = checkItem.jueJin()
 	var biLi= checkItem.biLi()
@@ -71,7 +75,7 @@ function fileInfo(path) {
 	// console.log('>>>>>',info.birthTime,importantDate)
 	return {
 		name,
-		path, 
+		path:filePath, 
 		lastTime,
 		birthTime,
 		lastTimeMs:parseInt(info.atimeMs),
@@ -80,6 +84,26 @@ function fileInfo(path) {
 		biLi,
 		importantDate
 	}
+}
+
+//日期固化
+function fixedDate(filePath,date){
+	//判断是否有固化日期 有直接return
+	var filePath = path.join(__dirname,'../../'+filePath)
+	const checkItem = new checkFile(filePath)
+	var hasDate = checkItem.checkDate()
+	if(!hasDate){
+		const old =checkItem.showContent()
+		const newCon = `<!-- 日期:${date} -->\n`+old
+		fs.writeFileSync(filePath,newCon,(err,res)=>{
+			if(err) return
+			console.log('日期固化成功')
+		})
+	}
+
+	//读取文件创建日期
+
+	//固化到文件当中
 }
 
 // fileInfo('./算法/leetCode/19删除链表的倒数第N个结点.html')
