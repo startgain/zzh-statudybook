@@ -2,30 +2,38 @@
  
 ## 日志 
 - 算法学习
-	- 2021.12.19 19. 删除链表的倒数第 N 个结点
-		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/19.%20%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%AC%20N%20%E4%B8%AA%E7%BB%93%E7%82%B9.html)
-		- [掘金](https://juejin.cn/post/7035637554871287815)
+	- 2021.12.20 662. 二叉树最大宽度
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/18/662.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E6%9C%80%E5%A4%A7%E5%AE%BD%E5%BA%A6.html)
+	- 2021.12.20 剑指 Offer 54. 二叉搜索树的第k大节点
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/18/%E5%89%91%E6%8C%87%20Offer%2054.%20%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E7%AC%ACk%E5%A4%A7%E8%8A%82%E7%82%B9.html)
+		- [掘金](https://juejin.cn/post/7043376817633230856)
 	- 2021.12.16 105. 从前序与中序遍历序列构造二叉树
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/17/105.%20%E4%BB%8E%E5%89%8D%E5%BA%8F%E4%B8%8E%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91.html)
 		- [掘金](https://juejin.cn/post/7041985472540704799)
+		- [b站](https://www.bilibili.com/video/BV1n34y167FX)
 	- 2021.12.16 222. 完全二叉树的节点个数
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/17/222.%20%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%8A%82%E7%82%B9%E4%B8%AA%E6%95%B0.html)
 		- [掘金](https://juejin.cn/post/7041599568219209736)
 	- 2021.12.15 112. 路径总和
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/17/112.%20%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C.html)
 		- [掘金](https://juejin.cn/post/7041562262507061262)
+		- [b站](https://www.bilibili.com/video/BV1yi4y1d76b)
 	- 2021.12.15 779. 第K个语法符号
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/17/779.%20%E7%AC%ACK%E4%B8%AA%E8%AF%AD%E6%B3%95%E7%AC%A6%E5%8F%B7.html)
 		- [掘金](https://juejin.cn/post/7041594069830598669)
+		- [b站](https://www.bilibili.com/video/BV1Fr4y1Q7dG)
 	- 2021.12.11 剑指 Offer 10- I. 斐波那契数列
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/17/%E5%89%91%E6%8C%87%20Offer%2010-%20I.%20%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97.html)
 		- [掘金](https://juejin.cn/post/7040338916490248223)
+		- [b站](https://www.bilibili.com/video/BV1Ug411w7uh)
 	- 2021.12.10 707. 设计链表
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/16/707.%20%E8%AE%BE%E8%AE%A1%E9%93%BE%E8%A1%A8.html)
 		- [掘金](https://juejin.cn/post/7039376057266339853)
+		- [b站](https://www.bilibili.com/video/BV1VL411j7jP)
 	- 2021.12.10 面试题 02.04. 分割链表
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/16/%E9%9D%A2%E8%AF%95%E9%A2%98%2002.04.%20%E5%88%86%E5%89%B2%E9%93%BE%E8%A1%A8.html)
 		- [掘金](https://juejin.cn/post/7039745591995269133)
+		- [b站](https://www.bilibili.com/video/BV1Ab4y1v79z)
 	- 2021.12.09 143. 重排链表
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/15/143.%20%E9%87%8D%E6%8E%92%E9%93%BE%E8%A1%A8.html)
 		- [掘金](https://juejin.cn/post/7039376316394635277)
@@ -33,9 +41,11 @@
 	- 2021.12.09 725. 分隔链表
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/16/725.%20%E5%88%86%E9%9A%94%E9%93%BE%E8%A1%A8.html)
 		- [掘金](https://juejin.cn/post/7039754809972359176)
+		- [b站](https://www.bilibili.com/video/BV18L4y1J7eE)
 	- 2021.12.09 剑指 Offer 18. 删除链表的节点
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/16/%E5%89%91%E6%8C%87%20Offer%2018.%20%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9.html)
 		- [掘金](https://juejin.cn/post/7042134325172633631)
+		- [b站](https://www.bilibili.com/video/BV1ng411A7oC)
 	- 2021.12.07 1249. 移除无效的括号
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/15/1249.%20%E7%A7%BB%E9%99%A4%E6%97%A0%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7.html)
 		- [掘金](https://juejin.cn/post/7038649825490911245)
@@ -96,6 +106,9 @@
 	- 2021.11.29 933. 最近的请求次数
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/933.%20%E6%9C%80%E8%BF%91%E7%9A%84%E8%AF%B7%E6%B1%82%E6%AC%A1%E6%95%B0.html)
 		- [掘金](https://juejin.cn/post/7035672338397921294)
+	- 2021.11.28 19. 删除链表的倒数第 N 个结点
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/19.%20%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%AC%20N%20%E4%B8%AA%E7%BB%93%E7%82%B9.html)
+		- [掘金](https://juejin.cn/post/7035637554871287815)
 	- 2021.11.28 206. 反转链表
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/206.%20%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8.html)
 		- [掘金](https://juejin.cn/post/7035294135728734215)
