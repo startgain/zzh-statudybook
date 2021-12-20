@@ -2,95 +2,29 @@
 <title>662. 二叉树最大宽度</title>
 <script>
 	//算法
-	function computedLen(arr) {
-		var start
-		var end
-		var i = 0
-		while (i < arr.length) {
-			var item = arr[i]
-			if (item && start === undefined) {
-				start = i
-				end = i
-			}
-			if (item) {
-				end = i
-			}
-			i++
-		}
-		if (start === undefined) {
-			return 0
-		} else {
-			return end - start + 1
-		}
-	}
 	var widthOfBinaryTree = function (root) {
 		if (!root) return 0
-		var stack = [root]
+		var stack = [[root, 0]]
 		var curr = []
 		var max = 1
 		while (stack.length) {
-			debugger
-			var item = stack.shift()
-			// if (item && item.left) {
-			// 	curr.push(item.left)
-			// } else if (item) {
-			// 	curr.push(null)
-			// }
-			// if (item && item.right) {
-			// 	curr.push(item.right)
-			// } else if (item) {
-			// 	curr.push(null)
-			// }
-			if (item) {
-				if (item.left) {
-					curr.push(item.left)
-				} else {
-					curr.push(null)
-				}
-				if (item.right) {
-					curr.push(item.right)
-				} else {
-					curr.push(null)
-				}
-			} else if (curr.length) {
-				curr.push(null)
+			var [item, pos] = stack.shift()
+			if (item.left) {
+				curr.push([item.left, pos * 2])
+			}
+			if (item.right) {
+				curr.push([item.right, pos * 2 + 1])
 			}
 			if (!stack.length) {
-				var max = Math.max(max, computedLen(curr))
-				stack = curr
-				curr = []
+				if (curr.length) {
+					if (curr.length === 1) { curr[0][1] = 0 }
+					var max = Math.max(max, curr[curr.length - 1][1] - curr[0][1] + 1)
+					stack = curr
+					curr = []
+				} else {
+					return max
+				}
 			}
 		}
-		return max
 	};
-	var root = {
-		val: 1,
-		left: {
-			val: 3,
-			left: {
-				val: 5,
-				left: {
-					val: 6,
-					left: null,
-					right: null
-				},
-				right: null
-			},
-			right: null
-		},
-		right: {
-			val: 2,
-			left: null,
-			right: {
-				val: 9,
-				left: null,
-				right: {
-					val: 7,
-					left: null,
-					right: null
-				},
-			}
-		}
-	}
-	console.log(widthOfBinaryTree(root))
 </script>

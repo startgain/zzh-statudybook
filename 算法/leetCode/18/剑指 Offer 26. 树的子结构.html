@@ -1,0 +1,51 @@
+<meta charset='UTF-8' />
+<title>剑指 Offer 26. 树的子结构</title>
+<script>
+	//算法
+	function checkTree(findB, B) {
+		var stackB = [B]
+		var stackFindB = [findB]
+		while (stackB.length) {
+			var item = stackB.shift()
+			var itemFindB = stackFindB.shift()
+			if (item.left) {
+				if (itemFindB.left && item.left.val === itemFindB.left.val) {
+					stackB.push(item.left)
+					stackFindB.push(itemFindB.left)
+				} else {
+					return false
+				}
+			}
+
+			if (item.right) {
+				if (itemFindB.right && item.right.val === itemFindB.right.val) {
+					stackB.push(item.right)
+					stackFindB.push(itemFindB.right)
+				} else {
+					return false
+				}
+			}
+		}
+
+		return true
+	}
+	var isSubStructure = function (A, B) {
+		if (!A || !B) return false
+		var stack = [A]
+		var findB
+		while (stack.length) {
+			var item = stack.shift()
+			if (item.val === B.val) {
+				findB = item
+				var res = checkTree(findB, B)
+				if (res) {
+					return true
+				}
+			}
+			if (item.left) { stack.push(item.left) }
+			if (item.right) { stack.push(item.right) }
+		}
+		return false
+	};
+
+</script>

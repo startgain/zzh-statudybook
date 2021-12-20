@@ -1,0 +1,63 @@
+<meta charset='UTF-8' />
+<title>144. 二叉树的前序遍历</title>
+<script>
+	//算法
+	/**
+	 * Definition for singly-linked list.
+	 * function ListNode(val, next) {
+	 *     this.val = (val===undefined ? 0 : val)
+	 *     this.next = (next===undefined ? null : next)
+	 * }
+	 */
+	/**
+	 * @param {ListNode} head
+	 * @return {ListNode}
+	 */
+	var reverseList = function (head) {
+		let arr = []
+		function qianxu(root) {
+			if (!root || !root.val) return
+			arr.push(root.val)
+			qianxu(root.left)
+			qianxu(root.right)
+		}
+		qianxu(root)
+		return arr
+	};
+
+
+	/**
+	 * Definition for a binary tree node.
+	 * function TreeNode(val, left, right) {
+	 *     this.val = (val===undefined ? 0 : val)
+	 *     this.left = (left===undefined ? null : left)
+	 *     this.right = (right===undefined ? null : right)
+	 * }
+	 */
+	/**
+	 * @param {TreeNode} root
+	 * @return {number[]}
+	 */
+	var preorderTraversal = function (root) {
+		const stack = [];
+		const res = [];
+		if (root) stack.push(root);
+		while (stack.length) {
+			const node = stack.pop();
+			const left = node.left
+			const right = node.right
+			if (!node.left && !node.right) {
+				res.push(node.val);
+				continue;
+			}
+			if (right) stack.push(right); // 右
+			if (left) stack.push(left); // 左
+			node.left = null
+			node.right = null
+			stack.push(node); // 中
+		};
+		return res;
+	};
+
+
+</script>
