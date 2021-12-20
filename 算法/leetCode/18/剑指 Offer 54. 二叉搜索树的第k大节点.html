@@ -1,0 +1,21 @@
+<meta charset='UTF-8' />
+<title>剑指 Offer 54. 二叉搜索树的第k大节点</title>
+<script>
+//算法
+var kthLargest = function (root, k) {
+    var stack = [root]
+    var res = []
+    while (stack.length) {
+        var item = stack.pop()
+        res.push(item.val)
+        if (item.left) {
+            stack.push(item.left)
+        }
+        if (item.right) {
+            stack.push(item.right)
+        }
+    }
+    res.sort((a, b) => b - a)
+    return res[k - 1]
+};
+</script>
