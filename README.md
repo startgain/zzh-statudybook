@@ -2,11 +2,22 @@
  
 ## 日志 
 - 算法学习
+	- 2021.12.21 144. 二叉树的前序遍历
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/18/144.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86.html)
+		- [掘金](https://juejin.cn/post/7043804971246026789)
+		- [b站](https://www.bilibili.com/video/BV1hb4y1q7ZJ)
+	- 2021.12.21 剑指 Offer 26. 树的子结构
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/18/%E5%89%91%E6%8C%87%20Offer%2026.%20%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84.html)
+		- [掘金](https://juejin.cn/post/7043458436478009380)
+		- [b站](https://www.bilibili.com/video/BV1VQ4y1Y77S)
 	- 2021.12.20 662. 二叉树最大宽度
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/18/662.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E6%9C%80%E5%A4%A7%E5%AE%BD%E5%BA%A6.html)
+		- [掘金](https://juejin.cn/post/7043793495991156750)
+		- [b站](https://www.bilibili.com/video/BV1YY411H7yc)
 	- 2021.12.20 剑指 Offer 54. 二叉搜索树的第k大节点
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/18/%E5%89%91%E6%8C%87%20Offer%2054.%20%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E7%AC%ACk%E5%A4%A7%E8%8A%82%E7%82%B9.html)
 		- [掘金](https://juejin.cn/post/7043376817633230856)
+		- [b站](https://www.bilibili.com/video/BV1tL411j7Df)
 	- 2021.12.16 105. 从前序与中序遍历序列构造二叉树
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/17/105.%20%E4%BB%8E%E5%89%8D%E5%BA%8F%E4%B8%8E%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91.html)
 		- [掘金](https://juejin.cn/post/7041985472540704799)
@@ -14,6 +25,7 @@
 	- 2021.12.16 222. 完全二叉树的节点个数
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/17/222.%20%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%8A%82%E7%82%B9%E4%B8%AA%E6%95%B0.html)
 		- [掘金](https://juejin.cn/post/7041599568219209736)
+		- [b站](https://www.bilibili.com/video/BV1eM4y1c7VD)
 	- 2021.12.15 112. 路径总和
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/17/112.%20%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C.html)
 		- [掘金](https://juejin.cn/post/7041562262507061262)
