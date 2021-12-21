@@ -1,0 +1,32 @@
+<meta charset='UTF-8' />
+<title>226. 翻转二叉树</title>
+<script>
+//算法
+//层序遍历
+var invertTree = function(root) {
+    if(!root) return root
+    var queue = []
+    queue.push(root)
+    while(queue.length>0){
+        var node = queue.shift();
+        var temp = node.left
+        node.left = node.right
+        node.right = temp
+
+        if(node.right) queue.push(node.right)
+        if(node.left) queue.push(node.left)
+    }
+    
+    return root
+};
+//递归
+var invertTree = function(root) {
+    if(!root) return root
+    let temp = root.left
+    root.left = root.right
+    root.right = temp
+    invertTree(root.left)
+    invertTree(root.right)
+    return root
+};
+</script>

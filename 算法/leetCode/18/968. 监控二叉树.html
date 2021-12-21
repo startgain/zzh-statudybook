@@ -1,0 +1,32 @@
+<meta charset='UTF-8' />
+<title>968. 监控二叉树</title>
+<script>
+	//算法
+	var minCameraCover = function (root) {
+		var noCover = 0
+		var isCover = 1
+		var isCamera = 2
+		var res = 0
+		var traversal = function (root) {
+			if (root === null) return isCover
+
+			var left = traversal(root.left)
+			var right = traversal(root.right)
+
+			if (left === noCover || right === noCover) {
+				res++
+				return isCamera
+			}
+			if (left === isCamera || right === isCamera) {
+				return isCover
+			}
+			if (left === isCover && right === isCover) {
+				return noCover
+			}
+		}
+		if (traversal(root) === noCover) res++
+		return res
+
+	};
+
+</script>

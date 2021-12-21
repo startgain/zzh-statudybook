@@ -1,0 +1,26 @@
+<meta charset='UTF-8' />
+<title>剑指 Offer 32 - II. 从上到下打印二叉树 II</title>
+<script>
+//算法
+var levelOrder = function(root) {
+    var res = []
+    if(!root) return res
+    var stack = [root]
+    var curr = []
+    var currRes = []
+    while(stack.length){
+        var item = stack.shift();
+        currRes.push(item.val)
+        if(item.left) curr.push(item.left)
+        if(item.right) curr.push(item.right)
+        if(!stack.length){
+            res.push(currRes)
+            stack = curr
+            curr = []
+            currRes = []
+        }
+    }
+    return res
+};
+
+</script>

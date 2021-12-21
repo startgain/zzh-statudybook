@@ -1,0 +1,50 @@
+<meta charset='UTF-8' />
+<title>589. N 叉树的前序遍历</title>
+<script>
+	//算法
+	/**
+	 * // Definition for a Node.
+	 * function Node(val, children) {
+	 *    this.val = val;
+	 *    this.children = children;
+	 * };
+	 */
+
+	/**
+	 * @param {Node|null} root
+	 * @return {number[]}
+	 */
+	//递归法
+	var preorder = function (root) {
+		var res = []
+		if (!root) return res
+		var preorderNode = function (node) {
+			if (!node) return
+			res.push(node.val)
+			var children = node.children
+			for (var i = 0; i < children.length; i++) {
+				var item = children[i]
+				preorderNode(item)
+			}
+		}
+		preorderNode(root)
+		return res
+	};
+	//深度优先遍历迭代法
+	var preorder = function (root) {
+		var res = []
+		if (!root) return res
+
+		var stack = [root]
+		while (stack.length) {
+			var item = stack.pop()
+			res.push(item.val)
+			var children = item.children
+			for (var i = children.length - 1; i >= 0; i--) {
+				var item = children[i]
+				if (item) stack.push(item)
+			}
+		}
+		return res
+	};
+</script>
