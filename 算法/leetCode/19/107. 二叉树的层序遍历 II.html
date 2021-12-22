@@ -1,0 +1,25 @@
+<meta charset='UTF-8' />
+<title>107. 二叉树的层序遍历 II</title>
+<script>
+//算法
+var levelOrderBottom = function(root) {
+    var res = []
+    if (!root) return res
+    var stack = [root]
+    var curr = []
+    var currRes = []
+    while (stack.length) {
+        var item = stack.shift();
+        currRes.push(item.val)
+        if (item.left) curr.push(item.left)
+        if (item.right) curr.push(item.right)
+        if (!stack.length) {
+            res.unshift(currRes)
+            stack = curr
+            curr = []
+            currRes = []
+        }
+    }
+    return res
+};
+</script>

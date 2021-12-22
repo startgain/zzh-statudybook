@@ -1,0 +1,31 @@
+<meta charset='UTF-8' />
+<title>103. 二叉树的锯齿形层序遍历</title>
+<script>
+	//算法
+	var zigzagLevelOrder = function (root) {
+		var res = []
+		var line = true
+		if (!root) return res
+		var stack = [root]
+		var curr = []
+		var currRes = []
+		while (stack.length) {
+			var item = stack.shift();
+			if (line) {
+				currRes.push(item.val)
+			} else {
+				currRes.unshift(item.val)
+			}
+			if (item.left) curr.push(item.left)
+			if (item.right) curr.push(item.right)
+			if (!stack.length) {
+				line = !line
+				res.push(currRes)
+				stack = curr
+				curr = []
+				currRes = []
+			}
+		}
+		return res
+	};
+</script>
