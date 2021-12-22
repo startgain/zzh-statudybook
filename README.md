@@ -2,6 +2,18 @@
  
 ## 日志 
 - 算法学习
+	- 2021.12.22 968. 监控二叉树
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/18/968.%20%E7%9B%91%E6%8E%A7%E4%BA%8C%E5%8F%89%E6%A0%91.html)
+		- [掘金](https://juejin.cn/post/7044184891038597156)
+	- 2021.12.22 226. 翻转二叉树
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/19/226.%20%E7%BF%BB%E8%BD%AC%E4%BA%8C%E5%8F%89%E6%A0%91.html)
+		- [掘金](https://juejin.cn/post/7044211108965515277)
+	- 2021.12.22 589. N 叉树的前序遍历
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/19/589.%20N%20%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86.html)
+		- [掘金](https://juejin.cn/post/7044209860518346765)
+	- 2021.12.22 剑指 Offer 32 - II. 从上到下打印二叉树 II
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/19/%E5%89%91%E6%8C%87%20Offer%2032%20-%20II.%20%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91%20II.html)
+		- [掘金](https://juejin.cn/post/7044213857660698632)
 	- 2021.12.21 144. 二叉树的前序遍历
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/18/144.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86.html)
 		- [掘金](https://juejin.cn/post/7043804971246026789)
