@@ -1,0 +1,34 @@
+<!-- 日期:2021.12.25 -->
+<meta charset='UTF-8' />
+<title>110. 平衡二叉树</title>
+<script>
+//算法
+//自下向上递归
+var isBalanced = function(root) {
+    if (!root) return true
+    function getDepth(node){
+        if(node===null){
+            return 0 
+        }
+        var leftDepth = getDepth(node.left)
+        var rightDepth = getDepth(node.right)
+        if(leftDepth===-1||rightDepth===-1||Math.abs(leftDepth-rightDepth)>1) return -1
+        return Math.max(leftDepth,rightDepth)+1
+    }
+    return getDepth(root)>0
+};
+//自上向下递归
+var isBalanced = function(root) {
+    if (!root) return true
+    function getDepth(node){
+        if(node===null){
+            return 0 
+        }
+        var leftDepth = getDepth(node.left)
+        var rightDepth = getDepth(node.right)
+        if(leftDepth===-1||rightDepth===-1||Math.abs(leftDepth-rightDepth)>1) return -1
+        return Math.max(leftDepth,rightDepth)+1
+    }
+    return getDepth(root)>0
+};
+</script>

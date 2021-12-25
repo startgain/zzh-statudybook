@@ -1,0 +1,67 @@
+<!-- 日期:2021.12.24 -->
+<meta charset='UTF-8' />
+<title>堆排序</title>
+<script>
+//算法
+var len;    // 因为声明的多个函数都需要数据长度，所以把len设置成为全局变量
+ 
+function buildMaxHeap(arr) {   // 建立大顶堆
+    len = arr.length;
+    for (var i = Math.floor(len/2); i >= 0; i--) {
+        heapify(arr, i);
+    }
+}
+ 
+function heapify(arr, i) {     // 堆调整
+    var left = 2 * i + 1,
+        right = 2 * i + 2,
+        largest = i;
+ 
+    if (left < len && arr[left] > arr[largest]) {
+        largest = left;
+    }
+ 
+    if (right < len && arr[right] > arr[largest]) {
+        largest = right;
+    }
+ 
+    if (largest != i) {
+        swap(arr, i, largest);
+        heapify(arr, largest);
+    }
+}
+ 
+function swap(arr, i, j) {
+    var temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+}
+ 
+function heapSort(arr) {
+	debugger
+    buildMaxHeap(arr);
+ 
+    for (var i = arr.length - 1; i > 0; i--) {
+        swap(arr, 0, i);
+        len--;
+        heapify(arr, 0);
+    }
+    return arr;
+}
+
+
+var arr = [1, 3, 4, 5, 2, 6, 9, 7, 8, 0]
+heapSort(arr)
+//堆排序
+
+//堆排序是一个完全二叉树。通过i*2+1  和i*2+2 获取到i的两个子元素位置  比较三者最大值，放在三者的中间节点上，这样就能保证每个节点的值都比其子节点大
+//分为大顶堆和小顶堆
+// 大顶堆：就是从上到下，大的在上，小的在下
+// 小顶堆：就是从上到下，小的在上，大的在下
+// 通过循环处理len/2向下取整开始->到0位置的节点,每个节点位置调换后继续往下处理,就能保证每个节点都比子节点大
+//分三步
+//1.初始化
+//2.创建循环函数
+//3.每次调用函数从0开始处理
+// 处理len次就能依序得到一个有序排列的数组
+</script>

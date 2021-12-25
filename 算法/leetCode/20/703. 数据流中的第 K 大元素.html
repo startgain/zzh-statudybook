@@ -1,0 +1,74 @@
+<!-- 日期:2021.12.25 -->
+<meta charset='UTF-8' />
+<title>703. 数据流中的第 K 大元素</title>
+<script>
+//算法
+/**
+ * @param {number} k
+ * @param {number[]} nums
+ */
+ var KthLargest = function(k, nums) {
+    this.k = k
+    this.valArr = nums.sort((a, b) => b - a) || []
+};
+
+/** 
+ * @param {number} val
+ * @return {number}
+ */
+KthLargest.prototype.add = function(val) {
+    var len = this.valArr.length
+    if (len === 0) {
+        this.valArr.push(val)
+        return this.valArr[this.k - 1]
+    }
+    if (val >= this.valArr[0]) {
+        this.valArr.unshift(val)
+        return this.valArr[this.k - 1]
+    }
+    if (val <= this.valArr[len - 1]) {
+        this.valArr.push(val)
+        return this.valArr[this.k - 1]
+    }
+    if (len === 2) {
+        this.valArr.splice(1, 0, val)
+        return this.valArr[this.k - 1]
+    }
+    var start = 0;
+    var end = len - 1;
+    var flag = true;
+    while (flag) {
+        var middle = (end + start) >> 1
+        var pre = this.valArr[middle - 1]
+        var next = this.valArr[middle + 1]
+        if (this.valArr[middle] >= val) {
+            if (val >= next) {
+                this.valArr.splice(middle + 1, 0, val)
+                flag = false
+                break
+            }
+        }
+        if (val >= this.valArr[middle]) {
+            if (pre >= val) {
+                this.valArr.splice(middle, 0, val)
+                flag = false
+                break
+            }
+
+        }
+        if (this.valArr[middle] < val) {
+            end = middle
+        }
+        if (this.valArr[middle] > val) {
+            start = middle
+        }
+    }
+    return this.valArr[this.k - 1]
+};
+
+/**
+ * Your KthLargest object will be instantiated and called as such:
+ * var obj = new KthLargest(k, nums)
+ * var param_1 = obj.add(val)
+ */
+</script>

@@ -1,0 +1,18 @@
+<!-- 日期:2021.12.25 -->
+<meta charset='UTF-8' />
+<title>1046. 最后一块石头的重量</title>
+<script>
+//算法 sort
+var lastStoneWeight = function (stones) {
+    while (stones.length > 1) {
+        stones.sort((a, b) => a - b)
+        var stone1 = stones.pop()
+        var stone2 = stones.pop()
+        var res = stone1 - stone2
+        if (res) {
+            stones.push(res)
+        }
+    }
+    return stones.length?stones[0]:0
+};
+</script>
