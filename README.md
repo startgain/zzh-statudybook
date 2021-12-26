@@ -5,18 +5,23 @@
 	- 2021.12.25 1046. 最后一块石头的重量
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/20/1046.%20%E6%9C%80%E5%90%8E%E4%B8%80%E5%9D%97%E7%9F%B3%E5%A4%B4%E7%9A%84%E9%87%8D%E9%87%8F.html)
 		- [掘金](https://juejin.cn/post/7045559691669307400)
+		- [b站](https://www.bilibili.com/video/BV1jL4y1E7r7)
 	- 2021.12.25 110. 平衡二叉树
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/20/110.%20%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91.html)
 		- [掘金](https://juejin.cn/post/7044930808972312584)
+		- [b站](https://www.bilibili.com/video/BV12Y411h7t9)
 	- 2021.12.25 373. 查找和最小的K对数字
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/20/373.%20%E6%9F%A5%E6%89%BE%E5%92%8C%E6%9C%80%E5%B0%8F%E7%9A%84K%E5%AF%B9%E6%95%B0%E5%AD%97.html)
 		- [掘金](https://juejin.cn/post/7045612250899415048)
+		- [b站](https://www.bilibili.com/video/BV1ub4y1i7dv)
 	- 2021.12.25 703. 数据流中的第 K 大元素
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/20/703.%20%E6%95%B0%E6%8D%AE%E6%B5%81%E4%B8%AD%E7%9A%84%E7%AC%AC%20K%20%E5%A4%A7%E5%85%83%E7%B4%A0.html)
 		- [掘金](https://juejin.cn/post/7045566678263922701)
+		- [b站](https://www.bilibili.com/video/BV1N44y1E7dc)
 	- 2021.12.25 剑指 Offer 40. 最小的k个数
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/20/%E5%89%91%E6%8C%87%20Offer%2040.%20%E6%9C%80%E5%B0%8F%E7%9A%84k%E4%B8%AA%E6%95%B0.html)
 		- [掘金](https://juejin.cn/post/7045558234161086472)
+		- [b站](https://www.bilibili.com/video/BV1gm4y1Q7Ri)
 	- 2021.12.25 ceshi
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/sort/ceshi.html)
 	- 2021.12.25 基数排序
