@@ -1,0 +1,73 @@
+<!-- 日期:2021.12.26 -->
+<meta charset='UTF-8' />
+<title>215. 数组中的第K个最大元素</title>
+<script>
+//算法
+// 堆排序
+class Heap {
+    constructor(nums, compare) {
+        this.arr = nums
+        this.compare = compare
+        for (var i = (this.arr.length >> 1) - 1; i >= 0; i--) {
+            this.heapify(i)
+        }
+        
+    }
+    heapify(index) {
+        var data = this.arr
+        var target = index
+        var left = index * 2 + 1
+        var right = index * 2 + 2
+        if (left < data.length && this.compare(data[left], data[target])) {
+            target = left
+        }
+        if (right < data.length && this.compare(data[right], data[target])) {
+            target = right
+        }
+        if (target != index) {
+            this.swap(target, index)
+            this.heapify(target)
+        }
+    }
+    swap(l, r) {
+        let data = this.arr;
+        [data[l], data[r]] = [data[r], data[l]];
+    }
+    push(val) {
+        var data = this.arr
+        this.arr.push(val)
+        this.buildMaxHeap()
+        let index = this.arr.length - 1
+        let father = ((index + 1) >> 1) - 1
+        while (father >= 0) {
+            var indexVal = data[index]
+            var fatherVal = data[father]
+            if (indexVal > father) {
+                this.swap(index, target)
+                index = father
+                father = ((index + 1) >> 1) - 1
+            } else {
+                break
+            }
+        }
+    }
+    pop() {
+        this.swap(0, this.arr.length - 1)
+        var res = this.arr.pop()
+        this.heapify(0)
+        return res
+    }
+
+}
+var findKthLargest = function (nums, k) {
+    var dp = new Heap(nums, (target, root) => target > root)
+    var i = 0
+    var res;
+    while (i < k) {
+        res = dp.pop()
+        i++
+    }
+    return res
+
+};
+</script>

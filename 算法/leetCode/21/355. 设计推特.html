@@ -1,0 +1,116 @@
+<!-- 日期:2021.12.26 -->
+<meta charset='UTF-8' />
+<title>355. 设计推特</title>
+<script>
+//算法
+var Twitter = function () {
+    this.TeetList = []
+    this.time = 0
+};
+
+/** 
+ * @param {number} userId 
+ * @param {number} tweetId
+ * @return {void}
+ */
+Twitter.prototype.postTweet = function (userId, tweetId) {
+    var user = this.TeetList.find(item => item[0] === userId)
+    if (!user) {
+        user = this.addUser(userId)
+    }
+    var userTeetList = user[1]
+    userTeetList.push([tweetId, this.time])
+    if(userTeetList.length>10){
+        user[1] = user[1].slice(-10)
+    }
+    this.time++
+};
+
+/** 
+ * @param {number} userId
+ * @return {number[]}
+ */
+Twitter.prototype.addUser = function (userId) {
+    var userData = [userId, [], []]
+    this.TeetList.push(userData)
+    return userData
+}
+Twitter.prototype.getUserTeetList = function (user, nums) {
+    var user = this.TeetList.find(item => item[0] === userId)
+    if (user) {
+
+    } else {
+        return []
+    }
+}
+Twitter.prototype.getNewsFeed = function (userId) {
+    var user = this.TeetList.find(item => item[0] === userId)
+    // console.log(this.TeetList)
+    if (user) {
+        var userTeetList = user[1]
+        var userFlow = user[2]
+        var followTeetList = []
+        for (var i = 0; i < userFlow.length; i++) {
+            var followItem = this.TeetList.find(item => item[0] === userFlow[i])
+            if (followItem) {
+                var followItemTeetList = followItem[1]
+                followTeetList.push(...followItemTeetList)
+            }
+        }
+        var allTeetList = [...userTeetList, ...followTeetList]
+        
+        allTeetList.sort((a, b) => {
+            return b[1] - a[1]
+        })
+        // console.log(allTeetList)
+        var tenNews = allTeetList.slice(0,10).map(item => item[0])
+        return tenNews
+    } else {
+        return []
+    }
+
+
+};
+
+/** 
+ * @param {number} followerId 
+ * @param {number} followeeId
+ * @return {void}
+ */
+Twitter.prototype.follow = function (followerId, followeeId) {
+    var user = this.TeetList.find(item => item[0] === followerId)
+    if (!user) {
+        user = this.addUser(followerId)
+    }
+    //是否已经关注
+    if (user[2].includes(followeeId)) return
+    user[2].push(followeeId)
+};
+
+/** 
+ * @param {number} followerId 
+ * @param {number} followeeId
+ * @return {void}
+ */
+Twitter.prototype.unfollow = function (followerId, followeeId) {
+    var user = this.TeetList.find(item => item[0] === followerId)
+    if (!user) {
+        user = this.addUser(followerId)
+    }
+    //是否已经关注
+    if (!user[2].includes(followeeId)) return
+
+    user[2] = user[2].filter(item => {
+        return item != followeeId
+    })
+};
+
+/**
+ * Your Twitter object will be instantiated and called as such:
+ * var obj = new Twitter()
+ * obj.postTweet(userId,tweetId)
+ * var param_2 = obj.getNewsFeed(userId)
+ * obj.follow(followerId,followeeId)
+ * obj.unfollow(followerId,followeeId)
+ */
+</script>

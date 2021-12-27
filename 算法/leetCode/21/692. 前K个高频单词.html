@@ -1,0 +1,26 @@
+<!-- 日期:2021.12.26 -->
+<meta charset='UTF-8' />
+<title>692. 前K个高频单词</title>
+<script>
+//算法
+var topKFrequent = function (words, k) {
+    var map = {}
+    for (var i = 0; i < words.length; i++) {
+        var item = words[i]
+        if (map[item]) {
+            map[item]++
+        } else {
+            map[item] = 1
+        }
+    }
+    var keys = Object.keys(map)
+
+    keys.sort((a, b) => {
+        if (map[b] !== map[a]) {
+            return map[b] - map[a]
+        }
+        return a.localeCompare(b)
+    })
+    return keys.slice(0, k)
+};
+</script>

@@ -1,0 +1,100 @@
+<!-- 日期:2021.12.26 -->
+<meta charset='UTF-8' />
+<title>面试题 17.20. 连续中值</title>
+<script>
+	//算法
+	/**
+ * initialize your data structure here.
+ */
+	var MedianFinder = function () {
+		this.data = []
+	};
+
+	/** 
+	 * @param {number} num
+	 * @return {void}
+	 */
+	MedianFinder.prototype.addNum = function (num) {
+		var data = this.data
+		var len = this.data.len
+		if (data.length === 0) {
+			data.push(num)
+			return
+		}
+		if (num <= data[0]) {
+			data.unshift(num)
+			return
+		}
+		if (num >= data[data.length - 1]) {
+			data.push(num)
+			return
+		}
+		if (len === 2) {
+			data = [data[0], num, data[p1]]
+			return
+		}
+		var start = 0;
+		var end = data.length - 1;
+		debugger
+		while (start >= 0 && end >= 0 && start <= end) {
+
+			var mid = (start + end) >> 1
+			var pre = data[mid - 1]
+			var next = data[mid + 1]
+			//console.log(num,'====',start,end,mid)
+			if (data[mid] <= num) {
+				if (num <= next) {
+					data.splice(mid + 1, 0, num)
+					break
+				}
+
+			}
+			if (data[mid] >= num) {
+				if (pre <= num) {
+					data.splice(mid, 0, num)
+					break
+				}
+			}
+			if (data[mid] === num) {
+				data.splice(mid, 0, num)
+				break
+			}
+			if (data[mid] < num) start = mid + 1
+			if (data[mid] > num) end = mid - 1
+		}
+	};
+
+	/**
+	 * @return {number}
+	 */
+	MedianFinder.prototype.findMedian = function () {
+		var len = this.data.length
+		var data = this.data
+		//console.log(data)
+		if (len % 2 === 0) {
+			var mid1 = (len - 1) >> 1
+			var mid2 = ((len - 1) >> 1) + 1
+			return (data[mid1] + data[mid2]) / 2
+		}
+		if (len % 2 === 1) {
+			return data[(len - 1) >> 1]
+		}
+	};
+
+	/**
+	 * Your MedianFinder object will be instantiated and called as such:
+	 * var obj = new MedianFinder()
+	 * obj.addNum(num)
+	 * var param_2 = obj.findMedian()
+	 */
+	 var obj = new MedianFinder()
+	 var ops = ["MedianFinder","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian"]
+var opsData = [[],[40],[],[12],[],[16],[],[14],[],[35],[],[19],[],[34],[],[35],[],[28],[],[35],[],[26],[],[6],[],[8],[],[2],[],[14],[],[25],[],[25],[],[4],[],[33],[],[18],[],[10],[],[14],[],[27],[],[3],[],[35],[],[13],[],[24],[],[27],[],[14],[],[5],[],[0],[],[38],[],[19],[],[25],[],[11],[],[14],[],[31],[],[30],[],[11],[],[31],[],[0],[]]
+for (let index = 1; index < ops.length; index++) {
+	const element = ops[index];
+	console.log(obj)
+	console.log(element)
+	obj[element](opsData[index][0])
+	
+}
+</script>
