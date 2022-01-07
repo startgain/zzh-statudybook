@@ -2,6 +2,8 @@
  
 ## 日志 
 - 算法学习
+	- 2022.01.08 394. 字符串解码
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/26/394.%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%A7%A3%E7%A0%81.html)
 	- 2021.12.26 215. 数组中的第K个最大元素
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/21/215.%20%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E7%AC%ACK%E4%B8%AA%E6%9C%80%E5%A4%A7%E5%85%83%E7%B4%A0.html)
 		- [掘金](https://juejin.cn/post/7045666029074120717)
