@@ -1,0 +1,51 @@
+<meta charset='UTF-8' />
+<title>面试题 17.14. 最小K个数</title>
+<script>
+//算法
+class Heap {
+    constructor(data, compare) {
+        this.data = data
+        this.compare = compare
+        for (let i = (data.length >> 1) - 1; i >= 0; i--) {
+            this.heapify(i);
+        }
+    }
+    heapify(index) {
+        var target = index;
+        let left = target * 2 + 1
+        let right = target * 2 + 2
+        if (left < this.data.length && this.compare(this.data[left], this.data[target])) {
+            target = left
+        }
+        if (right < this.data.length && this.compare(this.data[right], this.data[target])) {
+            target = right
+        }
+
+        if (target !== index) {
+            this.swap(target, index)
+            this.heapify(target)
+        }
+    }
+    swap(l, r) {
+        let data = this.data;
+        [data[l], data[r]] = [data[r], data[l]];
+    }
+    pop() {
+        this.swap(0, this.data.length - 1);
+        let ret = this.data.pop();
+        this.heapify(0);
+        return ret;
+    }
+}
+var smallestK = function (arr, k) {
+    // 思路小顶堆
+    const heap = new Heap(arr,(l,t)=>l<t)
+    const res = []
+    while(k>0){
+        res.push(heap.pop())
+        k--
+    }
+    return res
+
+};
+</script>

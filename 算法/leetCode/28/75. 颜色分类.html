@@ -1,0 +1,19 @@
+<meta charset='UTF-8' />
+<title>75. 颜色分类</title>
+<script>
+	//算法
+	var sortColors = function (nums) {
+		debugger
+		var red = []
+		var white = []
+		var blue = []
+		while (nums.length) {
+			var item = nums.pop()
+			if (item === 0) red.push(item)
+			if (item === 1) white.push(item)
+			if (item === 2) blue.push(item)
+		}
+		return [...red, ...white, ...blue]
+	};
+	console.log(sortColors([2, 0, 2, 1, 1, 0]))
+</script>

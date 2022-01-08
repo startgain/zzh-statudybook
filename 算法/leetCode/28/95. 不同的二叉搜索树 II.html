@@ -1,0 +1,50 @@
+<meta charset='UTF-8' />
+<title>95. 不同的二叉搜索树 II</title>
+<script>
+	//算法
+	/**
+	 * Definition for a binary tree node.
+	 * function TreeNode(val, left, right) {
+	 *     this.val = (val===undefined ? 0 : val)
+	 *     this.left = (left===undefined ? null : left)
+	 *     this.right = (right===undefined ? null : right)
+	 * }
+	 */
+	/**
+	 * @param {number} n
+	 * @return {TreeNode[]}
+	 */
+	function TreeNode(val, left, right) {
+		this.val = (val === undefined ? 0 : val)
+		this.left = (left === undefined ? null : left)
+		this.right = (right === undefined ? null : right)
+	}
+	var generateTrees = function (n) {
+		function generateChildTrees(start, end) {
+			var res = []
+			if (start > end) {
+				return [null]
+			}
+			for (var i = start; i <= end; i++) {
+
+				var leftTrees = generateChildTrees(start, i - 1)
+				var rightTrees = generateChildTrees(i + 1, end)
+				console.log(i, leftTrees)
+				console.log(i, rightTrees)
+				console.log('===========')
+				for (var j = 0; j < leftTrees.length; j++) {
+					for (var k = 0; k < rightTrees.length; k++) {
+						var currTree = new TreeNode(i)
+						currTree.left = leftTrees[j]
+						currTree.right = rightTrees[k]
+						res.push(currTree)
+					}
+				}
+			}
+
+			return res
+		}
+		return generateChildTrees(1, n)
+	};
+	console.log(generateTrees(3))
+</script>

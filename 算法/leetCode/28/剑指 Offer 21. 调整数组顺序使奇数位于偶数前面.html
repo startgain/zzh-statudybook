@@ -1,0 +1,25 @@
+<meta charset='UTF-8' />
+<title>剑指 Offer 21. 调整数组顺序使奇数位于偶数前面</title>
+<script>
+//算法
+function swap(nums, l, r) {
+    [nums[l], nums[r]] = [nums[r], nums[l]]
+}
+function isOdd(num) {
+    return num % 2 !== 0
+}
+var exchange = function (nums) {
+    // 思路用指针index记录奇数的最后位置的下一位
+    // [0,index) 为奇数
+    // [index,len-1] 为偶数
+    var index = 0
+    for (var i = 0; i < nums.length; i++) {
+        var item = nums[i]
+        if(isOdd(item)){
+            swap(nums,index,i)
+            index++
+        }
+    }
+    return nums
+};
+</script>
