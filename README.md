@@ -2,8 +2,23 @@
  
 ## 日志 
 - 算法学习
+	- 2022.01.09 75. 颜色分类
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/28/75.%20%E9%A2%9C%E8%89%B2%E5%88%86%E7%B1%BB.html)
+		- [掘金](https://juejin.cn/post/7050832814698151950)
+		- [b站](https://www.bilibili.com/video/BV1MS4y1j74q)
+	- 2022.01.09 95. 不同的二叉搜索树 II
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/28/95.%20%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%20II.html)
+		- [掘金](https://juejin.cn/post/7050875109388582942)
+		- [b站](https://www.bilibili.com/video/BV12Y411874U)
+	- 2022.01.09 剑指 Offer 21. 调整数组顺序使奇数位于偶数前面
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/28/%E5%89%91%E6%8C%87%20Offer%2021.%20%E8%B0%83%E6%95%B4%E6%95%B0%E7%BB%84%E9%A1%BA%E5%BA%8F%E4%BD%BF%E5%A5%87%E6%95%B0%E4%BD%8D%E4%BA%8E%E5%81%B6%E6%95%B0%E5%89%8D%E9%9D%A2.html)
+		- [掘金](https://juejin.cn/post/7050852784878387208)
+		- [b站](https://www.bilibili.com/video/BV1bT4y1m77R)
+	- 2022.01.09 面试题 17.14. 最小K个数
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/28/%E9%9D%A2%E8%AF%95%E9%A2%98%2017.14.%20%E6%9C%80%E5%B0%8FK%E4%B8%AA%E6%95%B0.html)
 	- 2022.01.08 394. 字符串解码
-		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/26/394.%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%A7%A3%E7%A0%81.html)
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/28/394.%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%A7%A3%E7%A0%81.html)
+		- [b站](https://www.bilibili.com/video/BV1a44y1574A)
 	- 2021.12.26 215. 数组中的第K个最大元素
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/21/215.%20%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E7%AC%ACK%E4%B8%AA%E6%9C%80%E5%A4%A7%E5%85%83%E7%B4%A0.html)
 		- [掘金](https://juejin.cn/post/7045666029074120717)
