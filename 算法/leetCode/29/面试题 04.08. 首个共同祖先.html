@@ -1,0 +1,49 @@
+<meta charset='UTF-8' />
+<title>面试题 04.08. 首个共同祖先</title>
+<script>
+	//算法
+	var lowestCommonAncestor = function (root, p, q) {
+		var res = {
+			target: null,
+			hasP: false,
+			hasQ: false
+		}
+		function findRoot(root, p, q) {
+			var flag = false
+			if (!res.hasP && !res.hasQ) flag = true
+			if (!root) return
+			if (root.val === p.val) {
+				res.hasP = true
+			}
+			if (root.val === q.val) {
+				res.hasQ = true
+			}
+			// 如果两个都还没找到，继续递归子元素
+			if (!res.hasP || !res.hasQ) {
+				findRoot(root.left, p, q)
+				findRoot(root.right, p, q)
+			}
+			if (!res.target && res.hasP && res.hasQ && flag) {
+				res.target = root
+			}
+		}
+		findRoot(root, p, q)
+		return res.target
+	};
+	var root = {
+		val: 3,
+		left: {
+			val: 1,
+			left: null,
+			right: null
+		},
+		right: {
+			val: 2,
+			left: null,
+			right: null
+		}
+	}
+	lowestCommonAncestor(root, 2, 3)
+
+
+</script>
