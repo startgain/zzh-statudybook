@@ -1,0 +1,43 @@
+<meta charset='UTF-8' />
+<title>剑指 Offer 51. 数组中的逆序对</title>
+<script>
+	//算法
+	var temp = []
+	var reversePairs = function (nums) {
+
+		var len = nums.length
+		return merge(0, len - 1, nums)
+	};
+	var merge = function (l, r, nums) {
+		debugger
+		// 终止条件
+		if (l >= r) return 0;
+		var mid = l + ((r - l) >> 1)
+		var res = merge(l, mid, nums) + merge(mid + 1, r, nums)
+		var i = l, j = mid + 1
+		for (var m = l; m <= r; m++) {
+			temp[m] = nums[m]
+		}
+
+		for (var n = l; n <= r; n++) {
+			if (i === (mid + 1)) {
+				nums[n] = temp[j]
+				j++
+			} else if (j === (r + 1)) {
+				nums[n] = temp[i]
+				i++
+			} else if (temp[i] <= temp[j]) {
+				nums[n] = temp[i]
+				i++
+			} else {
+				nums[n] = temp[j]
+				j++
+				res += mid - i + 1
+			}
+
+		}
+		return res
+	}
+	var nums = [7, 5, 6, 4]
+	reversePairs(nums)
+</script>
