@@ -2,6 +2,8 @@
  
 ## 日志 
 - 算法学习
+	- 2022.01.13 剑指 Offer 51. 数组中的逆序对
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/29/%E5%89%91%E6%8C%87%20Offer%2051.%20%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%80%86%E5%BA%8F%E5%AF%B9.html)
 	- 2022.01.12 面试题 04.08. 首个共同祖先
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/29/%E9%9D%A2%E8%AF%95%E9%A2%98%2004.08.%20%E9%A6%96%E4%B8%AA%E5%85%B1%E5%90%8C%E7%A5%96%E5%85%88.html)
 		- [掘金](https://juejin.cn/post/7051999278692040740)
