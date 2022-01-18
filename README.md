@@ -2,6 +2,8 @@
  
 ## 日志 
 - 算法学习
+	- 2022.01.19 327. 区间和的个数
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/29/327.%20%E5%8C%BA%E9%97%B4%E5%92%8C%E7%9A%84%E4%B8%AA%E6%95%B0.html)
 	- 2022.01.13 剑指 Offer 51. 数组中的逆序对
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/29/%E5%89%91%E6%8C%87%20Offer%2051.%20%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%80%86%E5%BA%8F%E5%AF%B9.html)
 		- [掘金](https://juejin.cn/post/7052718384458235941)
