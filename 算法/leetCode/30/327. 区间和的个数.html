@@ -1,0 +1,69 @@
+<meta charset='UTF-8' />
+<title>327. 区间和的个数</title>
+<script>
+	//算法
+	// [-2,5,-1]
+	// -2
+	// 2
+	var countRangeSum = function (nums, lower, upper) {
+		debugger
+		//求区间和联想到前缀和前缀和
+		//区间和 S(i, j) 表示在 nums 中，位置从 i 到 j 的元素之和，包含 i 和 j (i ≤ j)。
+		//那么在前缀和sums中，可以用sums[j]-sums[i-1](因为包含了i和j)来表示区间和S(i,j)。所以为了表达端点需要在前缀和初始值增加一个0.
+		var sums = [0]
+		var total = 0
+		for (var i = 0; i < nums.length; i++) {
+			sums.push(total += nums[i])
+		}
+		const result = computedS(sums, lower, upper)
+		return result[1]
+	};
+	var computedS = function (sums, lower, upper) {
+		if (sums.length < 2) return [sums, 0]
+		var mid = Math.floor((sums.length) / 2);
+		var left = sums.slice(0, mid)
+		var right = sums.slice(mid)
+		//console.log(sums)
+		//console.log(mid)
+		//console.log(left)
+		//console.log(right)
+		var [sums1, n1] = computedS(left, lower, upper)
+		var [sums2, n2] = computedS(right, lower, upper)
+		//console.log('n1he n2',n1,n2)
+		var res = n1 + n2
+		// 声明l和r指向右侧数组的第一项
+		var i = 0;
+		var l = r = 0
+		// 循环统计
+		////console.log(left,right,'====',l,r)
+		while (i <= mid - 1) {
+			while (l <= sums2.length - 1 && sums2[l] - sums1[i] < lower) l++
+			while (r <= sums2.length - 1 && sums2[r] - sums1[i] <= upper) r++
+			////console.log(i,r,l,sums,'=',sums[r] , sums[i],sums[r] - sums[i],sums[r] - sums[i]<=upper)
+			//console.log('排序结果1',sums1,sums2)
+			//console.log('排序结果2',l,r)
+			//console.log('排序结果3',i,mid,sums)
+			res += (r - l)
+			i++
+		}
+
+
+		var arr = []
+		var p1 = p2 = 0
+		var index = 0
+		while (p1 < sums1.length || p2<sums2.length) {
+			if (p1 >= sums1.length) {
+				arr[index++] = sums2[p2++]
+			} else if (p2 >= sums2.length) {
+				arr[index++] = sums1[p1++]
+			}else if (sums1[p1] < sums2[p2]) {
+				arr[index++] = sums1[p1++]
+			} else {
+				arr[index++] = sums2[p2++]
+			}
+		}
+		//console.log('最终结果',res)
+		return [arr, res]
+	}
+	console.log('haha', countRangeSum([-2, 5, -1, 6], -2, 2))
+</script>

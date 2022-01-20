@@ -1,0 +1,58 @@
+<meta charset='UTF-8' />
+<title>315. 计算右侧小于当前元素的个数</title>
+<script>
+	//算法
+	var countSmaller = function (nums) {
+		var i = 0
+		while (i < nums.length) {
+			nums[i] = { val: nums[i], res: 0 }
+			i++
+		}
+
+		function computedNum(nums) {
+			if (nums.length < 2) return nums
+			var len = nums.length
+			var mid = len >> 1
+			var left = nums.slice(0, mid)
+			var right = nums.slice(mid)
+			var sortLeft = computedNum(left)
+			var sortRight = computedNum(right)
+			// 开始统计right中的小于left的值
+			var i = 0
+			var p = 0
+			while (i < left.length) {
+				var item = sortLeft[i]
+				while (sortRight[p] && item.val > sortRight[p].val && p < sortRight.length) p++
+				item.res += p
+				i++
+			}
+			// 合并数组
+
+			var arr = Array(nums.length)
+			var index = 0;
+			var p = q = 0
+			while (index < nums.length) {
+				if (p === sortLeft.length) {
+					arr[index++] = sortRight[q++]
+				} else if (q === sortRight.length) {
+					arr[index++] = sortLeft[p++]
+				} else if (sortLeft[p].val < sortRight[q].val) {
+					arr[index++] = sortLeft[p++]
+				} else {
+					arr[index++] = sortRight[q++]
+				}
+			}
+			return arr
+		}
+		computedNum(nums)
+		var j = 0
+		while (j < nums.length) {
+			nums[j] = nums[j].res
+			j++
+		}
+		return nums
+
+
+	};
+	countSmaller([26, 78, 27, 100, 33, 67, 90, 23, 66, 5, 38, 7, 35, 23, 52, 22, 83, 51, 98, 69, 81, 32, 78, 28, 94, 13, 2, 97, 3, 76, 99, 51, 9, 21, 84, 66, 65, 36, 100, 41])
+</script>

@@ -1,0 +1,26 @@
+<meta charset='UTF-8' />
+<title>1508. 子数组和排序后的区间和</title>
+<script>
+//算法
+var rangeSum = function (nums, n, left, right) {
+    var module = 1000000007
+    var arr = []
+    left = left-1
+    right = right -1
+    var index = 0
+    for (var i = 0; i < nums.length; i++) {
+        var total = 0
+        for (var j = i; j < nums.length; j++) {
+            total += nums[j]
+            arr[index++] = total
+        }
+    }
+    arr.sort((a,b)=>a-b)
+    var res = 0
+    
+    for (var i = left; i <= right; i++) {
+        res+=arr[i]
+    }
+    return res%module
+};
+</script>

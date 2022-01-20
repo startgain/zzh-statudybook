@@ -1,0 +1,45 @@
+<meta charset='UTF-8' />
+<title>1305. 两棵二叉搜索树中的所有元素</title>
+<script>
+//算法
+var getAllElements = function (root1, root2) {
+    var Traversal = function (root) {
+        if (!root) return []
+        var stack = [root]
+        var res = []
+        while (stack.length > 0) {
+            var node = stack.pop()
+            if (!node.left && !node.right) {
+                res.push(node.val)
+                continue
+            }
+            var left = node.left
+            var right = node.right
+            node.left = node.right = null
+            
+            
+            if (right) {
+                stack.push(right)
+            }
+            stack.push(node)
+            if (left) {
+                stack.push(left)
+            }
+        }
+        return res
+    };
+    var Traversal1 = Traversal(root1)
+    var Traversal2 = Traversal(root2)
+    var result = []
+    while(Traversal1.length&&Traversal2.length){
+        if(Traversal1[0]<Traversal2[0]){
+            result.push(Traversal1.shift())
+        }else{
+            result.push(Traversal2.shift())
+        }
+    }
+    if(Traversal1.length) result = result.concat(Traversal1)
+    if(Traversal2.length) result = result.concat(Traversal2)
+    return result
+}
+</script>

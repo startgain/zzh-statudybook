@@ -1,0 +1,48 @@
+<meta charset='UTF-8' />
+<title>148. 排序链表</title>
+<script>
+//算法
+var sortList = function (head) {
+    // 终止条件
+    if (!head || !head.next) {
+        return head
+    }
+    //快慢指针寻找中点
+    var newHead = new ListNode(0, head)
+    var fast = newHead
+    var slow = newHead
+    while (fast && fast.next) {
+        fast = fast.next.next
+        slow = slow.next
+    }
+
+    var right = slow.next
+    slow.next = null
+    var left = newHead.next
+
+    // 递归处理子链表
+    var sortLeft = sortList(left)
+    var sortRight = sortList(right)
+    // 合并排序的子链表
+    var sortNewHead = new ListNode(0)
+    var curr = sortNewHead
+    while (sortLeft && sortRight) {
+        if (sortLeft.val < sortRight.val) {
+            curr.next = sortLeft
+            sortLeft = sortLeft.next
+        } else {
+            curr.next = sortRight
+            sortRight = sortRight.next
+        }
+        curr = curr.next
+    }
+    if (sortRight) {
+        curr.next = sortRight
+    }
+    if (sortLeft) {
+        curr.next = sortLeft
+    }
+    return sortNewHead.next
+
+};
+</script>

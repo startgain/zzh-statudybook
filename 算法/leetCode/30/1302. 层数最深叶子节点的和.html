@@ -1,0 +1,27 @@
+<meta charset='UTF-8' />
+<title>1302. 层数最深叶子节点的和</title>
+<script>
+//算法
+var deepestLeavesSum = function (root) {
+    // 层序遍历
+    var maxN = 1
+    var res = 0
+    function recursion(root, n) {
+        if (!root) return
+        if (!root.left && !root.right) {
+            // 叶子结点
+            if(n === maxN){
+                res+=root.val
+            }else if(n>maxN){
+                res = root.val
+                maxN = n
+            }
+        } else {
+            recursion(root.left,n+1)
+            recursion(root.right,n+1)
+        }
+    }
+    recursion(root,1)
+    return res
+};
+</script>
