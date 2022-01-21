@@ -10,6 +10,7 @@
 		- [掘金](https://juejin.cn/post/7054205062553272351)
 	- 2022.01.21 1302. 层数最深叶子节点的和
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/30/1302.%20%E5%B1%82%E6%95%B0%E6%9C%80%E6%B7%B1%E5%8F%B6%E5%AD%90%E8%8A%82%E7%82%B9%E7%9A%84%E5%92%8C.html)
+		- [掘金](https://juejin.cn/post/7055472888664555550)
 	- 2022.01.21 1508. 子数组和排序后的区间和
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/30/1508.%20%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C%E6%8E%92%E5%BA%8F%E5%90%8E%E7%9A%84%E5%8C%BA%E9%97%B4%E5%92%8C.html)
 	- 2022.01.21 23. 合并K个升序链表
