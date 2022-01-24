@@ -2,6 +2,14 @@
  
 ## 日志 
 - 算法学习
+	- 2022.01.25 1288. 删除被覆盖区间
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/31/1288.%20%E5%88%A0%E9%99%A4%E8%A2%AB%E8%A6%86%E7%9B%96%E5%8C%BA%E9%97%B4.html)
+	- 2022.01.25 53. 最大子数组和
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/31/53.%20%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C.html)
+		- [掘金](https://juejin.cn/post/7056370616185651213)
+	- 2022.01.25 56. 合并区间
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/31/56.%20%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4.html)
+		- [掘金](https://juejin.cn/post/7056783377596153893)
 	- 2022.01.21 1305. 两棵二叉搜索树中的所有元素
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/29/1305.%20%E4%B8%A4%E6%A3%B5%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E5%85%83%E7%B4%A0.html)
 		- [掘金](https://juejin.cn/post/7054595336135770126)
