@@ -1,0 +1,22 @@
+<meta charset='UTF-8' />
+<title>1288. 删除被覆盖区间</title>
+<script>
+	//算法
+	var removeCoveredIntervals = function (intervals) {
+		intervals.sort((a, b) => a[0] - b[0])
+		var total = 0
+		var pre = intervals[0]
+		for (var i = 1; i < intervals.length; i++) {
+			var item = intervals[i]
+			if (item[0] > pre[0] && item[1] > pre[1]) {
+				total += 1
+				pre = item
+			} else {
+				pre[0] = Math.min(pre[0], item[0])
+				pre[1] = Math.max(pre[1], item[1])
+			}
+		}
+		return total + 1
+	};
+	console.log(removeCoveredIntervals([[1, 2], [1, 4], [3, 4]]))
+</script>

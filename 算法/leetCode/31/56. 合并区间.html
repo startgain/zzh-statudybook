@@ -1,0 +1,39 @@
+<meta charset='UTF-8' />
+<title>56. 合并区间</title>
+<script>
+//算法
+var merge = function(intervals) {
+    var res = [];
+    // 以item[0]为基准排序
+    intervals.sort((a,b)=>{
+        return a[0]-b[0]
+    })
+		// pre 初始值
+		var pre = intervals[0];
+    for ( var i = 1; i < intervals.length; i++){
+        var item = intervals[i];
+        // [1,5] [2,6] 
+        // 交集的情况 比较多
+        // [a,b] [c,d]
+        // a或者b  大于等于c并且小于等于d 
+        // c或者d  大于等于a并且小于等于b 
+        // 不交集的情况  就一种
+        // [a,b] [c,d]
+        // a>d 或者 c>b
+        // 但是数组不是有序的啊   所以先排序
+        if(item[0]>pre[1]||item[1]<pre[0]){
+            res.push(pre);
+            pre = item
+        }else{
+            pre[0] = Math.min(pre[0],item[0])
+            pre[1] = Math.max(pre[1],item[1])
+        }
+    }
+    if(pre){
+        res.push(pre)
+    }
+    return res
+};
+
+console.log(merge([[1,4],[0,4]]))
+</script>
