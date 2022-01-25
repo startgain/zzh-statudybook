@@ -45,24 +45,27 @@
 		padding: 0px 150px;
 		box-sizing: border-box;
 	}
-	.download{
-		display:block;
-		width:130px;
+
+	.download {
+		display: block;
+		width: 130px;
 		height: 50px;
 		border: 1px solid #fff;
-		background:lightblue;
+		background: lightblue;
 		color: #000;
 		text-align: center;
 		line-height: 50px;
-		text-decoration:none;
+		text-decoration: none;
 		border-radius: 10px;
-		margin: 0 auto;;
+		margin: 0 auto;
+		;
 	}
 </style>
 
 <body>
 	<div class="imgBox">
-		<p class="hiddenP" style="opacity: 0;"></p>
+		<p class="hiddenP"
+			style="opacity: 0;"></p>
 		<!-- <p>331. 验证二叉树的前序序列化</p> -->
 		<!-- <p>142. 环形链表 II</p> -->
 		<!-- <p>206. 反转链表</p> -->
@@ -87,7 +90,7 @@
 		<!-- <p>445. 两数相加 II</p> -->
 		<!-- <p>1249. 移除无效的括号</p> -->
 		<!-- <p class="imgTitle">633. 平方数之和</p> -->
-	
+
 		<!-- <p>143. 重排链表</p> -->
 		<!-- 16 -->
 		<!-- <p>面试题 02.04. 分割链表</p> -->
@@ -139,7 +142,8 @@
 		<!-- <p>315. 计算右侧小于当前元素的个数</p> -->
 		<!-- <p>53. 最大子数组和</p> -->
 		<!-- <p>56. 合并区间</p> -->
-		<p>1288. 删除被覆盖区间</p>
+		<!-- <p>1288. 删除被覆盖区间</p> -->
+		<p>面试题 04.12. 求和路径</p>
 	</div>
 	<a class="download"
 		href="./img/wuya.png"
@@ -148,18 +152,18 @@
 </body>
 <script src="./js/html2canvas.min.js"></script>
 <script>
-	
+
 
 	// 处理字体大小
-	function dealFontSize(){
+	function dealFontSize() {
 		const hiddenP = document.querySelector('.hiddenP');
 		const target = document.querySelector("p:not(.hiddenP)");
 		hiddenP.innerText = target.innerText;
 		const hiddenH = hiddenP.offsetHeight
-		if(hiddenH>200){
+		if (hiddenH > 200) {
 			const fontSize = getComputedStyle(hiddenP).fontSize.split('p')[0]
-			hiddenP.style.fontSize = fontSize-10+'px';
-			target.style.fontSize = fontSize-10+'px';
+			hiddenP.style.fontSize = fontSize - 10 + 'px';
+			target.style.fontSize = fontSize - 10 + 'px';
 			dealFontSize()
 		}
 	}
@@ -169,7 +173,7 @@
 	html2canvas(document.body, { width: 1303, height: 734 }).then(function (canvas) {
 		var btn = document.querySelector('.download');
 		document.querySelector('.imgBox').style.display = 'none';
-		document.body.insertBefore(canvas,btn);
+		document.body.insertBefore(canvas, btn);
 		document.querySelector('.download').href = canvas.toDataURL('image/png')
 		document.querySelector('.download').download = document.querySelector('p').innerText + '.png'
 	});
