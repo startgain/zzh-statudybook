@@ -2,6 +2,9 @@
  
 ## 日志 
 - 算法学习
+	- 2022.01.26 面试题 04.12. 求和路径
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/31/%E9%9D%A2%E8%AF%95%E9%A2%98%2004.12.%20%E6%B1%82%E5%92%8C%E8%B7%AF%E5%BE%84.html)
+		- [掘金](https://juejin.cn/post/7057173671709769735)
 	- 2022.01.25 1288. 删除被覆盖区间
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/31/1288.%20%E5%88%A0%E9%99%A4%E8%A2%AB%E8%A6%86%E7%9B%96%E5%8C%BA%E9%97%B4.html)
 	- 2022.01.25 53. 最大子数组和
