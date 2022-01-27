@@ -1,0 +1,52 @@
+<meta charset='UTF-8' />
+<title>207. 课程表</title>
+<script>
+	//算法
+	var canFinish = function (numCourses, prerequisites) {
+		if (prerequisites.length === 0) return true
+		var count = 0
+		// 记录课程依赖关系
+		var map = {}
+		// 记录入度数量
+		var frontCount = {}
+		for (var i = 0; i < prerequisites.length; i++) {
+			var item = prerequisites[i]
+			// 统计入度数量
+			if (frontCount[item[0]]) {
+				frontCount[item[0]]++
+			} else {
+				frontCount[item[0]] = 1
+			}
+			// 收集依赖关系
+			if (map[item[1]]) {
+				map[item[1]].push(item[0])
+			} else {
+				map[item[1]] = [item[0]]
+			}
+		}
+		// 查找起点 入度为0的元素
+		var queue = []
+		for (var i = 0; i < numCourses; i++) {
+			if (!frontCount[i]) {
+				queue.push(i)
+			}
+		}
+		// 遍历queue
+		while (queue.length) {
+			var item = queue.shift()
+			count++
+			var curr = map[item]
+			if (curr && curr.length) {
+				for (var i = 0; i < curr.length; i++) {
+					frontCount[curr[i]]--
+					if (frontCount[curr[i]] === 0) {
+						queue.push(curr[i])
+					}
+				}
+			}
+		}
+
+		return count === numCourses;
+	};
+	console.log(canFinish(2, [[1,0]]))
+</script>

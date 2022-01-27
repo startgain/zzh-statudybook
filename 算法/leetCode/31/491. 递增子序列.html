@@ -1,0 +1,32 @@
+<meta charset='UTF-8' />
+<title>491. 递增子序列</title>
+<script>
+	//算法
+	var findSubsequences = function (nums) {
+		var res = new Set()
+		for (var i = 0; i < nums.length - 1; i++) {
+			var head = nums[i];
+			find([head], nums.slice(i + 1))
+		}
+
+		function find(head, last) {
+			for (var i = 0; i < last.length; i++) {
+				var item = last[i];
+				var pre = head[head.length - 1]
+				if (item >= pre) {
+					var newVal = [...head, item]
+					res.add(JSON.stringify(newVal))
+					// 开启新篇章
+					find(newVal, last.slice(i + 1))
+				}
+			}
+		}
+		// 序列化
+		var result = []
+		for(let item of res){
+			result.push(JSON.parse(item))
+		}
+		return result
+	};
+	findSubsequences([4, 6, 7, 7])
+</script>
