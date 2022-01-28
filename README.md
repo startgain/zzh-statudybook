@@ -2,6 +2,11 @@
  
 ## 日志 
 - 算法学习
+	- 2022.01.28 491. 递增子序列
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/31/491.%20%E9%80%92%E5%A2%9E%E5%AD%90%E5%BA%8F%E5%88%97.html)
+		- [掘金](https://juejin.cn/post/7057556191018221599)
+	- 2022.01.28 207. 课程表
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/32/207.%20%E8%AF%BE%E7%A8%8B%E8%A1%A8.html)
 	- 2022.01.26 面试题 04.12. 求和路径
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/31/%E9%9D%A2%E8%AF%95%E9%A2%98%2004.12.%20%E6%B1%82%E5%92%8C%E8%B7%AF%E5%BE%84.html)
 		- [掘金](https://juejin.cn/post/7057173671709769735)
