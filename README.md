@@ -2,6 +2,9 @@
  
 ## 日志 
 - 算法学习
+	- 2022.01.30 1122. 数组的相对排序
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/32/1122.%20%E6%95%B0%E7%BB%84%E7%9A%84%E7%9B%B8%E5%AF%B9%E6%8E%92%E5%BA%8F.html)
+		- [掘金](https://juejin.cn/post/7058651055004844040)
 	- 2022.01.28 491. 递增子序列
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/31/491.%20%E9%80%92%E5%A2%9E%E5%AD%90%E5%BA%8F%E5%88%97.html)
 		- [掘金](https://juejin.cn/post/7057556191018221599)
