@@ -1,0 +1,42 @@
+<meta charset='UTF-8' />
+<title>1122. 数组的相对排序</title>
+<script>
+	//算法
+	var relativeSortArray = function (arr1, arr2) {
+		var temp = [];
+		var map = {}
+		// 保存arr2中存在的元素
+		for (var i = 0; i < arr2.length; i++) {
+			var item = arr2[i]
+			map[item] = 0
+		}
+		// 比那里arr1统计2中拥有的元素的数量
+		for (var i = 0; i < arr1.length; i++) {
+			var item = arr1[i]
+			if (map[item] !== undefined) {
+				map[item]++
+			} else {
+				temp.push(item)
+			}
+		}
+		var index = 0
+		// 从新放入新数组
+		for (var i = 0; i < arr2.length; i++) {
+			var item = arr2[i]
+			while (map[item] > 0) {
+				arr1[index] = item
+				index++
+				map[item]--
+			}
+		}
+		temp.sort((a, b) => a - b)
+		var last = arr1.length - temp.length
+		var t = 0
+		while (last < arr1.length) {
+			arr1[last] = temp[t]
+			last++
+			t++
+		}
+		return arr1
+	};
+</script>
