@@ -2,6 +2,9 @@
  
 ## 日志 
 - 算法学习
+	- 2022.01.31 274. H 指数
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/32/274.%20H%20%E6%8C%87%E6%95%B0.html)
+		- [掘金](https://juejin.cn/post/7059028970364207140)
 	- 2022.01.30 1122. 数组的相对排序
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/32/1122.%20%E6%95%B0%E7%BB%84%E7%9A%84%E7%9B%B8%E5%AF%B9%E6%8E%92%E5%BA%8F.html)
 		- [掘金](https://juejin.cn/post/7058651055004844040)
