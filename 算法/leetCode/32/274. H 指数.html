@@ -1,0 +1,17 @@
+<meta charset='UTF-8' />
+<title>274. H 指数</title>
+<script>
+//算法
+var hIndex = function(citations) {
+    citations.sort((a,b)=>b-a)
+    var h = 0
+    for(var i = 0;i < citations.length;i++){
+        if(citations[i]>i){
+            h = i+1
+        }else{
+            break
+        }
+    }
+    return h
+};
+</script>
