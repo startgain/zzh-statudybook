@@ -2,6 +2,14 @@
  
 ## 日志 
 - 算法学习
+	- 2022.02.06 164. 最大间距
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/33/164.%20%E6%9C%80%E5%A4%A7%E9%97%B4%E8%B7%9D.html)
+		- [掘金](https://juejin.cn/post/7060126193697161229)
+	- 2022.02.06 687. 最长同值路径
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/33/687.%20%E6%9C%80%E9%95%BF%E5%90%8C%E5%80%BC%E8%B7%AF%E5%BE%84.html)
+	- 2022.02.06 763. 划分字母区间
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/33/763.%20%E5%88%92%E5%88%86%E5%AD%97%E6%AF%8D%E5%8C%BA%E9%97%B4.html)
+		- [掘金](https://juejin.cn/post/7059281491548700709)
 	- 2022.01.31 274. H 指数
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/32/274.%20H%20%E6%8C%87%E6%95%B0.html)
 		- [掘金](https://juejin.cn/post/7059028970364207140)
