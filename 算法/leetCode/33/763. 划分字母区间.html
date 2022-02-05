@@ -1,0 +1,35 @@
+<meta charset="UTF-8" />
+<title>763. 划分字母区间</title>
+<script>
+  //算法
+  var partitionLabels = function (s) {
+    var indexMap = {};
+    for (var i = 0; i < s.length; i++) {
+      var item = s[i];
+      if (indexMap[item] === undefined) {
+        indexMap[item] = [i,i];
+      } else {
+        indexMap[item][1] = i;
+      }
+    }
+    var res = [];
+    var curr = indexMap[s[0]];
+    for (var i = 1; i < s.length; i++) {
+      var item = s[i];
+      var indexInfo = indexMap[item];
+      var left = indexInfo[0];
+      var right = indexInfo[indexInfo.length - 1];
+      // 区间合并
+      if(left<=curr[1]&&right>curr[1]){
+          curr[1] = right
+      }else if(left>curr[1]){
+        res.push(curr[1]-curr[0]+1)
+        curr = [left,right]
+      }
+    }
+    res.push(curr[1]-curr[0]+1)
+    return res
+  };
+  var s = "ababcbacadefegdehijhklij";
+  console.log(partitionLabels(s));
+</script>

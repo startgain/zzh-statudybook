@@ -1,0 +1,40 @@
+<meta charset="UTF-8" />
+<title>164. 最大间距</title>
+<script>
+  //算法
+  var maximumGap = function (nums) {
+    var counter = [];
+    function radixSort(arr, maxDigit) {
+      var mod = 10;
+      var dev = 1;
+      for (var i = 0; i < maxDigit; i++, dev *= 10, mod *= 10) {
+        for (var j = 0; j < arr.length; j++) {
+          var bucket = Math.floor((arr[j] % mod) / dev);
+          if (counter[bucket] == null) {
+            counter[bucket] = [];
+          }
+          counter[bucket].push(arr[j]);
+        }
+        var pos = 0;
+        for (var j = 0; j < counter.length; j++) {
+          var value = null;
+          if (counter[j] != null) {
+            while ((value = counter[j].shift()) != null) {
+              arr[pos++] = value;
+            }
+          }
+        }
+      }
+      return arr;
+    }
+    var maxDigit = Math.max(...nums).toString().length;
+    radixSort(nums, maxDigit);
+    // console.log(nums)
+    var max = 0;
+    for (var i = 1; i < nums.length; i++) {
+      max = Math.max(nums[i] - nums[i - 1], max);
+    }
+    return max;
+  };
+  console.log(maximumGap([1, 1000000]));
+</script>

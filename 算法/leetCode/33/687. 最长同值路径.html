@@ -1,0 +1,45 @@
+<meta charset="UTF-8" />
+<title>687. 最长同值路径</title>
+<script>
+  //算法
+  var longestUnivaluePath = function (root) {
+    // console.log(JSON.stringify(root))
+    // 当前节点的左右子树
+    // 没有与当前节点一致的  //结束
+    // 有一个一致  // 延伸
+    // 有两个  判断
+    var max = 0;
+    function deepRoot(root, d) {
+      if (!root) return d;
+      var left = d,
+        right = d;
+      if (root.left && root.left.val === root.val) {
+        left = deepRoot(root.left, d + 1);
+      } else {
+        deepRoot(root.left, 0);
+      }
+      if (root.right && root.right.val === root.val) {
+        right = deepRoot(root.right, d + 1);
+      } else {
+        deepRoot(root.right, 0);
+      }
+      var res = Math.max(left, right);
+
+      if (
+        root.left &&
+        root.left.val === root.val &&
+        root.right &&
+        root.right.val === root.val
+      ) {
+        // console.log(left, right, max)
+        max = Math.max(left + right - d - d, max);
+        // console.log(max,left,right,d,root)
+      } else {
+        max = Math.max(res, max);
+      }
+      return res;
+    }
+    deepRoot(root, 0);
+    return max;
+  };
+</script>
