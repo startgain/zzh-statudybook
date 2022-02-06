@@ -1,0 +1,21 @@
+<meta charset='UTF-8' />
+<title>179. 最大数</title>
+<script>
+//算法
+var largestNumber = function (nums) {
+    // 开始排序
+    nums.sort((a, b) => {
+        var strA = a.toString()
+        var strB = b.toString()
+        var res1 = parseInt(strA + strB)
+        var res2 = parseInt(strB + strA)
+        return res2 - res1
+    })
+    var res = nums.join('')
+    if (res[0] === '0') {
+        return '0'
+    }
+    return res
+};
+
+</script>
