@@ -1,0 +1,65 @@
+<meta charset="UTF-8" />
+<title>69. x 的平方根</title>
+<script>
+  //算法
+  var mySqrt = function (x) {
+    // 二分查找
+    if (x === 0) return 0;
+    if (x === 1 || x === 2 || x === 3) return 1;
+
+    var left = 2,
+      right = x >> 1;
+
+    var mid = (left + right) >> 1;
+    while (left < right) {
+      if (mid * mid > x) right = mid - 1;
+      if (mid * mid < x) {
+        if ((mid + 1) * (mid + 1) > x) {
+          left = mid;
+          right = mid;
+          break;
+        } else {
+          left = mid + 1;
+        }
+      }
+      if (mid * mid === x) {
+        left = mid;
+        right = mid;
+        break;
+      }
+      mid = (left + right) >> 1;
+    }
+    return left;
+  };
+  var mySqrt = function (x) {
+    // 二分查找
+    if (x === 0) return 0;
+    if (x < 4) return 1;
+
+    var left = 2,
+      right = x >> 1;
+    var ans = 0;
+    var mid = (left + right) >> 1;
+    while (left < right) {
+      // 大于的情况
+      if (mid * mid > x) right = mid - 1;
+      // 小于的情况
+      if (mid * mid < x) {
+        if ((mid + 1) * (mid + 1) > x) {
+          ans = mid;
+          break;
+        } else {
+          left = mid + 1;
+        }
+      }
+      // 等于的情况
+      if (mid * mid === x) {
+        ans = mid;
+        break;
+      }
+      mid = (left + right) >> 1;
+    }
+    return ans;
+  };
+  mySqrt(9);
+</script>

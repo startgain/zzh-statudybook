@@ -1,0 +1,66 @@
+<meta charset="UTF-8" />
+<title>1658. 将 x 减到 0 的最小操作数</title>
+<script>
+  //算法
+    var minOperations = function (nums, x) {
+    var min = -1;
+    var len = nums.length;
+    var before = Array(len).fill(0);
+    var after = Array(len).fill(0);
+
+    // 设置初始值，并判断是否符合答案
+    before[0] = nums[0];
+    after[len - 1] = nums[len - 1];
+    if (nums[0] === x || nums[len - 1] === x) return 1;
+    // 前缀和、后缀和   并记录是否有单边满足条件的答案
+    for (var i = 1; i < len; i++) {
+      before[i] = before[i - 1] + nums[i];
+      after[len - 1 - i] = after[len - i] + nums[len - 1 - i];
+      if (before[i] === x || after[len - 1 - i] === x) {
+        if (min === -1) {
+          min = i + 1;
+        } else {
+          min = Math.min(i + 1, min);
+        }
+      }
+      if (before[i] >= x && after[len - 1 - i] >= x) {
+        break;
+      }
+    }
+
+    // 特殊情况
+    // [1,1,2,3,5,6,7,2,2,3]   7  4+0 、 0+3、2+2、3+1
+    // 这里min最少>=2
+    var p = 0,
+      q = len - 1;
+    while (p >= 0 && q <= len - 1 && p < q) {
+      var total = before[p] + after[q];
+      if (total < x) {
+        q--;
+      }
+      if (total > x) {
+        p++;
+        while (before[p] + after[q] > x && q < len) {
+          q++;
+        }
+      }
+      if (total === x) {
+        if (min === -1) {
+          min = p + 1 + len - q;
+        } else {
+          min = Math.min(p + 1 + len - q, min);
+        }
+        p++;
+        while (before[p] + after[q] > x && q < len) {
+          q++;
+        }
+      }
+    }
+
+    return min;
+  };
+  var nums = [1, 1, 4, 2, 3];
+  var x = 5;
+
+  console.log(minOperations(nums, x));
+</script>
