@@ -1,0 +1,27 @@
+<meta charset='UTF-8' />
+<title>34. 在排序数组中查找元素的第一个和最后一个位置</title>
+<script>
+//算法
+var searchRange = function (nums, target) {
+    // 二分查找
+    var res = [-1, -1]
+    var left = 0
+    var right = nums.length
+    while (left <= right) {
+        var mid = (left + right) >> 1
+        if (nums[mid] < target) {
+            left = mid + 1
+        } else {
+            right = mid - 1
+        }
+    }
+    // 如果res 不等于[-1，-1] 那么left为target的起始位置
+    while (nums[left] === target) {
+        if (res[0] === -1) res[0] = left
+        res[1] = left
+        left++
+    }
+    return res
+};
+
+</script>

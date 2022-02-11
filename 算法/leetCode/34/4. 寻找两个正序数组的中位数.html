@@ -1,0 +1,40 @@
+<meta charset='UTF-8' />
+<title>4. 寻找两个正序数组的中位数</title>
+<script>
+//算法
+var findMedianSortedArrays = function (nums1, nums2) {
+    var len1 = nums1.length
+    var len2 = nums2.length
+    // 奇数
+    var isEven = (len1 + len2) % 2 !== 0
+    var mergeArr = merge(nums1, nums2)
+    if (isEven) {
+        // 找到奇数的下标
+        var index = (len1 + len2 - 1) / 2
+        return mergeArr[index]
+    } else {
+        //偶数
+        var left = mergeArr.length / 2 - 1
+        var right = left + 1
+        return (mergeArr[left] + mergeArr[right]) / 2
+    }
+};
+function merge(nums1, nums2) {
+    var arr = []
+    while (nums1.length && nums2.length) {
+        if (nums1[0] < nums2[0]) {
+            arr.push(nums1.shift())
+        } else {
+            arr.push(nums2.shift())
+        }
+    }
+    if (nums1.length) {
+        arr.push(...nums1)
+    }
+    if (nums2.length) {
+        arr.push(...nums2)
+    }
+    return arr
+}
+
+</script>
