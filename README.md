@@ -2,8 +2,14 @@
  
 ## 日志 
 - 算法学习
+	- 2022.02.12 34. 在排序数组中查找元素的第一个和最后一个位置
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/34/34.%20%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%92%8C%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E4%BD%8D%E7%BD%AE.html)
+		- [掘金](https://juejin.cn/post/7062000145067409416)
+	- 2022.02.12 4. 寻找两个正序数组的中位数
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/34/4.%20%E5%AF%BB%E6%89%BE%E4%B8%A4%E4%B8%AA%E6%AD%A3%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0.html)
+		- [掘金](https://juejin.cn/post/7063481906850955277)
 	- 2022.02.11 475. 供暖器
-		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/32/475.%20%E4%BE%9B%E6%9A%96%E5%99%A8.html)
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/34/475.%20%E4%BE%9B%E6%9A%96%E5%99%A8.html)
 		- [掘金](https://juejin.cn/post/7063109396183646239)
 	- 2022.02.09 1658. 将 x 减到 0 的最小操作数
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/34/1658.%20%E5%B0%86%20x%20%E5%87%8F%E5%88%B0%200%20%E7%9A%84%E6%9C%80%E5%B0%8F%E6%93%8D%E4%BD%9C%E6%95%B0.html)
