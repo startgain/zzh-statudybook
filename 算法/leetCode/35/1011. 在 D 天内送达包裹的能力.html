@@ -1,0 +1,65 @@
+<meta charset='UTF-8' />
+<title>1011. 在 D 天内送达包裹的能力</title>
+<script>
+	//算法
+	/**
+	 * @param {number[]} weights
+	 * @param {number} days
+	 * @return {number}
+	 */
+	var shipWithinDays = function (weights, days) {
+		// 求最低运载能力
+		var total = weights.reduce((total, item) => {
+			return total += item
+		}, 0)
+		var lowWeights = Math.ceil(total / days)
+		var minWeights = Math.max(...weights)
+		lowWeights = Math.max(lowWeights, minWeights)
+
+		// 对包裹进行分组
+		var arr = Array(days).fill([])
+		var total = 0
+		var i = 0
+		var index = 0
+		while (i < weights.length) {
+			if (total + weights[i] <= lowWeights) {
+				total += weights[i]
+			} else {
+				++index
+				if (index >= days) {
+					break;
+				}
+				total = weights[i]
+			}
+			arr[index].push(weights[i])
+			i++
+		}
+		//
+
+		console.log(arr)
+		while (!isSure(weights, days, lowWeights)) {
+			lowWeights += 1
+		}
+		return lowWeights
+	};
+	function isSure(weights, days, lowWeights) {
+		var total = 0
+		var i = 0
+		var day = 0
+		while (i < weights.length) {
+			if (total + weights[i] <= lowWeights) {
+				total += weights[i]
+			} else {
+				day += 1
+				total = weights[i]
+			}
+			i++
+		}
+		return day + 1 <= days
+	}
+
+	var weights = [1, 2, 3, 1, 1]
+
+	var days = 4
+	console.log(shipWithinDays(weights, days));
+</script>
