@@ -1,0 +1,60 @@
+<meta charset='UTF-8' />
+<title>240. 搜索二维矩阵 II</title>
+<script>
+	//算法
+	// var searchMatrix = function (matrix, target) {
+	// 	// 二分查找
+	// 	var len = matrix.length;
+	// 	var left = 0
+	// 	var right = matrix.length - 1
+
+	// 	while (left <= right) {
+	// 		var mid = (left + right) >> 1
+	// 		var curr = matrix[mid][mid]
+	// 		if (curr < target) {
+	// 			if (left < len - 1) {
+	// 				left = mid + 1
+	// 			} else {
+	// 				return false
+	// 			}
+
+	// 		} else {
+	// 			right = mid - 1
+	// 		}
+	// 	}
+	// 	debugger
+	// 	if (left === 0) {
+	// 		return matrix[left][left] === target
+	// 	}
+	// 	if (matrix[left][left] === target || matrix[left][left - 1] === target || matrix[left - 1][left] === target) {
+	// 		return true
+	// 	}
+	// 	return false
+	// };
+	var searchMatrix = function (matrix, target) {
+    // 二分查找
+    for(var i = 0;i<matrix.length;i++){
+        var item = matrix[i]
+        if(findTarget(item,target)) return true
+    }
+    return false
+};
+function findTarget(nums, target) {
+    var left = 0
+    var right = nums.length - 1 
+    while (left <= right) {
+        var mid = (left + right) >> 1
+        if (nums[mid] < target) {
+            left = mid + 1
+        } else {
+            right = mid - 1
+        }
+    }
+    if (nums[left] === target) return true
+    return false
+}
+
+	var matrix = [[-5]]
+	var target = -2
+	console.log(searchMatrix(matrix, target))
+</script>
