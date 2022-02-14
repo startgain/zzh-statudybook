@@ -1,0 +1,62 @@
+<meta charset='UTF-8' />
+<title>430. 扁平化多级双向链表</title>
+<script>
+	//算法
+	var flatten = function (head) {
+		if (!head) return head
+		var stack = []
+		var newHead = head
+		while (!(!newHead.next && !newHead.child && !stack.length)) {
+			// 是否有child节点，有则处理child和next的关系
+			if (newHead.child) {
+				var next = newHead.next
+				//保存next拐点
+				if (next) stack.push(next)
+				var child = newHead.child
+				newHead.child = null
+				// 衔接链表
+				newHead.next = child
+				child.prev = newHead
+			}
+			// 是否有next节点
+			if (newHead.next) {
+				// 下一个节点
+				newHead = newHead.next
+			} else if (stack.length) {
+				// 是否存在拐点
+				var next = stack.pop()
+				// 衔接链表
+				newHead.next = next
+				next.prev = newHead
+				// 下一个节点
+				newHead = newHead.next
+			}
+		}
+		return head
+	};
+	var node1 = {
+		var: 1,
+		prev: null,
+		next: null,
+		child: null
+	}
+	var node2 = {
+		var: 2,
+		prev: null,
+		next: null,
+		child: null
+	}
+	var node3 = {
+		var: 3,
+		prev: null,
+		next: null,
+		child: null
+	}
+	node1.next = node2
+	node2.prev = node1
+	node1.child = node3
+	var head = node1
+	alert(0)
+
+	console.log(flatten(head))
+</script>
