@@ -1,0 +1,110 @@
+<meta charset='UTF-8' />
+<title>863. 二叉树中所有距离为 K 的结点</title>
+<script>
+	//算法
+	var distanceK = function (root, target, k) {
+		var stack = [root]
+		var start
+		var res = []
+		while (stack.length) {
+			var item = stack.pop()
+			// 保存起点
+			if (item.val === target.val) {
+				start = item
+			}
+			// 处理左右
+			var left = item.left
+			var right = item.right
+			if (left) {
+				left.prev = item
+				stack.push(left)
+			}
+			if (right) {
+				right.prev = item
+				stack.push(right)
+			}
+		}
+		// 向下查找
+		function findDown(root, n) {
+			if (!root) return
+			if (n === k) {
+				res.push(root.val)
+				return
+			}
+			findDown(root.left, n + 1)
+			findDown(root.right, n + 1)
+		}
+		// 向上查找
+		function findUp(root, n, prev) {
+			if (!root) return
+			if (n === k) {
+				res.push(root.val)
+				return
+			}
+			if (n > k) return
+			// 向下
+			if (root.left && root.left.val === prev) {
+				findDown(root.right, n + 1)
+			}
+			if (root.right && root.right.val === prev) {
+				findDown(root.left, n + 1)
+			}
+			// 向上
+			findUp(root.prev, n + 1, root.val)
+
+		}
+		// 处理起点
+		if (start) {
+			if (k === 0) {
+				return [start.val]
+			} else {
+				// 向下查找
+				findDown(start.left, 1)
+				findDown(start.right, 1)
+				// 向上查找
+				findUp(start.prev, 1, start.val)
+			}
+		}
+		return res
+	};
+
+	var root = {
+		val: 3,
+		left: {
+			val: 5,
+			left: {
+				val: 6,
+				left: null,
+				right: null
+			},
+			right: {
+				val: 2,
+				left: {
+					val: 7,
+					left: null,
+					right: null
+				},
+				right: {
+					val: 4,
+					left: null,
+					right: null
+				}
+			}
+		},
+		right: {
+			val: 1,
+			left: {
+				val: 0,
+				left: null,
+				right: null
+			},
+			right: {
+				val: 8,
+				left: null,
+				right: null
+			}
+		}
+	}
+	var target = root.left, k = 2
+	console.log(distanceK(root, target, k))
+</script>
