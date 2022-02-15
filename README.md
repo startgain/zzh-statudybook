@@ -2,8 +2,11 @@
  
 ## 日志 
 - 算法学习
+	- 2022.02.15 430. 扁平化多级双向链表
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/35/430.%20%E6%89%81%E5%B9%B3%E5%8C%96%E5%A4%9A%E7%BA%A7%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8.html)
 	- 2022.02.14 240. 搜索二维矩阵 II
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/35/240.%20%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5%20II.html)
+		- [掘金](https://juejin.cn/post/7064223792544874526)
 	- 2022.02.13 1011. 在 D 天内送达包裹的能力
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/35/1011.%20%E5%9C%A8%20D%20%E5%A4%A9%E5%86%85%E9%80%81%E8%BE%BE%E5%8C%85%E8%A3%B9%E7%9A%84%E8%83%BD%E5%8A%9B.html)
 		- [掘金](https://juejin.cn/post/7063848198900547591)
