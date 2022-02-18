@@ -2,6 +2,12 @@
  
 ## 日志 
 - 算法学习
+	- 2022.02.19 705. 设计哈希集合
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/36/705.%20%E8%AE%BE%E8%AE%A1%E5%93%88%E5%B8%8C%E9%9B%86%E5%90%88.html)
+		- [掘金](https://juejin.cn/post/7065706153350529060)
+	- 2022.02.19 706. 设计哈希映射
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/36/706.%20%E8%AE%BE%E8%AE%A1%E5%93%88%E5%B8%8C%E6%98%A0%E5%B0%84.html)
+		- [掘金](https://juejin.cn/post/7066078535437254670)
 	- 2022.02.16 863. 二叉树中所有距离为 K 的结点
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/35/863.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E6%89%80%E6%9C%89%E8%B7%9D%E7%A6%BB%E4%B8%BA%20K%20%E7%9A%84%E7%BB%93%E7%82%B9.html)
 		- [掘金](https://juejin.cn/post/7064966615485382686)
