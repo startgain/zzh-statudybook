@@ -1,0 +1,60 @@
+<meta charset='UTF-8' />
+<title>706. 设计哈希映射</title>
+<script>
+//算法
+var MyHashMap = function() {
+    this.base = 1000
+    this.map= new Array(this.base).fill(0).map(()=>new Array())
+};
+
+/** 
+ * @param {number} key 
+ * @param {number} value
+ * @return {void}
+ */
+MyHashMap.prototype.put = function(key, value) {
+    var h = this.hash(key)
+    var arr = this.map[h]
+    for(var i = 0;i<arr.length;i++){
+        if(arr[i][0]===key){
+            arr[i][1] = value
+            return
+        }
+    }
+    arr.push([key,value])
+};
+
+/** 
+ * @param {number} key
+ * @return {number}
+ */
+MyHashMap.prototype.get = function(key) {
+    var h = this.hash(key)
+    var arr = this.map[h]
+    for(var i = 0;i<arr.length;i++){
+        if(arr[i][0]===key){
+            return arr[i][1]
+        }
+    }
+    return -1
+};
+
+/** 
+ * @param {number} key
+ * @return {void}
+ */
+MyHashMap.prototype.remove = function(key) {
+    var h = this.hash(key)
+    var arr = this.map[h]
+    for(var i = 0;i<arr.length;i++){
+        if(arr[i][0]===key){
+            arr.splice(i,1)
+            return
+        }
+    }
+};
+MyHashMap.prototype.hash = function(key) {
+    return key % this.base
+};
+
+</script>
