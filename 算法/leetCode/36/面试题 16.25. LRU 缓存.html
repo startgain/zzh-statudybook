@@ -1,0 +1,90 @@
+<meta charset='UTF-8' />
+<title>面试题 16.25. LRU 缓存</title>
+<script>
+//算法
+function DoubleList(key, value, prev, next) {
+    this.key = key || null
+    this.value = value || null
+    this.prev = prev || null
+    this.next = next || null
+}
+var LRUCache = function (capacity) {
+    this.head = new DoubleList('head', 'head')
+    this.tail = new DoubleList('tail', 'tail', this.head)
+    this.head.next = this.tail
+    this.map = new Map()
+    this.size = 0
+    this.maxSize = capacity
+};
+
+/** 
+ * @param {number} key
+ * @return {number}
+ */
+LRUCache.prototype.get = function (key) {
+    // 存在
+    if (this.map.has(key)) {
+        var node = this.map.get(key)
+        this.MoveHead(node)
+        return node.value
+    }
+    // 不存在
+    return -1
+};
+
+/** 
+ * @param {number} key 
+ * @param {number} value
+ * @return {void}
+ */
+LRUCache.prototype.put = function (key, value) {
+    // 存在
+    if (this.map.has(key)) {
+        var node = this.map.get(key)
+        node.value = value
+        this.MoveHead(node)
+        return
+    }
+    // 不存在判断长度
+    if (this.size === this.maxSize) {
+        // 删除最后一个节点
+        var lastNode = this.tail.prev
+        // console.log('put',node)
+        this.DelNode(lastNode)
+    }
+    // 添加新元素
+    var newNode = new DoubleList(key, value)
+    this.AddNode(newNode)
+};
+LRUCache.prototype.AddNode = function(node){
+    var prev = this.head
+    var next = this.head.next
+    // 头
+    prev.next = node
+    // curr
+    node.next = next
+    node.prev = prev
+    // next
+    next.prev = node
+    // 新增map
+    this.map.set(node.key,node)
+    // size
+    this.size++
+}
+LRUCache.prototype.MoveHead = function (node) {
+    this.DelNode(node)
+    this.AddNode(node)
+};
+LRUCache.prototype.DelNode = function (node) {
+    var prev = node.prev
+    var next = node.next
+    var key = node.key
+    // 删除链表中的node
+    prev.next = next
+    next.prev = prev
+    // 删除map中的节点
+    this.map.delete(key)
+    // size
+    this.size--
+};
+</script>
