@@ -1,0 +1,47 @@
+<meta charset='UTF-8' />
+<title>35. TinyURL 的加密与解密</title>
+<script>
+//算法
+/**
+ * Encodes a URL to a shortened URL.
+ *
+ * @param {string} longUrl
+ * @return {string}
+ */
+ const keyStr = "0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIGKLMNOPQRSTUVWXYZ"
+const map = new Map()
+var getRandomKey = function(num=6){
+    var len = keyStr.length
+    var key = ''
+    while(num>0){
+        var random = Math.floor(Math.random()*len)
+        key+=keyStr[random]
+        num--
+    }
+    return key
+}
+var encode = function(longUrl) {
+    var key = getRandomKey()
+    while(map.has(key)){
+        key = getRandomKey()
+    }
+    map.set(key,longUrl)
+    return `http://tinyurl.com/${key}`
+};
+
+/**
+ * Decodes a shortened URL to its original URL.
+ *
+ * @param {string} shortUrl
+ * @return {string}
+ */
+var decode = function(shortUrl) {
+    var key = shortUrl.slice(-6)
+    return map.get(key)
+};
+
+/**
+ * Your functions will be called as such:
+ * decode(encode(url));
+ */
+</script>
