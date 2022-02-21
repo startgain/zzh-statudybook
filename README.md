@@ -4,6 +4,7 @@
 - 算法学习
 	- 2022.02.21 35. TinyURL 的加密与解密
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/36/35.%20TinyURL%20%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E8%A7%A3%E5%AF%86.html)
+		- [掘金](https://juejin.cn/post/7066821227268014093)
 	- 2022.02.20 面试题 16.25. LRU 缓存
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/36/%E9%9D%A2%E8%AF%95%E9%A2%98%2016.25.%20LRU%20%E7%BC%93%E5%AD%98.html)
 		- [掘金](https://juejin.cn/post/7066450891699650568)
