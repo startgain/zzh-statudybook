@@ -1,0 +1,19 @@
+<meta charset='UTF-8' />
+<title>187. 重复的DNA序列</title>
+<script>
+//算法
+var findRepeatedDnaSequences = function (s) {
+    // 暴力破解
+    var res = []
+    var map = new Map()
+    for (var i = 0; i < s.length; i++) {
+        var item = s.slice(i, i + 10)
+        var num = map.get(item)
+        map.set(item, num+1||1)
+        if (map.get(item)===2) {
+            res.push(item)
+        }
+    }
+    return res
+};
+</script>
