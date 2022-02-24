@@ -1,0 +1,28 @@
+<meta charset='UTF-8' />
+<title>94. 目标和</title>
+<script>
+	//算法
+	var findTargetSumWays = function (nums, target) {
+		var res = 0
+		function computed(curr, nums, target) {
+			if (nums.length === 0) {
+				if (curr === target) {
+					res++
+				}
+
+				return
+			}
+			nums = [...nums]
+			var item = nums.pop()
+			var curr1 = curr + item
+			var curr2 = curr - item
+			computed(curr1, nums, target)
+			computed(curr2, nums, target)
+		}
+		computed(0, nums, target)
+		return res
+	};
+	var nums = [1, 1, 1, 1, 1], target = 3
+	console.log(findTargetSumWays(nums, target))
+
+</script>

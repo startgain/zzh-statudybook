@@ -1,0 +1,72 @@
+<meta charset='UTF-8' />
+<title>111. 二叉树的最小深度</title>
+<script>
+	//算法
+	var minDepth = function (root) {
+		if (!root) return 0
+		var min = 0
+		function minDeep(root, deep) {
+			if (!root) return
+			if (!root.left && !root.right) {
+				if (!min) {
+					min = deep + 1
+				} else {
+					min = Math.min(min, deep + 1)
+				}
+
+
+				return
+			}
+			minDeep(root.left, deep + 1)
+			minDeep(root.right, deep + 1)
+		}
+		minDeep(root, 0)
+		return min
+	};
+	var minDepth = function (root) {
+		if (!root) return 0
+		var deep = 1
+		var root = [root]
+		var next = []
+		while (root.length) {
+			var item = root.pop()
+			var left = item.left
+			var right = item.right
+			// 判断是否是叶子节点
+			if (!left && !right) {
+				return deep
+			} else {
+				left && next.push(left)
+				right && next.push(right)
+			}
+			// 进入下一层
+			if (root.length === 0) {
+				root = next
+				next = []
+			}
+		}
+	};
+	var root = {
+		value: 1,
+		left: {
+			value: 2,
+			left: {
+				value: 4,
+				left: null,
+				right: null
+			},
+			right: {
+				value: 5,
+				left: null,
+				right: null
+			}
+		},
+		right: {
+			value: 3,
+			left: null,
+			right: null
+		}
+	}
+	console.log(minDepth(root))
+
+</script>
