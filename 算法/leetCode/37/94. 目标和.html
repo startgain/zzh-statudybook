@@ -23,7 +23,50 @@
 		computed(0, nums, target)
 		return res
 	};
-	var nums = [1, 1, 1, 1, 1], target = 3
-	console.log(findTargetSumWays(nums, target))
 
+	var findTargetSumWays = function (nums, target) {
+		// 题目分析
+		// 因为nums=> total => a+b
+		// a+b = total
+		// a-b = target
+		// a = (total+target)/2
+		// a 一定是一个整数 所以 如果(total+target)%2!==0  return 0
+
+		// 动态规划
+		// 题目转换为从nums中找到和为a的种数
+		// 寻找边界条件和递推公式  
+		// 边界条件极限假设 那就是一个都不选 那就是 target === 0
+		// 当前的两个可变量就是1. 数组长度  2.目标值~0
+		// 从数组m中查找target为n的所有可能性
+		// 每个值都可能被选中，或者不被选中
+		// 
+
+
+		var total = nums.reduce((all, item) => {
+			return all += item
+		})
+		var a = (total + target) / 2
+		if ((total + target) % 2 !== 0 |||| a < 0) return 0
+
+
+		var len = nums.length
+		var dp = new Array(len + 1).fill(0).map(item => new Array(a + 1).fill(0))
+		dp[0][0] = 1
+		console.log(total)
+		for (var i = 1; i <= len; i++) {
+			var curr = nums[i - 1]
+			for (var j = 0; j <= a; j++) {
+				dp[i][j] = dp[i - 1][j]
+				if (j >= curr) {
+					dp[i][j] += dp[i - 1][j - curr]
+				}
+			}
+		}
+		console.log(dp)
+		return dp[len][a]
+	};
+	var nums = [1, 1, 1, 1, 1], target = 3
+	nums = [100]
+	target = -200
+	console.log(findTargetSumWays(nums, target))
 </script>

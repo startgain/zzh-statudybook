@@ -1,0 +1,39 @@
+<meta charset='UTF-8' />
+<title>39. 组合总和</title>
+<script>
+//算法
+var combinationSum = function (candidates, target) {
+    // 思路
+    // 回溯
+    // dfs 深度优先遍历
+    // 0. 参数介绍  index，当前使用candidates中的第几个数字，stack当前使用的数字栈[]，target，target当前要找的目标
+    // 1. 判断target是否为0，为0则直接返回
+    // 2. 数组循环完毕则
+    // 3. 当前index值不要直接跳到index+1
+    // 4. 当前index的值要，但是需要满足条件 target>=curr
+
+    var ans = []
+    var len = candidates.length
+    var dfs = function (index, stack, target) {
+        // 1
+        if (index === len) {
+            return
+        }
+        // 2
+        if (target === 0) {
+            ans.push(stack)
+            return
+        }
+        // 3 
+        dfs(index + 1, stack, target)
+        // 4
+        if (target >= candidates[index]) {
+            dfs(index, [...stack,candidates[index]], target - candidates[index])
+        }
+    }
+    // 执行dfs
+    dfs(0,[],target)
+
+    return ans
+};
+</script>
