@@ -2,8 +2,12 @@
  
 ## 日志 
 - 算法学习
+	- 2022.02.27 39. 组合总和
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/37/39.%20%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C.html)
+		- [掘金](https://juejin.cn/post/7069048185364152351)
 	- 2022.02.26 17. 电话号码的字母组合
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/38/17.%20%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88.html)
+		- [掘金](https://juejin.cn/post/7068676944430104584)
 	- 2022.02.25 94. 目标和
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/37/94.%20%E7%9B%AE%E6%A0%87%E5%92%8C.html)
 		- [掘金](https://juejin.cn/post/7067934866821611556)
