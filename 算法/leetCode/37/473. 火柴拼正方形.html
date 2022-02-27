@@ -1,0 +1,42 @@
+<meta charset='UTF-8' />
+<title>标题</title>
+<script>
+//算法
+var makesquare = function (matchsticks) {
+    // 总长
+    var total = matchsticks.reduce((total, item) => total += item)
+    // 余数不为0则直接false
+    if (total % 4) return false
+    // 变长side
+    var side = total / 4
+    // 查找四个边
+    var sideArr = [0, 0, 0, 0]
+    matchsticks.sort((a, b) => b - a)
+    // 排序以减少回溯的次数
+    // 参数：index  代表matchsticks的第index个元素，
+    var dfs = (index) => {
+        // 只要元素能全部用完则满足条件return true，否则返回false
+        if(index===matchsticks.length) return true
+        var item = matchsticks[index]
+        for (var i = 0; i < sideArr.length; i++) {
+            var sideItem = sideArr[i]
+            // 如果不超出side，那么可以放入此处
+            if (sideItem + item <= side) {
+                sideArr[i] += item
+                // 放入后，开始处理下一个元素index+1，如果这个方案可以返回true直接返回否则回溯状态将index往后面的桶中尝试
+                if(dfs(index+1)){
+                    return true
+                }
+                // 回溯状态
+                sideArr[i] -= item
+            }
+        }
+        // 四个都放不进去，则返回false
+        return false
+    }
+    return dfs(0)
+
+};
+var nums = [1,1,1,97]
+console.log(makesquare(nums))
+</script>

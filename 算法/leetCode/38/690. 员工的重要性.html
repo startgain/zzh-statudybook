@@ -1,0 +1,29 @@
+<meta charset='UTF-8' />
+<title>690. 员工的重要性</title>
+<script>
+//算法
+var GetImportance = function (employees, id) {
+    console.log(employees)
+    var map = new Map()
+    for (var i = 0; i < employees.length; i++) {
+        var item = employees[i]
+        map.set(item.id, item)
+    }
+    var total = 0
+    function checkImportance(id) {
+        // 当前id人
+        var targetItem = map.get(id)
+        // 下属数组
+        var staff = targetItem.subordinates
+        // 当前人权重统计
+        total += targetItem.importance
+        // 员工遍历
+        for (var i = 0; i < staff.length; i++) {
+            var staffId = staff[i]
+            checkImportance(staffId)
+        }
+    }
+    checkImportance(id)
+    return total
+};
+</script>
