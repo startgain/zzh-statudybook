@@ -2,6 +2,12 @@
  
 ## 日志 
 - 算法学习
+	- 2022.02.28 473. 火柴拼正方形
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/37/473.%20%E7%81%AB%E6%9F%B4%E6%8B%BC%E6%AD%A3%E6%96%B9%E5%BD%A2.html)
+		- [掘金](https://juejin.cn/post/7069407579037761573)
+	- 2022.02.28 690. 员工的重要性
+		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/38/690.%20%E5%91%98%E5%B7%A5%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7.html)
+		- [掘金](https://juejin.cn/post/7069431610797457438)
 	- 2022.02.27 39. 组合总和
 		- [代码](https://github.com/startgain/zzh-statudybook/blob/main/%E7%AE%97%E6%B3%95/leetCode/37/39.%20%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C.html)
 		- [掘金](https://juejin.cn/post/7069048185364152351)
